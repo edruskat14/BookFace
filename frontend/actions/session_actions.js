@@ -4,26 +4,35 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
-export const login = (user) => {
+const receiveCurrentUser = (user) => {
+  return {
+    type: RECEIVE_CURRENT_USER,
+    user
+  }
+}
+
+export const login = (inputUser) => {
   return dispatch => {
-    return SessionApiUtil.login(user).then((user) => {
-      return dispatch({type: RECEIVE_CURRENT_USER, user })
+    return SessionApiUtil.login(inputUser).then((user) => {
+      return dispatch(receiveCurrentUser(user)), err => {
+        return dispatch(receiveErrors(err))
+      }
     });
   };
 };
 
 export const logout = () => {
   return dispatch => {
-    return SessionApiUtil.logout().then(() => {
+    return SessionApiUtil.logout().then((user) => {
       return dispatch({type: LOGOUT_CURRENT_USER})
     });
   };
 };
 
-export const signup = (user) => {
+export const signup = (inputUser) => {
   return dispatch => {
-    return SessionApiUtil.signup(user).then((user) => {
-      dispatch({type: RECEIVE_CURRENT_USER, user })
+    return SessionApiUtil.signup(inputUser).then((user) => {
+      return dispatch({type: RECEIVE_CURRENT_USER, user })
     });
   };
 };

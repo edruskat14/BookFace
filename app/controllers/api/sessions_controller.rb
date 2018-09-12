@@ -5,6 +5,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
+      render '/api/users/show'
       #render json: api/feed TODO not made yet
     else
       render json: @user.errors, status: 401
@@ -14,7 +15,7 @@ class Api::SessionsController < ApplicationController
   def destroy
     if current_user
       logout
-      # render '/' TODO not made yet
+      render json: {}
     else
       render json: ['No one logged in'], status: 404
     end

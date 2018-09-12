@@ -4,11 +4,17 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login(@user)
-      # render "api/feed" TODO not made yet
+      render :show
     else
       render json: @user.errors, status: 401
     end
   end
+
+  def show
+    @user = User.find(params[:id])
+
+  end
+
 
 
   private #pirate
