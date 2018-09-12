@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
       render '/api/users/show'
       #render json: api/feed TODO not made yet
     else
-      render json: @user.errors, status: 401
+      render json: ['Ivalid Username of Password'], status: 401
     end
   end
 

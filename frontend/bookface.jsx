@@ -6,13 +6,18 @@ import { login, signup, logout } from './actions/session_actions';
 import * as SessionApiUtil from './util/session_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+  let store;
+    if (window.currentUser) {
+      const preloadedState = {
+        entities: { users: { [window.currentUser.id]: window.currentUser} },
+        session: { id: window.currentUser.id }
+      };
+      store = configureStore(preloadedState);
+      delete window.currentUser;
+    } else {
+      store = configureStore();
+    }
 
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.login = login;
-  window.signup = signup;
-  window.logout = logout;
 
   window.ajaxLogin = SessionApiUtil.login;
   const root = document.getElementById('root');

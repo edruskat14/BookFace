@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  # attr_reader :current_user
+  helper_method :current_user
 
   def login(user)
     session[:session_token] = user.reset_session_token!
