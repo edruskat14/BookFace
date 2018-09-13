@@ -2,14 +2,14 @@ import { withRouter, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import React from 'react';
 
-const Auth = ({ component: Component, path, loggedIn, exact }) => {
+const ProtRoute = ({ component: Component, path, loggedIn, exact }) => {
   return <Route path={path} exact={exact} render={(props) => (
-      loggedIn ? (
-        <Redirect to={'/'} />
-      ) : (
-        <Component {...props} />
-      )
-    )}/>
+    loggedIn ? (
+      <Component {...props} />
+    ) : (
+      <Redirect to={'/'} />
+    )
+  )}/>
 }
 
 const msp = (state) => {
@@ -18,4 +18,4 @@ const msp = (state) => {
   };
 };
 
-export default withRouter(connect(msp)(Auth));
+export default withRouter(connect(msp)(ProtRoute));
