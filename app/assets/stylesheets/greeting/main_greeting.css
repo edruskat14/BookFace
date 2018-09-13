@@ -66,6 +66,33 @@
   font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
+.greet-pic-col {
+
+}
+
+.greet-left-top {
+  align-items: center;
+  display: flex;
+}
+.greet-left-mid {
+  align-items: center;
+  display: flex;
+}
+.greet-left-bot {
+  align-items: center;
+  display: flex;
+}
+.greet-left-img {
+  margin: 15px 16px 10px 0;
+}
+.greet-left-bold {
+  font-weight: 700;
+  margin-right: 6px;
+}
+.greet-left-light {
+  color: #666;
+}
+
 
 .greet-right {
   width: 399px;

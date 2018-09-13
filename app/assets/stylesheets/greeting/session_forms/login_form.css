@@ -3,6 +3,7 @@
   display: table;
   top: 11px;
   right: 228px;
+  height: 56px;
 }
 .login-form {
   display: table-row;
@@ -49,4 +50,13 @@
 .login-submit:hover {
   cursor: pointer;
   background-color: #29487d;
+}
+
+.forgot-account {
+  margin: 0;
+  position: relative;
+  color: #F8F8FF;
+  left: 175px;
+  font-size: 12px;
+
 }

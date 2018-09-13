@@ -23,12 +23,28 @@ const Greeting = (props) => {
           <main className='greet-main'>
             <div className='greet-left'>
               <h2 className="connect-intro">Connect with friends and the world around you on BookFace.</h2>
+              <div className='greet-pic-col'>
+                <div className='greet-left-top'>
+                  <img className='greet-left-img' src={window.session_top_pic}/>
+                  <p className='greet-left-bold'>See photos and updates</p>
+                  <p className='greet-left-light'> from friends in news feed</p>
+                </div>
+                <div className='greet-left-mid'>
+                  <img className='greet-left-img' src={window.session_mid_pic}/>
+                  <p className='greet-left-bold'>Share what's new</p>
+                  <p className='greet-left-light'> in your life on your Timeline</p>
+                </div>
+                <div className='greet-left-bot'>
+                <img className='greet-left-img' src={window.session_bot_pic}/>
+                  <p className='greet-left-bold'>Find more</p>
+                  <p className='greet-left-light'> of what you're looking for with BookFace search</p>
+                </div>
+              </div>
             </div>
             <div className='greet-right'>
               <div className='greet-su-form'>
                 <SignupFormContainer />
               </div>
-              <button onClick={props.logout}>Logout</button>
             </div>
           </main>
         </div>

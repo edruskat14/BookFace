@@ -1,6 +1,7 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
+import Greeting from './greeting/greeting';
 import FeedContainer from './feed/feed_container';
+import UserPageContainer from './user_page/user_page_container';
 import { Route } from 'react-router-dom';
 // import LoginFormContainer from './session/login_form_container';
 // import SignupFormContainer from './session/signup_form_container';
@@ -11,8 +12,9 @@ import { logout } from '../actions/session_actions';
 const App = () => {
   return (
     <div>
-      <AuthRoute path='/' component={GreetingContainer} />
+      <AuthRoute path='/' component={Greeting} />
       <ProtRoute path='/feed' component={FeedContainer} />
+      <ProtRoute path='/users/:userId' component={UserPageContainer} />
     </div>
   );
 };

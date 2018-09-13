@@ -4,7 +4,7 @@ display:inline-block;
 }
 .sign-up-header {
   margin: 0 auto;
-  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+  font-family: 'Freight';
   font-size: 36px;
 }
 .para-gratis {
@@ -17,28 +17,31 @@ display:inline-block;
   margin: 10px 10px 0 0;
   border: 1px solid #bdc7d8;
   border-radius: 5px;
-  width: 172.3px;
-  height: 20px;
+  width: 174.5px;
+  height: 21px;
   position: relative;
-  padding: 8px 10px;
+  padding: 8px 9px;
+  font-size: 18px;
 }
 .signup-form-ele-last-name {
   margin: 10px 0;
   border: 1px solid #bdc7d8;
   border-radius: 5px;
-  width: 172.3px;
-  height: 20px;
+  width: 174.5px;
+  height: 21px;
   position: relative;
-  padding: 8px 10px;
+  padding: 8px 9px;
+  font-size: 18px;
 }
 .signup-form-ele {
   margin: 0 0 10px 0;
   border: 1px solid #bdc7d8;
   border-radius: 5px;
-  width: 395px;
-  height: 35px;
+  width: 379px;
+  height: 21px;
   position: relative;
-
+  font-size: 18px;
+  padding: 8px 9px;
 }
 
 .birthday-title {

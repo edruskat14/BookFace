@@ -15,3 +15,5 @@ const mdp = (dispatch) => {
 };
 
 export default connect(msp, mdp)(Greeting);
+
+//TODO not even used???

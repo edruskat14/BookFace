@@ -5,6 +5,8 @@ import Root from './components/root';
 import { login, signup, logout } from './actions/session_actions';
 import * as SessionApiUtil from './util/session_api_util';
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
     if (window.currentUser) {
@@ -13,6 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         session: { id: window.currentUser.id }
       };
       store = configureStore(preloadedState);
+
+      //test
+      window.dispatch = store.dispatch;
+      window.logout = logout;
+      //test
+
       delete window.currentUser;
     } else {
       store = configureStore();
