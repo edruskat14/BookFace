@@ -1,0 +1,52 @@
+.login-table {
+  position: fixed;
+  display: table;
+  top: 11px;
+  right: 228px;
+}
+.login-form {
+  display: table-row;
+}
+
+.login-labels {
+  display: flex;
+  display: table-row;
+  color: #fff;
+  font-size: 14px;
+}
+.login-label-un {
+  display: table-cell;
+  position: relative;
+  right: -5px;
+}
+.login-label-pw {
+  display: table-cell;
+  position: relative;
+  right: 158px;
+}
+
+.login-form-ele {
+  border: 1px solid black;
+  margin: 5px;
+  height: 20px;
+  width: 148px;
+  /* display: table-cell; */
+}
+
+.login-submit {
+  color: #fff;
+  background-color: #4267b2;
+  border: 1px solid #29487d;
+  height: 20px;
+  position: absolute;
+  top: 23px;
+  right: 0;
+  height: 24px;
+  width: 51px;
+
+}
+
+.login-submit:hover {
+  cursor: pointer;
+  background-color: #29487d;
+}

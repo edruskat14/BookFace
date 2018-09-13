@@ -1,0 +1,81 @@
+
+.greet-header {
+  background-color: #365899;
+  background-image: linear-gradient(#4e69a2, #3b5998 50%);
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 82px;
+  border-bottom: 1px solid #133783;
+}
+.greet-header-content {
+  width: 980px;
+  margin: 0 auto;
+  height: 82px;
+  top: 0;
+  position: relative;
+}
+
+.greet-h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 38px;
+  font-style: klavika-bold;
+  position: relative;
+  left: 0;
+  top: 1px;
+}
+.greet-li-form {
+  position: fixed;
+  top: 0;
+  left: 914px;
+}
+.greet-full {
+  background-color: rgb(237, 240, 245);
+  width: 100%;
+  position: fixed;
+  top: 82px;
+  left: 0;
+  height: 584px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+}
+.greet-main {
+  margin: 0 auto;
+  display: flex;
+  width: 980px;
+  height: 544px;
+  padding: 20px 0;
+  left: 0;
+  top: 82px;
+}
+
+.greet-left {
+  width: 565px;
+  height: 378px;
+  position: relative;
+}
+.connect-intro {
+  width: 441px;
+  height: 72px;
+  padding: 42px 0 24px 0;
+  margin: 0 auto auto 0;
+  font-size: 28px;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.greet-right {
+  width: 399px;
+  height: 543.5px;
+  position: relative;
+  left: 16px;
+}
+
+.greet-su-form {
+  margin: 0 auto;
+  height: 543.5px;
+  width: 399px;
+}

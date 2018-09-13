@@ -1,0 +1,96 @@
+.signup-form {
+display: flex;
+display:inline-block;
+}
+.sign-up-header {
+  margin: 0 auto;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+  font-size: 36px;
+}
+.para-gratis {
+  font-family:'Freight Sans', Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  margin: 5px 0 14px 0;
+}
+
+.signup-form-ele-first-name {
+  margin: 10px 10px 0 0;
+  border: 1px solid #bdc7d8;
+  border-radius: 5px;
+  width: 172.3px;
+  height: 20px;
+  position: relative;
+  padding: 8px 10px;
+}
+.signup-form-ele-last-name {
+  margin: 10px 0;
+  border: 1px solid #bdc7d8;
+  border-radius: 5px;
+  width: 172.3px;
+  height: 20px;
+  position: relative;
+  padding: 8px 10px;
+}
+.signup-form-ele {
+  margin: 0 0 10px 0;
+  border: 1px solid #bdc7d8;
+  border-radius: 5px;
+  width: 395px;
+  height: 35px;
+  position: relative;
+
+}
+
+.birthday-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 13px auto auto auto;
+}
+
+.signup-month {
+  height: 30px;
+  width: 63px;
+  font-size: 13px;
+  position: relative;
+  top: -11px;
+  border: 1px solid #bdc7d8;
+}
+
+.signup-day {
+  height: 30px;
+  width: 48px;
+  font-size: 13px;
+  position: relative;
+  top: -11px;
+  border: 1px solid #bdc7d8;
+}
+.signup-year {
+  height: 30px;
+  width: 57px;
+  font-size: 13px;
+  position: relative;
+  top: -11px;
+  border: 1px solid #bdc7d8;
+}
+
+.signup-radio {
+  font-size: 18px;
+  padding-right: 5px;
+}
+.signup-radio-button {
+  margin: 8px;
+}
+
+.signup-submit {
+  width: 193px;
+  height: 39px;
+  border-radius: 5px;
+  background-color: #69a74e;
+  color: white;
+  font-size: 20px;
+}
+
+.signup-submit:hover{
+  cursor: pointer;
+  background: linear-gradient(#79bc64, #578843);
+}
