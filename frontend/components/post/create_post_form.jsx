@@ -15,7 +15,7 @@ class CreatePostForm extends React.Component {
   onSubmit(e) {
     e.preventDefault();
     this.props.createPost(this.props.pageOwner, this.state);
-
+    this.setState({body: ''})
   }
 
   render() {

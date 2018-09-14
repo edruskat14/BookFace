@@ -4,13 +4,14 @@ export const RECEIVE_ALL_POSTS = 'RECEIVE_ALL_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const REMOVE_POST = 'REMOVE_POST';
 
-export const fetchAllPosts = (user) => {
+export const fetchAllPosts = (user, feed) => {
   return dispatch => {
-    return PostApiUtil.fetchAllPosts(user).then((posts) => {
+    return PostApiUtil.fetchAllPosts(user, feed).then((posts) => {
       return dispatch({ type: RECEIVE_ALL_POSTS, posts });
     });
   };
 };
+
 export const createPost = (user, post) => {
   return dispatch => {
     return PostApiUtil.createPost(user, post).then((post) => {

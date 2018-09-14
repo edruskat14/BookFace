@@ -1,14 +1,18 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = User.find(params[:user_id]).wall_posts
+    if params[:feed] == 'false'
+      @posts = User.find(params[:user_id]).wall_posts
+    elsif params[:feed] == 'true'
+
+    end
   end
 
   def create
     @post = Post.new(post_params)
 
     if @post.save
-      render :index
+      render :show
     else
       render json: @post.errors.full_messages, status: 404
     end

@@ -10,7 +10,7 @@ class userShow extends React.Component {
   }
 
 componentWillMount() {
-  this.props.fetchAllPosts(this.props.pageOwner)
+  this.props.fetchAllPosts(this.props.pageOwner, false)
 }
   render() {
     const postsToRender = Object.values(this.props.posts);

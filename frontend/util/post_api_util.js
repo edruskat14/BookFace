@@ -1,7 +1,7 @@
-export const fetchAllPosts = (user) => {
+export const fetchAllPosts = (user, feed) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/users/${user.id}/posts`
+    url: `/api/users/${user.id}/posts/?feed=${feed}`
   });
 };
 

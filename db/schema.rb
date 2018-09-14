@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_14_045253) do
+ActiveRecord::Schema.define(version: 2018_09_14_154029) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2018_09_14_045253) do
     t.integer "post_id", null: false
     t.text "body", null: false
     t.integer "response_id"
+  end
+
+  create_table "friends", force: :cascade do |t|
+    t.integer "friender_id", null: false
+    t.integer "friendee_id", null: false
+    t.string "status", default: "pending"
   end
 
   create_table "posts", force: :cascade do |t|

@@ -6,10 +6,10 @@ class Feed extends React.Component {
   constructor(props) {
     super(props)
   }
-  // componentDidMount() {
-  //   this.props.fetchUsers();
+  componentDidMount() {
+    this.props.fetchUsers();
+  }
   //   this.props.fetchProfiles();
-  // }
 
   render() {
     return (
