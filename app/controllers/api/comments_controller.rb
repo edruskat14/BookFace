@@ -1,5 +1,5 @@
 class Api::CommentsController < ApplicationController
   def index
-    @user
+    @comments = Post.find
   end
 end
