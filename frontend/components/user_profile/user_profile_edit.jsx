@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 class userProfileEdit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.profile 
+    this.state = this.props.profile
   }
   render() {
-    console.log(this.state);
     return (
       <div>
         This is {this.props.pageOwner.username}s page.
