@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PostIndexItem from '../post/post_index_item';
 import CreatePostFormContainer from '../post/create_post_form_container';
+import FriendRequest from '../friend/friend_request';
 
 class userShow extends React.Component {
   constructor(props) {
@@ -18,12 +19,16 @@ componentWillMount() {
     const posts = postsToRender.map((post) => {
       return <PostIndexItem post={post} key={post.id}/>;
     });
-
     return (
       <div>
         USER SHOW {this.props.pageOwner.username}
+        <br />
+        <FriendRequest currentUser={this.props.currentUser} pageOwner={this.props.pageOwner}/>
+        <br />
         <h3>Post to wall</h3>
         <br />
+
+
         <CreatePostFormContainer pageOwner={this.props.pageOwner} />
         <br /><br />
           {posts}

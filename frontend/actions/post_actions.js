@@ -11,7 +11,6 @@ export const fetchAllPosts = (user, feed) => {
     });
   };
 };
-
 export const createPost = (user, post) => {
   return dispatch => {
     return PostApiUtil.createPost(user, post).then((post) => {

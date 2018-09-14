@@ -8,6 +8,7 @@ class Feed extends React.Component {
   }
   componentDidMount() {
     this.props.fetchUsers();
+    this.props.fetchFriends(this.props.currentUser);
   }
   //   this.props.fetchProfiles();
 
@@ -21,7 +22,14 @@ class Feed extends React.Component {
         <br /><br />
         <button onClick={this.props.logout}>LOGOUT</button>
         <Link to={`/users/${this.props.currentUser.id}`}>Your Page!</Link>
-        <Link to={'/users/18'}>Test Link</Link>
+        <br />
+        <Link to={'/users/18'}>Test</Link>
+        <br />
+        <Link to={'/users/19'}>Test1</Link>
+        <br />
+        <Link to={'/users/20'}>Test2</Link>
+        <br />
+        <Link to={'/users/21'}>Test3</Link>
       </div>
     )
   }

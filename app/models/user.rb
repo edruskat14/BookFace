@@ -23,6 +23,14 @@ class User < ApplicationRecord
   foreign_key: :commenter_id,
   class_name: :Comment
 
+  has_many :friend_requests,
+  foreign_key: :friendee_id,
+  class_name: :Friendship
+
+  has_many :friends_requested,
+  foreign_key: :friender_id,
+  class_name: :Friendship
+
 
   def self.find_by_credentials(un, pw)
     user = User.find_by(username: un)
@@ -50,5 +58,9 @@ class User < ApplicationRecord
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
+  end
+
+  def friendships
+    Friendship.where(friender_id: self.id).or(Friendship.where(friendee_id: self.id))
   end
 end
