@@ -10,7 +10,7 @@ class Api::PostsController < ApplicationController
     if @post.save
       render :index
     else
-      render json: @post.errors, status: 404
+      render json: @post.errors.full_messages, status: 404
     end
   end
 
@@ -18,5 +18,5 @@ class Api::PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:body, :poster_id, :wall_id)
-  end 
+  end
 end

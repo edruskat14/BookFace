@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PostIndexItem from '../post/post_index_item';
+import CreatePostFormContainer from '../post/create_post_form_container';
 
 class userShow extends React.Component {
   constructor(props) {
@@ -15,12 +16,15 @@ componentWillMount() {
     const postsToRender = Object.values(this.props.posts);
 
     const posts = postsToRender.map((post) => {
-      return <PostIndexItem post={post} />;
+      return <PostIndexItem post={post} key={post.id}/>;
     });
 
     return (
       <div>
         USER SHOW {this.props.pageOwner.username}
+        <h3>Post to wall</h3>
+        <br />
+        <CreatePostFormContainer pageOwner={this.props.pageOwner} />
         <br /><br />
           {posts}
         <br />

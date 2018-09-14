@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { fetchAllPosts } from '../../actions/post_actions';
 import userShow from './user_show';
+
 const msp = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],

@@ -12,7 +12,7 @@ import ProtRoute from '../util/route_util/prot_route';
 const App = () => {
   return (
     <div>
-      <AuthRoute path='/' component={Greeting} />
+      <AuthRoute exact path='/' component={Greeting} />
       <ProtRoute path='/feed' component={FeedContainer} />
       <ProtRoute path='/users/:userId' component={userShowContainer} />
       <ProtRoute exact path='/users/:userId/edit' component={userProfileEditContainer} />
