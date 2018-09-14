@@ -6,7 +6,7 @@ import { login, signup, logout } from './actions/session_actions';
 import * as SessionApiUtil from './util/session_api_util';
 import { fetchProfile } from './actions/profile_actions';
 import { fetchUsers } from './actions/user_actions';
-
+import { fetchAllPosts } from './actions/post_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     window.fetchUsers = fetchUsers;
-
+    window.fetchAllPosts = fetchAllPosts;
     //test
 
   window.ajaxLogin = SessionApiUtil.login;

@@ -11,6 +11,19 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Profile
 
+  has_many :posts_made,
+  foreign_key: :poster_id,
+  class_name: :Post
+
+  has_many :wall_posts,
+  foreign_key: :wall_id,
+  class_name: :Post
+
+  has_many :comments_made,
+  foreign_key: :commenter_id,
+  class_name: :Comment
+
+
   def self.find_by_credentials(un, pw)
     user = User.find_by(username: un)
     if user && user.is_password?(pw)
