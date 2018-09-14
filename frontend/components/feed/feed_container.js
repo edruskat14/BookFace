@@ -1,6 +1,8 @@
 import Feed from './feed';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
+// import { fetchProfiles } from '../../actions/profile_actions';
+import { fetchUsers } from '../../actions/user_actions';
 
 const msp = (state) => {
   return {
@@ -10,7 +12,9 @@ const msp = (state) => {
 
 const mdp = (dispatch) => {
   return {
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    fetchProfiles: () => dispatch(fetchProfiles()),
+    fetchUsers: () => dispatch(fetchUsers())
   };
 };
 

@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class userProfile extends React.Component {
+class userProfileEdit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { ownPage: this.props.currentUser === this.props.pageOwner}
+    this.state = this.props.profile 
   }
   render() {
+    console.log(this.state);
     return (
       <div>
         This is {this.props.pageOwner.username}s page.
-      
+
         <Link to={'/feed'}>Back To Feed</Link>
         <br /> <br />
         <button onClick={this.props.logout}>LOGOUT</button>
@@ -19,4 +20,4 @@ class userProfile extends React.Component {
   }
 }
 
-export default userProfile;
+export default userProfileEdit;

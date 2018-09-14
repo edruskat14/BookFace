@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import userProfile from './user_profile';
+import userProfileEdit from './user_profile_edit';
+
 
 const msp = (state, ownProps) => {
   return {
-    currentUser: state.entities.users[state.session.id],
-    profile: state.entities.users[ownProps.match.params.userId].profile,
+    profile: state.entities.profiles[ownProps.match.params.userId],
     pageOwner: state.entities.users[ownProps.match.params.userId]
   };
 };
@@ -16,4 +16,4 @@ const mdp = (dispatch) => {
   };
 };
 
-export default connect(msp, mdp)(userProfile);
+export default connect(msp, mdp)(userProfileEdit);
