@@ -7,6 +7,10 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_one :profile,
+  foreign_key: :user_id,
+  class_name: :Profile
+
   def self.find_by_credentials(un, pw)
     user = User.find_by(username: un)
     if user && user.is_password?(pw)

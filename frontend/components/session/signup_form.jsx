@@ -25,14 +25,14 @@ class Signup extends React.Component {
     return (
       <div>
         <h2 className='sign-up-header'>Sign Up</h2>
-        <p className='para-gratis'>It's gratis and it always will be.</p>
+        <p className='para-gratis'>It's gratis and always will be.</p>
         <form onSubmit={this.handleSubmit} className='signup-form'>
           <input type='text' className='signup-form-ele-first-name' onChange={this.handleChange('firstname')} value={this.state.firstname} placeholder="First name"/>
           <input type='text' className='signup-form-ele-last-name' onChange={this.handleChange('lastname')} value={this.state.lastname} placeholder="Last name"/>
           <br />
           <input type='text' className='signup-form-ele' onChange={this.handleChange('username')} value={this.state.username} placeholder="Username"/>
           <br />
-          <input type='password' className='signup-form-ele' onChange={this.handleChange('password')} value={this.state.password} placeholder="Password"/>
+          <input type='password' className='signup-form-ele' onChange={this.handleChange('password')} value={this.state.password} placeholder="New password"/>
           <br />
           <h4 className='birthday-title'>Birthday</h4>
           <br />
