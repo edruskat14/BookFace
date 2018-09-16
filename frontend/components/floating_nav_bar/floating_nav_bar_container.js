@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import floatingNavBar from './floating_nav_bar';
+import FloatingNavBar from './floating_nav_bar';
 
 const msp = (state, ownProps) => {
   return {
@@ -14,4 +14,4 @@ const mdp = (dispatch) => {
   };
 };
 
-export default
+export default connect(msp, mdp)(FloatingNavBar)

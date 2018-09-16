@@ -1,0 +1,115 @@
+.floating-nav-main {
+    background-color: #4267b2;
+    border-bottom: 1px solid #29487d;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 42px;
+    align-items: center;
+}
+
+.floating-nav-content {
+  background-color: #4267b2;
+  border-bottom: 1px solid #29487d;
+  display: flex;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 42px;
+  align-items: center;
+}
+
+.nav-search-with-logo {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  width: 475px;
+}
+.nav-search-with-logo a {
+  height: 24px;
+  width: 24px;
+}
+
+.nav-fb-logo {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  position: relative;
+  left: 133px;
+  border-radius: 1.6px;
+}
+.nav-search-bar {
+  position: relative;
+  height: 25px;
+  width: 446px;
+  left: 141px;
+  position: relative;
+  right: 0;
+  border-radius: 1.6px;
+}
+
+.nav-buttons {
+  position: relative;
+  left: 655px;
+  height: 27px;
+  width: 287px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+
+}
+
+.separator-line {
+  background-color: rgba(0, 0, 0, .1);
+  height: 17px;
+  width: 1px;
+}
+.show-page-button {
+  background-color: #4267b2;
+  color: #fff;
+  border: none;
+  line-height: 27px;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.home-button {
+  background-color: #4267b2;
+  color: #fff;
+  border: none;
+  line-height: 27px;
+  width: 55px;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.find-friends-button {
+  background-color: #4267b2;
+  color: #fff;
+  border: none;
+  line-height: 27px;
+  width: 94px;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.show-page-button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.home-button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.find-friends-button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .1);
+}

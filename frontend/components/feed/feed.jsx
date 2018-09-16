@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import CreatePostFormContainer from '../post/create_post_form_container';
+import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_container';
 
 class Feed extends React.Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class Feed extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='feed-main'>
+        <FloatingNavBarContainer />
         <h1>This is your feed {this.props.currentUser.username}</h1>
 
         <h3>Post 2 own wall</h3><br />

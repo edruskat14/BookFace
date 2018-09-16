@@ -63,4 +63,23 @@ class User < ApplicationRecord
   def friendships
     Friendship.where(friender_id: self.id).or(Friendship.where(friendee_id: self.id))
   end
+
+  def pendingRequests
+    
+  end
+
+  def friends
+
+  end
+
+  private #pirate
+
+  def get_friend_id_from_friendship(ship)
+    if ship.friender_id == self.id
+      return ship.friender_id
+    else
+      return ship.friendee_id
+    end
+  end
+
 end

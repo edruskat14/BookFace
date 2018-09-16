@@ -4,7 +4,6 @@ class Api::FriendshipsController < ApplicationController
   end
 
   def create
-    debugger
     @friendship = Friendship.new(friendship_params)
     if @friendship.save
       render :show

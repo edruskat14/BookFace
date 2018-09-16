@@ -14,21 +14,21 @@ export const fetchFriends = (user) => {
 export const makeFriendRequest = (friendship) => {
   return dispatch => {
     return FriendApiUtil.makeFriendRequest(friendship).then((friendship) => {
-      return dispatch({ type: RECEIVE_ALL_FRIENDS, friendship });
+      return dispatch({ type: RECEIVE_FRIEND, friendship });
     });
   };
 };
 export const approveFriendRequest = (friendship) => {
   return dispatch => {
     return FriendApiUtil.approveFriendRequest(friendship).then((friendship) => {
-      return dispatch({ type: RECEIVE_ALL_FRIENDS, friendship });
+      return dispatch({ type: RECEIVE_FRIEND, friendship });
     });
   };
 };
 export const removeFriend = (user) => {
   return dispatch => {
     return FriendApiUtil.removeFriend(user).then((friendship) => {
-      return dispatch({ type: RECEIVE_ALL_FRIENDS, friendship });
+      return dispatch({ type: REMOVE_FRIEND, friendship });
     });
   };
 };
