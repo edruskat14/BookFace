@@ -40,13 +40,6 @@ class userShow extends React.Component {
 
         <main className='show-page-main'>
 
-            USER SHOW {this.props.pageOwner.username}
-            <br />
-
-            <br />
-            <h3>Post to wall</h3>
-            <br />
-
             <div className='show-page-post-section'>
               <CreatePostFormContainer pageOwner={this.props.pageOwner} />
               <br /><br />

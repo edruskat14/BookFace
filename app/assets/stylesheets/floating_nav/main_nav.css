@@ -4,6 +4,7 @@
     display: flex;
     margin: 0 auto;
     width: 100%;
+    padding-right: 205px;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,23 +12,14 @@
     align-items: center;
 }
 
-.floating-nav-content {
-  background-color: #4267b2;
-  border-bottom: 1px solid #29487d;
-  display: flex;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 42px;
-  align-items: center;
-}
-
 .nav-search-with-logo {
   display: flex;
   align-items: center;
   height: 25px;
-  width: 475px;
+  width: 490px;
+  position: fixed;
+  margin-right: 25px;
+  left: 112px;
 }
 .nav-search-with-logo a {
   height: 24px;
@@ -37,36 +29,49 @@
 .nav-fb-logo {
   height: 25px;
   width: 25px;
-  margin-right: 5px;
-  position: relative;
-  left: 133px;
+  margin-right: 3px;
   border-radius: 1.6px;
 }
 .nav-search-bar {
-  position: relative;
   height: 25px;
   width: 446px;
-  left: 141px;
   position: relative;
-  right: 0;
-  border-radius: 1.6px;
+  left: 25px;
+  border-radius: 4px;
+  display: contents;
 }
-
+.nav-all-clickables {
+  position: relative;
+  height: 42px;
+  width: 600px;
+  left: 651px;
+  display: flex;
+}
 .nav-buttons {
   position: relative;
-  left: 655px;
   height: 27px;
   width: 287px;
   font-size: 12px;
   display: flex;
-  align-items: center;
+  top: 8px;
 
+}
+.nav-symbols {
+  position: relative;
+  height: 27px;
+  width: 250px;
+  font-size: 12px;
+  left: -66px;
+  display: flex;
+  top: 8px;
 }
 
 .separator-line {
   background-color: rgba(0, 0, 0, .1);
   height: 17px;
   width: 1px;
+  position: relative;
+  top: -6px;
 }
 .show-page-button {
   background-color: #4267b2;
@@ -112,4 +117,41 @@
 .find-friends-button:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, .1);
+}
+
+
+.nav-friends-symbol {
+  height: 22px;
+  width: 28px;
+  margin-right: 7px;
+  position: relative;
+  top: 3px;
+}
+.nav-messages-symbol {
+  height: 22px;
+  width: 26px;
+  margin-right: 7px;
+  position: relative;
+  top: 3px;
+}
+.nav-notifications-symbol {
+  height: 23px;
+  width: 27px;
+  margin-right: 16px;
+  position: relative;
+  top: 3px;
+}
+.nav-quick-help-symbol {
+  height: 22px;
+  width: 24px;
+  margin-right: 9px;
+  margin-left: 16px;
+  position: relative;
+  top: 3px;
+}
+.nav-downward-arrow-symbol {
+  position: relative;
+  width: 17px;
+  height: 13px;
+  top: 6px;
 }

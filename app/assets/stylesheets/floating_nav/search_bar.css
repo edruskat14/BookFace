@@ -1,7 +1,8 @@
 .nav-search {
   height: 25px;
-  position: fixed;
+  position: absolute;
   border-radius: 2px;
+  left: 32px;
 }
 .nav-search-text {
   border: none;

@@ -1,0 +1,35 @@
+.create-post-form {
+  width: 514px;
+  height: 139px;
+  background-color: #fff;
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+}
+
+.create-post-text {
+  width: 454px;
+  height: 75px;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  padding: 23px 48px 12px 12px;
+  border-bottom: 1px solid #dddfe2;
+}
+
+.create-post-submit-button {
+  height: 28px;
+  width: 66px;
+  font-size: 12px;
+  position: relative;
+  left: 448px;
+  bottom: 4px;
+  padding: 0 16px;
+  background-color: #4267b2;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.create-post-submit-button:hover {
+  cursor: pointer;
+  background-color: #365899;
+}

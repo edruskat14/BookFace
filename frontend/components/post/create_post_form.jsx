@@ -20,9 +20,9 @@ class CreatePostForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <textarea onChange={this.handleChange}value={this.state.body}/>
-        <input type='submit' value='Send It'/>
+      <form className='create-post-form' onSubmit={this.onSubmit}>
+        <textarea className='create-post-text' onChange={this.handleChange}value={this.state.body}/>
+        <input className='create-post-submit-button' type='submit' value='Post'/>
       </form>
     );
   }
