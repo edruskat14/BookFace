@@ -6,10 +6,12 @@ class Api::PostsController < ApplicationController
     elsif params[:feed] == 'true'
       friends = User.find(params[:user_id]).friends
       @posts = [];
+      @posts += User.find(params[:user_id]).posts_made
       friends.each do |friend|
         @posts += friend.posts_made
       end
     end
+    @posts.sort { |x, y| x.created_at <=> y.created_at}
   end
 
   def create

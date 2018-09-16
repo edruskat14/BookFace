@@ -8,7 +8,7 @@ import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_contai
 class userShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { pageOwner: this.props.pageOwner}
+    this.state = { pageOwner: this.props.pageOwner }
 
   }
   componentWillMount(){

@@ -30,7 +30,7 @@ class Feed extends React.Component {
             <br /><br />
             {posts}
           </div>
-          <h3>Post 2 own wall</h3><br />
+          <br />
           <br />
           <button onClick={this.props.logout}>LOGOUT</button>
           <br />
