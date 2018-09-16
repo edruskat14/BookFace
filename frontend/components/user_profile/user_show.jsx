@@ -17,7 +17,7 @@ class userShow extends React.Component {
   }
 
   render() {
-    const postsToRender = Object.values(this.props.posts);
+    const postsToRender = Object.values(this.props.posts).reverse();
     const posts = postsToRender.map((post) => {
       return <PostIndexItem post={post} key={post.id}/>;
     });
@@ -32,6 +32,9 @@ class userShow extends React.Component {
           </div>
           <div className='profile-picture-container'>
             <img src={window.bookface_jim} className='profile-picture'/>
+          </div>
+          <div className='username-f-and-c'>
+            {this.props.pageOwner.username}
           </div>
           <div className='add-friend-user-show-button'>
             <FriendRequest currentUser={this.props.currentUser} pageOwner={this.props.pageOwner} />

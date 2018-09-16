@@ -48,11 +48,16 @@
   height: 160px;
   width: 160px;
 }
-.add-friend-user-show-button {
+.username-f-and-c {
+  max-width: 275px;
+  font-size: 30px;
+  color: #fff;
   position: relative;
-  left: 635px;
-  top: 270px;
+  top: 260px;
+  left: 376px;
+  text-shadow: 0 0 10px rgba(0,0,0,.8);
 }
+
 
 .show-page-main {
   position: relative;
@@ -66,4 +71,15 @@
   position: relative;
   left: 334px;
   width: 518px;
+}
+
+
+
+
+.add-friend-user-show-button {
+  width: 107px;
+  height: 30px;
+  position: relative;
+  left: 635px;
+  top: 231px;
 }
