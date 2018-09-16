@@ -17,7 +17,7 @@ class userShow extends React.Component {
   }
 
   render() {
-    const postsToRender = Object.values(this.props.posts).reverse();
+    const postsToRender = this.props.posts.reverse();
     const posts = postsToRender.map((post) => {
       return <PostIndexItem post={post} key={post.id}/>;
     });

@@ -64,21 +64,37 @@ class User < ApplicationRecord
     Friendship.where(friender_id: self.id).or(Friendship.where(friendee_id: self.id))
   end
 
-  def pendingRequests
-    
+  def pending_friend_requests
+    all_pending = [];
+    self.friendships.each do |ship|
+      if ship.status == 'pending'
+        requestor_id = get_friend_id_from_friendship(ship)
+        requestor = User.find(requestor_id)
+        all_pending << requestor
+      end
+    end
+    all_pending
   end
 
   def friends
-
+    all_friends = [];
+    self.friendships.each do |ship|
+      if ship.status == 'approved'
+        friend_id = get_friend_id_from_friendship(ship)
+        friend = User.find(friend_id)
+        all_friends << friend
+      end
+    end
+    all_friends
   end
 
   private #pirate
 
   def get_friend_id_from_friendship(ship)
     if ship.friender_id == self.id
-      return ship.friender_id
-    else
       return ship.friendee_id
+    else
+      return ship.friender_id
     end
   end
 

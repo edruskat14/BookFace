@@ -4,7 +4,11 @@ class Api::PostsController < ApplicationController
     if params[:feed] == 'false'
       @posts = User.find(params[:user_id]).wall_posts
     elsif params[:feed] == 'true'
-
+      friends = User.find(params[:user_id]).friends
+      @posts = [];
+      friends.each do |friend|
+        @posts += friend.posts_made
+      end
     end
   end
 
