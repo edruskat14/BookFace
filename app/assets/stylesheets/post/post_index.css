@@ -9,7 +9,24 @@
   font-family: helvetica;
 }
 .post-names {
-  
+  display: flex;
+  margin-bottom: 5px;
+}
+.postee-name{
+  position: relative;
+  margin-right: 5px;
+  color: #365899;
+}
+.post-right-arrow {
+  position: relative;
+  height: 13px;
+  width: 10px;
+  margin-right: 5px;
+  top: 2px;
+}
+.poster-name{
+  position: relative;
+  color: #365899;
 }
 .post-body {
 
