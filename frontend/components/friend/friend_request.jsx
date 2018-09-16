@@ -5,7 +5,7 @@ import React from 'react';
 const FriendRequest = (props) => {
   return (
     <div>
-      <button onClick={() => props.makeFriendRequest({friender_id: props.currentUser.id, friendee_id: props.pageOwner.id})}>Add Friend</button>
+      <button className='add-friend-button' onClick={() => props.makeFriendRequest({friender_id: props.currentUser.id, friendee_id: props.pageOwner.id})}>Add Friend</button>
     </div>
   )
 }

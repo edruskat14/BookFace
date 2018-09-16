@@ -23,7 +23,6 @@ class Feed extends React.Component {
         <CreatePostFormContainer pageOwner={this.props.currentUser}/>
         <br /><br />
         <button onClick={this.props.logout}>LOGOUT</button>
-        <Link to={`/users/${this.props.currentUser.id}`}>Your Page!</Link>
         <br />
         <Link to={'/users/18'}>Test</Link>
         <br />

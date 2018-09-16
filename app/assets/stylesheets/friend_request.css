@@ -1,0 +1,12 @@
+.add-friend-button {
+  height: 28px;
+  width: 105px;
+  border: 1px solid rgba(0, 0, 0, .4);
+  border-radius: 2px;
+  background-color: #f5f6f7;
+}
+
+.add-friend-button:hover {
+  cursor: pointer;
+  background-color: #ebedf0;
+}

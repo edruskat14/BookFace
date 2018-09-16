@@ -22,23 +22,39 @@ class userShow extends React.Component {
       return <PostIndexItem post={post} key={post.id}/>;
     });
     return (
-      <div className='user-show-main'>
+      <div className='user-show-all-content'>
         <nav>
           <FloatingNavBarContainer />
         </nav>
-        USER SHOW {this.props.pageOwner.username}
-        <br />
-        <FriendRequest currentUser={this.props.currentUser} pageOwner={this.props.pageOwner}/>
-        <br />
-        <h3>Post to wall</h3>
-        <br />
+        <div className='show-page-topper'>
+          <div className='cover-photo-container'>
+            <img src={window.beatles} className='cover-photo'/>
+          </div>
+          <div className='profile-picture-container'>
+            <img src={window.bookface_jim} className='profile-picture'/>
+          </div>
+          <div className='add-friend-user-show-button'>
+            <FriendRequest currentUser={this.props.currentUser} pageOwner={this.props.pageOwner} />
+          </div>
+        </div>
 
+        <main className='show-page-main'>
 
-        <CreatePostFormContainer pageOwner={this.props.pageOwner} />
-        <br /><br />
-          {posts}
-       <br />
-        <button onClick={this.props.logout}>LOGOUT</button>
+            USER SHOW {this.props.pageOwner.username}
+            <br />
+
+            <br />
+            <h3>Post to wall</h3>
+            <br />
+
+            <div className='show-page-post-section'>
+              <CreatePostFormContainer pageOwner={this.props.pageOwner} />
+              <br /><br />
+              {posts}
+            </div>
+            <br />
+            <button onClick={this.props.logout}>LOGOUT</button>
+        </main>
       </div>
     );
   }
