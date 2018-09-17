@@ -4,6 +4,12 @@ import CreateCommentFormContainer from '../comments/create_comment_form_containe
 import CommentIndexItem from '../comments/comment_index_item';
 
 const PostIndexItem = (props) => {
+  let com = null;
+  if (props.post.comments) {
+    com = props.post.comments.map((comment) => {
+      return <CommentIndexItem comment={comment} key={comment.id}/> }
+      )}
+
   return (
     <div className='post-main'>
       <header className='post-names'>
@@ -18,11 +24,8 @@ const PostIndexItem = (props) => {
       <div className='post-body'>
         {props.post.body}
       </div>
-      <div className='post-comment-section'>
-        if (props.post.comments) {
-          props.post.comments.map((comment) => {
-            return <CommentIndexItem comment={comment} key={comment.id}/> }
-        )}
+      <div className='comments'>
+        {com}
       </div>
       <div className='post-comment-section'>
         <CreateCommentFormContainer post={props.post} />

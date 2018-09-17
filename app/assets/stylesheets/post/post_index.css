@@ -8,6 +8,7 @@
   margin-bottom: 12px;
   font-family: helvetica;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
 }
 .post-names {
   display: flex;

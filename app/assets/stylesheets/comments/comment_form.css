@@ -28,5 +28,6 @@
   color: #fff;
 }
 .create-comment-submit-button:hover {
-
+  background-color: #365899;
+  cursor: pointer;
 }
