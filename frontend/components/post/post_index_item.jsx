@@ -19,9 +19,10 @@ const PostIndexItem = (props) => {
         {props.post.body}
       </div>
       <div className='post-comment-section'>
-        {props.post.comments.map((comment) => {
-          return <CommentIndexItem comment={comment} key={comment.id}/>
-        })}
+        if (props.post.comments) {
+          props.post.comments.map((comment) => {
+            return <CommentIndexItem comment={comment} key={comment.id}/> }
+        )}
       </div>
       <div className='post-comment-section'>
         <CreateCommentFormContainer post={props.post} />

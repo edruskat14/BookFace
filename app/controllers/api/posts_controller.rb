@@ -15,7 +15,6 @@ class Api::PostsController < ApplicationController
     @posts.each do |post|
       @comments[post.id] = post.comments # {post.id => post.comments }
     end
-    @comments ||= [];
   end
 
   def create
