@@ -11,7 +11,6 @@ class Api::PostsController < ApplicationController
         @posts += friend.posts_made
       end
     end
-    @posts.sort { |x, y| x.created_at <=> y.created_at}
   end
 
   def create
