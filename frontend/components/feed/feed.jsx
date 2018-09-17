@@ -20,7 +20,7 @@ class Feed extends React.Component {
   //   this.props.fetchProfiles();
 
   render() {
-    const toRenderPosts = this.props.posts.reverse();
+    const toRenderPosts = this.props.posts;
 
     const posts = toRenderPosts.map((post) => {
       return <PostIndexItem post={post} key={post.id}/>;
