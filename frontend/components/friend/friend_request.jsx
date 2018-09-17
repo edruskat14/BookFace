@@ -2,6 +2,12 @@ import { connect } from 'react-redux';
 import { makeFriendRequest } from '../../actions/friend_actions';
 import React from 'react';
 
+const mdp = (dispatch) => {
+  return {
+    makeFriendRequest: (request) => dispatch(makeFriendRequest(request))
+  };
+};
+
 const FriendRequest = (props) => {
   return (
     <div>
@@ -9,10 +15,5 @@ const FriendRequest = (props) => {
     </div>
   )
 }
-const mdp = (dispatch) => {
-  return {
-    makeFriendRequest: (request) => dispatch(makeFriendRequest(request))
-  };
-};
 
 export default connect(null, mdp)(FriendRequest);

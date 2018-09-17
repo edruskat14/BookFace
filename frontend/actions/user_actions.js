@@ -2,6 +2,7 @@ import * as UserApiUtil from '../util/user_api_util';
 
 export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
 export const RECEIVE_USER = 'RECEIVE_USER'
+export const RECEIVE_ALL_FRIENDS = 'RECEIVE_ALL_FRIENDS';
 
 export const fetchUsers = () => {
   return dispatch => {
@@ -10,6 +11,15 @@ export const fetchUsers = () => {
     });
   };
 };
+
+export const fetchFriends = (user) => {
+  return dispatch => {
+    return UserApiUtil.fetchFriends(user).then((friends) => {
+      return dispatch({ type: RECEIVE_ALL_FRIENDS, friends })
+    });
+  };
+};
+
 export const fetchUser = (id) => {
   return dispatch => {
     return UserApiUtil.fetchUser(id).then((user) => {

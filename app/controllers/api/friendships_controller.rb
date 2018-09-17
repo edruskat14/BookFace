@@ -1,6 +1,6 @@
 class Api::FriendshipsController < ApplicationController
   def index
-    @friendships = User.find(params[:user_id]).friendships
+    @friendships = User.find(params[:user_id]).pending_friendships
   end
 
   def create

@@ -6,9 +6,9 @@ import { fetchUser } from '../../actions/user_actions';
 
 const msp = (state, ownProps) => {
   return {
-    currentUser: state.entities.users[state.session.id],
+    currentUser: state.entities.users.general[state.session.id],
     // profile: state.entities.profiles[ownProps.match.params.userId],
-    pageOwner: state.entities.users[ownProps.match.params.userId],
+    pageOwner: state.entities.users.general[ownProps.match.params.userId],
     posts: Object.values(state.entities.posts)
   };
 };

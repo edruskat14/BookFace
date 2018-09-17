@@ -6,7 +6,7 @@ import userProfileEdit from './user_profile_edit';
 const msp = (state, ownProps) => {
   return {
     profile: state.entities.profiles[ownProps.match.params.userId],
-    pageOwner: state.entities.users[ownProps.match.params.userId]
+    pageOwner: state.entities.users.general[ownProps.match.params.userId]
   };
 };
 

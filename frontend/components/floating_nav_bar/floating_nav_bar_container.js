@@ -4,7 +4,7 @@ import FloatingNavBar from './floating_nav_bar';
 
 const msp = (state, ownProps) => {
   return {
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users.general[state.session.id]
   };
 };
 

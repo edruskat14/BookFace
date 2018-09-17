@@ -1,13 +1,13 @@
 import * as FriendApiUtil from '../util/friend_api_util';
 
-export const RECEIVE_ALL_FRIENDS = 'RECEIVE_ALL_FRIENDS';
+export const RECEIVE_ALL_REQUESTS = 'RECEIVE_ALL_REQUESTS';
 export const RECEIVE_FRIEND = 'RECEIVE_FRIEND';
 export const REMOVE_FRIEND = 'REMOVE_FRIEND';
 
-export const fetchFriends = (user) => {
+export const fetchFriendRequests = (user) => {
   return dispatch => {
-    return FriendApiUtil.fetchFriends(user).then((friendship) => {
-      return dispatch({ type: RECEIVE_ALL_FRIENDS, friendship });
+    return FriendApiUtil.fetchFriendRequests(user).then((friendships) => {
+      return dispatch({ type: RECEIVE_ALL_REQUESTS, friendships });
     });
   };
 };
@@ -25,9 +25,9 @@ export const approveFriendRequest = (friendship) => {
     });
   };
 };
-export const removeFriend = (user) => {
+export const removeFriend = (friendship) => {
   return dispatch => {
-    return FriendApiUtil.removeFriend(user).then((friendship) => {
+    return FriendApiUtil.removeFriend(friendship).then((friendship) => {
       return dispatch({ type: REMOVE_FRIEND, friendship });
     });
   };

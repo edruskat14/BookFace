@@ -5,10 +5,10 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :index] do
       resource :profile, only: [:create, :show, :update]
       resources :posts, only: [:index, :create]
-      resources :friendships, only: [:index, :destroy]
+      resources :friendships, only: [:index]
     end
     resource :session, only: [:create, :destroy]
-    resources :friendships, only: [:update, :create]
+    resources :friendships, only: [:update, :create, :destroy]
     # resources :profiles, only: [:index]
     resources :posts, only: [:update, :destroy, :show] do
       resources :comments, only: [:create]

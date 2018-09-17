@@ -4,7 +4,7 @@ import { createPost } from '../../actions/post_actions';
 
 const msp = (state, ownProps) => {
   return {
-    currentUser: state.entities.users[state.session.id],
+    currentUser: state.entities.users.general[state.session.id],
     post: {body: ''}
   };
 };

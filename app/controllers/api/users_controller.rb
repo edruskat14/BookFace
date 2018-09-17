@@ -1,7 +1,12 @@
 class Api::UsersController < ApplicationController
 
   def index
-    @users = User.all
+    user = User.find_by(id: params[:id])
+    if user
+      @users = User.find(params[:id]).friends
+    else
+      @users = User.all
+    end
   end
 
   def create

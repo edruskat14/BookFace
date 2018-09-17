@@ -1,4 +1,4 @@
-export const fetchFriends = (user) => {
+export const fetchFriendRequests = (user) => {
   return $.ajax({
     method: 'GET',
     url: `/api/users/${user.id}/friendships`
@@ -20,7 +20,7 @@ export const approveFriendRequest = (friendship) => {
   });
 };
 
-export const removeFriend = (remover) => {
+export const removeFriend = (friendship) => {
   return $.ajax({
     method: 'DELETE',
     url: `/api/users/${remover.id}/friendships`
