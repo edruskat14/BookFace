@@ -24,6 +24,7 @@ export const approveFriendRequest = (friendship) => {
 export const removeFriend = (friendship) => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/friendships/${friendship.id}`
+    url: `/api/friendships/${friendship.id}`,
+    data: { friendship }
   });
 };

@@ -23,7 +23,9 @@ class Feed extends React.Component {
       return <PostIndexItem post={post} key={post.id}/>;
     });
     const requests = this.props.pendingRequests.map((request) => {
-      return <FriendResponse friendship={request} key={request.id}/>
+      if (request.friendee_id === this.props.currentUser.id) {
+        return <FriendResponse friendship={request} key={request.id}/>
+      }
     });
     return (
       <div className='feed-all-content'>

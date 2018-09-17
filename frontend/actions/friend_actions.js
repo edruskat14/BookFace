@@ -3,6 +3,7 @@ import * as FriendApiUtil from '../util/friend_api_util';
 export const RECEIVE_ALL_REQUESTS = 'RECEIVE_ALL_REQUESTS';
 export const RECEIVE_FRIEND = 'RECEIVE_FRIEND';
 export const REMOVE_FRIEND = 'REMOVE_FRIEND';
+export const REQUEST_FRIEND = 'REQUEST_FRIEND';
 
 export const fetchFriendRequests = (user) => {
   return dispatch => {
@@ -14,7 +15,7 @@ export const fetchFriendRequests = (user) => {
 export const makeFriendRequest = (friendship) => {
   return dispatch => {
     return FriendApiUtil.makeFriendRequest(friendship).then((friendship) => {
-      return dispatch({ type: RECEIVE_FRIEND, friendship });
+      return dispatch({ type: REQUEST_FRIEND, friendship });
     });
   };
 };
