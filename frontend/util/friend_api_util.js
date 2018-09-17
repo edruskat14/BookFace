@@ -16,13 +16,14 @@ export const makeFriendRequest = (friendship) => {
 export const approveFriendRequest = (friendship) => {
   return $.ajax({
       method: 'PATCH',
-      url: `/api/friendships/${request.id}`
+      url: `/api/friendships/${friendship.id}`,
+      data: { friendship }
   });
 };
 
 export const removeFriend = (friendship) => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/users/${remover.id}/friendships`
+    url: `/api/friendships/${friendship.id}`
   });
 };

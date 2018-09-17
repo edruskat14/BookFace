@@ -8,7 +8,7 @@ const entitiesReducer = combineReducers({
   users: usersReducer,
   profiles: profilesReducer,
   posts: postsReducer,
-  pending_requests: friendshipsReducer
+  pendingRequests: friendshipsReducer
 });
 
 export default entitiesReducer;

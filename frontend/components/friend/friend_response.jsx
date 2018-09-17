@@ -12,8 +12,8 @@ const mdp = dispatch => {
 const FriendResponse = (props) => {
   return (
     <div className='friend-response'>
-      <button className='approveFriendRequest' onClick={() => props.approve(this.props.friendship)}>Confirm</button>
-      <button className='decline-friend-request' onClick={() => props.decline(this.props.friendship)}>Delete Request</button>
+      <button className='approveFriendRequest' onClick={() => props.approve(props.friendship)}>Confirm</button>
+      <button className='decline-friend-request' onClick={() => props.decline(props.friendship)}>Delete Request</button>
     </div>
   );
 };

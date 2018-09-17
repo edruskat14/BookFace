@@ -9,10 +9,17 @@
 }
 .feed-main {
   top: 43px;
+  display: flex;
 }
 
 .feed-posts {
   position: relative;
   top: 12px;
   left: 304px;
+}
+
+.feed-left {
+  position: absolute;
+  left: 111px;
+  top: 16px;
 }

@@ -23,6 +23,16 @@ class Api::FriendshipsController < ApplicationController
     end
   end
 
+  def destroy
+    @friendship = Friendship.find(params[:id])
+
+    if @friendship
+      @friendship.destroy
+    else
+      render json: ["You two don't know each other"]
+    end
+  end
+
   private #pirate
 
   def friendship_params
