@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CreateCommentFormContainer from '../comments/create_comment_form_container';
 
 const PostIndexItem = (props) => {
   return (
@@ -15,6 +16,9 @@ const PostIndexItem = (props) => {
       </header>
       <div className='post-body'>
         {props.post.body}
+      </div>
+      <div className='post-comment-section'>
+        <CreateCommentFormContainer post={props.post} />
       </div>
     </div>
   );

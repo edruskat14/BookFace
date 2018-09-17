@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import CreatePostForm from './create_post_form';
-import { createComment } from '../../actions/post_actions';
+import CreateCommentForm from './create_comment_form';
+import { createComment } from '../../actions/comment_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -11,7 +11,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
   return {
-    createComment: (user, comment) => dispatch(createComment(user, comment))
+    createComment: (post, comment) => dispatch(createComment(post, comment))
   };
 };
 

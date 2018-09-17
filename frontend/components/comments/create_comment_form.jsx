@@ -3,7 +3,7 @@ import React from 'react';
 class CreateCommentForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {body: '', wall_id: this.props.pageOwner.id, commenter_id: this.props.currentUser.id }
+    this.state = {body: '', commenter_id: this.props.currentUser.id, post_id: this.props.post.id }
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -14,7 +14,7 @@ class CreateCommentForm extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.props.createComment(this.props.pageOwner, this.state);
+    this.props.createComment(this.props.post, this.state);
     this.setState({body: ''})
   }
 
