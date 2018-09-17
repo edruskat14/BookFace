@@ -14,6 +14,11 @@
   font-size: 14px;
   padding: 23px 48px 12px 12px;
   border-bottom: 1px solid #dddfe2;
+  border-radius: 3px;
+}
+
+.create-post-text:focus {
+  outline: none;
 }
 
 .create-post-submit-button {
@@ -28,6 +33,7 @@
   color: #fff;
   font-family: sans-serif;
   font-weight: bold;
+  border-radius: 3px;
 }
 .create-post-submit-button:hover {
   cursor: pointer;

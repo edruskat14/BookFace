@@ -3,7 +3,7 @@ class Api::PostsController < ApplicationController
   def index
     if params[:feed] == 'false'
       @posts = User.find(params[:user_id]).wall_posts
-    elsif params[:feed] == 'true'
+    else #if params[:feed] == 'true'
       friends = User.find(params[:user_id]).friends
       @posts = [];
       @posts += User.find(params[:user_id]).posts_made
@@ -11,6 +11,11 @@ class Api::PostsController < ApplicationController
         @posts += friend.posts_made
       end
     end
+    @comments = {};
+    @posts.each do |post|
+      @comments[post.id] = post.comments # {post.id => post.comments }
+    end
+    @comments ||= [];
   end
 
   def create

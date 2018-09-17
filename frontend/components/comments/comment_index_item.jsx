@@ -7,9 +7,9 @@ const CommentIndexItem = (props) => {
       <header className='comment-name'>
         {props.comment.commenter_id}
       </header>
-      <body className='comment-body'>
+      <div className='comment-body'>
         {props.comment.body}
-      </body>
+      </div>
     </div>
   );
 };

@@ -7,6 +7,7 @@ import * as SessionApiUtil from './util/session_api_util';
 import { fetchProfile } from './actions/profile_actions';
 import { fetchUsers } from './actions/user_actions';
 import { fetchAllPosts } from './actions/post_actions';
+import { fetchAllComments } from './actions/comment_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       store = configureStore();
     }
     //test
+    window.fetchAllComments = fetchAllComments;
     window.dispatch = store.dispatch;
     window.logout = logout;
     // window.fetchProfiles = fetchProfiles;

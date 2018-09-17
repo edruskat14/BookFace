@@ -4,9 +4,9 @@ export const RECEIVE_ALL_COMMENTS = 'RECEIVE_ALL_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
-export const fetchAllComments = (post) => {
+export const fetchAllComments = (posts) => {
   return dispatch => {
-    return CommentApiUtil.fetchAllComments(post).then((comments) => {
+    return CommentApiUtil.fetchAllComments(posts).then((comments) => {
       return dispatch({ type: RECEIVE_ALL_COMMENTS, comments });
     });
   };

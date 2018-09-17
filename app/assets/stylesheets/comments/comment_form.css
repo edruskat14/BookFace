@@ -1,0 +1,32 @@
+.create-comment-form {
+  position: relative;
+}
+
+.create-comment-text {
+  position: relative;
+  width: 454px;
+  height: 18px;
+  border: 1px solid #ccd0d5;
+  resize: none;
+  border-radius: 20px;
+  padding: 11px 7px 8px 10px;
+  background-color: #f2f3f5;
+  top: 4px;
+  overflow-y: auto;
+
+}
+.create-comment-text:focus {
+  outline: none;
+}
+.create-comment-submit-button {
+  position: relative;
+  left: 400px;
+  height: 21px;
+  background-color: #4267b2;
+  border-radius: 8px;
+  bottom: 0;
+  color: #fff;
+}
+.create-comment-submit-button:hover {
+
+}

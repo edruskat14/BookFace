@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CreateCommentFormContainer from '../comments/create_comment_form_container';
+import CommentIndexItem from '../comments/comment_index_item';
 
 const PostIndexItem = (props) => {
   return (
@@ -16,6 +17,11 @@ const PostIndexItem = (props) => {
       </header>
       <div className='post-body'>
         {props.post.body}
+      </div>
+      <div className='post-comment-section'>
+        {props.post.comments.map((comment) => {
+          return <CommentIndexItem comment={comment} key={comment.id}/>
+        })}
       </div>
       <div className='post-comment-section'>
         <CreateCommentFormContainer post={props.post} />

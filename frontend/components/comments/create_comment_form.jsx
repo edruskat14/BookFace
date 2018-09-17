@@ -20,9 +20,9 @@ class CreateCommentForm extends React.Component {
 
   render() {
     return (
-      <form className='create-comment-form' onSubmit={this.onSubmit}>
-        <textarea className='create-comment-text' onChange={this.handleChange}value={this.state.body}/>
-        <input className='create-comment-submit-button' type='submit' value='Comment'/>
+      <form className='create-comment-form'       onSubmit={this.onSubmit}>
+        <textarea className='create-comment-text' onChange={this.handleChange}value={this.state.body} placeholder='Write a comment...' />
+        <input className='create-comment-submit-button' type='submit' value='Comment' />
       </form>
     );
   }

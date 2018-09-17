@@ -1,12 +1,13 @@
 .post-main {
   width: 492px;
-  min-height: 111px;
+  min-height: 140px;
   padding: 12px 12px 0 12px;
   background-color: #fff;
   border: 1px solid rgb(221, 223, 226);
   border-radius: 3px;
   margin-bottom: 12px;
   font-family: helvetica;
+  margin-bottom: 20px;
 }
 .post-names {
   display: flex;
@@ -29,5 +30,5 @@
   color: #365899;
 }
 .post-body {
-
+  margin-bottom: 36px;
 }

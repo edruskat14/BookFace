@@ -1,0 +1,24 @@
+.comment-main {
+  display: flex;
+  background-color: #ebedf0;;
+  border: 1px solid #eff1f3;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 13px;
+  height: min-content;
+  width: min-content;
+  max-width: 430px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.comment-name {
+  margin-right: 5px;
+  color: #365899;
+  font-weight: 700;
+}
+
+.comment-body {
+  word-break: break-all;
+}
