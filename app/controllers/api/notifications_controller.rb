@@ -1,6 +1,6 @@
 class Api::NotificationsController < ApplicationController
   def index
-    @notifications = User.find(params[:id]).notifications
+    @notifications = User.find(params[:user_id]).notifications
   end
 
   def create
@@ -16,6 +16,12 @@ class Api::NotificationsController < ApplicationController
   def destroy
     @notifications = User.find(params[:id]).notifications
     @notifications.destroy
+  end
+
+  private #pirate
+
+  def notification_params
+    params.require(:notification).permit(:user_id, :message)
   end
 
 end

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarSearch from './search';
+import RightSymbols from './right_symbol_buttons';
 
 const floatingNavBar = (props) => {
   return (
@@ -22,14 +23,7 @@ const floatingNavBar = (props) => {
           <button className='find-friends-button'>Find Friends</button>
           <p className='separator-line'></p>
         </nav>
-        <nav className='nav-symbols'>
-          <img className='nav-friends-symbol' src={window.friends_symbol} />
-          <img className='nav-messages-symbol' src={window.messages_symbol} />
-          <img className='nav-notifications-symbol' src={window.notifications_symbol} />
-          <p className='separator-line'></p>
-          <img className='nav-quick-help-symbol' src={window.quick_help_symbol} />
-          <img className='nav-downward-arrow-symbol' src={window.downward_arrow_symbol} />
-        </nav>
+        <RightSymbols notifications={props.notifications} deleteNotifications={props.deleteNotifications}/>
       </div>
     </div>
   );

@@ -1,0 +1,52 @@
+.nav-symbols {
+  position: relative;
+  height: 27px;
+  width: 250px;
+  font-size: 12px;
+  left: -66px;
+  display: flex;
+  top: 8px;
+}
+.nav-friends-symbol {
+  height: 22px;
+  width: 28px;
+  margin-right: 7px;
+  position: relative;
+  top: 3px;
+  left: -4px;
+}
+.nav-messages-symbol {
+  height: 22px;
+  width: 26px;
+  margin-right: 7px;
+  position: relative;
+  top: 3px;
+  left: -4px;
+}
+.nav-notifications-symbol {
+  height: 23px;
+  width: 27px;
+  margin-right: 16px;
+  position: relative;
+  right: 8px;
+  top: -2px;
+  left: -8px;
+  z-index: 1;
+}
+
+.nav-quick-help-symbol {
+  height: 22px;
+  width: 24px;
+  margin-right: 9px;
+  margin-left: 16px;
+  position: fixed;
+  top: 11px;
+  left: 965px;
+}
+.nav-downward-arrow-symbol {
+  position: fixed;
+  width: 17px;
+  height: 13px;
+  top: 15px;
+  left: 1010px;
+}

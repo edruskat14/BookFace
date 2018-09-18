@@ -35,6 +35,7 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Notification
 
+
   def self.find_by_credentials(un, pw)
     user = User.find_by(username: un)
     if user && user.is_password?(pw)

@@ -11,9 +11,9 @@ export const fetchNotifications = (user) => {
     });
   };
 };
-export const createNotification = (user, notification) => {
+export const createNotification = (notification) => {
   return dispatch => {
-    return NotificationApiUtil.createNotification(user, notificaiton).then((notification) => {
+    return NotificationApiUtil.createNotification(notification).then((notification) => {
       return dispatch({ type: RECEIVE_NOTIFICATION, notification });
     });
   };

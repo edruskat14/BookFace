@@ -3,6 +3,7 @@ import { logout } from '../../actions/session_actions';
 import FloatingNavBar from './floating_nav_bar';
 import { deleteNotifications } from '../../actions/notification_actions';
 
+
 const msp = (state, ownProps) => {
   return {
     currentUser: state.entities.users.general[state.session.id],

@@ -1,13 +1,13 @@
 export const fetchNotifications = (user) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/user/${user.id}/notifications`
+    url: `/api/users/${user.id}/notifications`
   });
 };
-export const createNotification = (user, notification) => {
+export const createNotification = (notification) => {
   return $.ajax({
     method: 'POST',
-    url: `/api/user/${user.id}/notifications`,
+    url: `/api/users/${notification.user_id}/notifications`,
     data: { notification }
   });
 };

@@ -1,0 +1,60 @@
+.notifications-div {
+  position: relative;
+  z-index: -1;
+  display: none;
+  width: 431px;
+  max-height: 200px;
+  list-style: none;
+  top: 35px;
+  right: 441px;
+}
+
+.notification-li {
+  position: relative;
+  width: 381px;
+  height: 36px;
+  background-color: #edf2fa;
+  color: black;
+  font-family: sans-serif;
+  font-size: 14px;
+  border: 1px solid black;
+  border-top: none;
+  border-color: rgba(100, 100, 100, 0.4);
+  padding: 10px 25px;
+}
+
+.notifications-button {
+  position: relative;
+  background-color: red;
+  width: 27px;
+  height: 23px;
+  top: 3px;
+  left: -6px;
+}
+.notifications-button:hover {
+  cursor: pointer;
+}
+.notifications-button:focus {
+  outline: none;
+}
+
+.notifications-button:focus + .notifications-div {
+  display: block;
+}
+
+.notifications-badge {
+  padding: 4px;
+  background-color: red;
+  color: white;
+  margin: 0;
+  position: fixed;
+  height: 7px;
+  width: 7px;
+  z-index: 4;
+  border: 0px solid;
+  border-radius: 10px;
+  font-family: sans-serif;
+  line-height: .67;
+  left: 946px;
+  display: inline-table;
+}
