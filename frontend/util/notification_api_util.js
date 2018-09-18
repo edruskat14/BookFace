@@ -11,9 +11,9 @@ export const createNotification = (notification) => {
     data: { notification }
   });
 };
-export const deleteNotifications = (user) => {
+export const deleteNotification = (notification) => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/users/${user.id}/notifications`
+    url: `/api/notifications/${notification.id}`
   });
 };

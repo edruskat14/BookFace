@@ -15,7 +15,9 @@ class CreateCommentForm extends React.Component {
   onSubmit(e) {
     e.preventDefault();
     this.props.createComment(this.props.post, this.state);
-    this.setState({body: ''})
+    this.props.createNotification({ user_id: this.props.post.poster_id, message: `${this.props.currentUser.username} has commented on your post.` })
+    this.setState({body: ''});
+
   }
 
   render() {

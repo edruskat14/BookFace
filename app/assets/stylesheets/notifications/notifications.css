@@ -1,12 +1,13 @@
 .notifications-div {
-  position: relative;
-  z-index: -1;
+  position: fixed;
   display: none;
   width: 431px;
   max-height: 200px;
   list-style: none;
-  top: 35px;
-  right: 441px;
+  top: 43px;
+  right: 397px;
+  overflow: scroll;
+  border: 1px solid rgba(100, 100, 100, 0.4);
 }
 
 .notification-li {
@@ -23,14 +24,6 @@
   padding: 10px 25px;
 }
 
-.notifications-button {
-  position: relative;
-  background-color: red;
-  width: 27px;
-  height: 23px;
-  top: 3px;
-  left: -6px;
-}
 .notifications-button:hover {
   cursor: pointer;
 }
@@ -41,13 +34,19 @@
 .notifications-button:focus + .notifications-div {
   display: block;
 }
+.notification-li:focus + .notifications-div {
+  display: block;
+}
+.notification-li:hover + .notifications-div {
+  display: block;
+}
 
 .notifications-badge {
   padding: 4px;
   background-color: red;
   color: white;
   margin: 0;
-  position: fixed;
+  position: relative;
   height: 7px;
   width: 7px;
   z-index: 4;
@@ -55,6 +54,19 @@
   border-radius: 10px;
   font-family: sans-serif;
   line-height: .67;
-  left: 946px;
+  top: -29px;
+  left: 7px;
   display: inline-table;
+}
+
+.single-notification {
+  width: 381px;
+  height: 36px;
+  background-color: #edf2fa;
+  border: none;
+}
+
+.single-notification:hover {
+  background-color: #dddfe2;
+  cursor: pointer;
 }

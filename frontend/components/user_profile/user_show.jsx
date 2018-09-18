@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PostIndexItem from '../post/post_index_item';
+import PostIndexItemContainer from '../post/post_index_item_container';
 import CreatePostFormContainer from '../post/create_post_form_container';
 import FriendRequest from '../friend/friend_request';
 import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_container';
@@ -12,15 +12,17 @@ class userShow extends React.Component {
 
   }
   componentWillMount(){
-    this.props.fetchAllPosts(this.props.pageOwner, false)
-    this.props.fetchUser(this.props.match.params.userId)
+    this.props.fetchAllPosts(this.props.pageOwner, false);
+    this.props.fetchUser(this.props.match.params.userId);
+    this.props.fetchNotifications(this.props.currentUser);
   }
 
   render() {
     const postsToRender = this.props.posts;
+
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
     const posts = postsToRender.map((post) => {
-      return <PostIndexItem post={post} key={post.id}/>;
+      return <PostIndexItemContainer post={post} key={post.id}/>;
     });
     return (
       <div className='user-show-all-content'>

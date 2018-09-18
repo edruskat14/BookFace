@@ -5,20 +5,23 @@ import CommentIndexItem from '../comments/comment_index_item';
 
 const PostIndexItem = (props) => {
   let com = null;
-  if (props.post.comments) {
-    com = props.post.comments.map((comment) => {
-      return <CommentIndexItem comment={comment} key={comment.id}/> }
+  if (props.comments) {
+    com = props.comments.map((comment) => {
+      return <CommentIndexItem comment={comment} post={props.post} currentUser={props.currentUser} key={comment.id}/> }
       )}
-
   return (
     <div className='post-main'>
       <header className='post-names'>
         <div className='postee-name'>
-          {props.post.poster_id}
+          <Link to={`/users/${props.poster.id}`} className='post-name-link'>
+            {props.poster.username}
+          </Link>
         </div>
         <img className='post-right-arrow' src={window.right_arrow_symbol} />
         <div className='poster-name'>
-          {props.post.wall_id}
+          <Link to={`/users/${props.postee.id}`} className='post-name-link'>
+            {props.postee.username}
+          </Link>
         </div>
       </header>
       <div className='post-body'>

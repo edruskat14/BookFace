@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import CreatePostFormContainer from '../post/create_post_form_container';
 import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_container';
-import PostIndexItem from '../post/post_index_item';
+import PostIndexItemContainer from '../post/post_index_item_container';
 import FriendResponse from '../friend/friend_response';
 
 class Feed extends React.Component {
@@ -25,7 +25,7 @@ class Feed extends React.Component {
 
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
     const posts = postsToRender.map((post) => {
-      return <PostIndexItem post={post} key={post.id}/>;
+      return <PostIndexItemContainer post={post} key={post.id}/>;
     });
     const requests = this.props.pendingRequests.map((request) => {
       if (request.friendee_id === this.props.currentUser.id) {

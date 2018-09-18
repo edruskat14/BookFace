@@ -10,6 +10,7 @@
     left: 0;
     height: 42px;
     align-items: center;
+    z-index: 1;
 }
 
 .nav-search-with-logo {
@@ -50,10 +51,10 @@
 .nav-buttons {
   position: relative;
   height: 27px;
-  width: 287px;
   font-size: 12px;
   display: flex;
   top: 8px;
+  margin-right: 8px;
 
 }
 

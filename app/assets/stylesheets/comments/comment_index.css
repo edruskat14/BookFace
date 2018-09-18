@@ -13,8 +13,15 @@
 
 .comment-name {
   margin-right: 5px;
-  color: #365899;
   font-weight: 700;
+}
+
+.comment-name-link {
+  text-decoration: none;
+  color: #365899;
+}
+.comment-name-link:hover {
+  text-decoration: underline;
 }
 
 .comment-body {

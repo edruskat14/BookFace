@@ -3,6 +3,7 @@ import { logout } from '../../actions/session_actions';
 import { fetchAllPosts } from '../../actions/post_actions';
 import userShow from './user_show';
 import { fetchUser } from '../../actions/user_actions';
+import { fetchNotifications } from '../../actions/notification_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -17,7 +18,8 @@ const mdp = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
     fetchAllPosts: (user, feed) => dispatch(fetchAllPosts(user, feed)),
-    fetchUser: (id) => dispatch(fetchUser(id))
+    fetchUser: (id) => dispatch(fetchUser(id)),
+    fetchNotifications: (user) => dispatch(fetchNotifications(user))
   };
 };
 

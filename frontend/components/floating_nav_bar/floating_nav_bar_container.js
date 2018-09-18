@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import FloatingNavBar from './floating_nav_bar';
-import { deleteNotifications } from '../../actions/notification_actions';
+import { deleteNotification } from '../../actions/notification_actions';
 
 
 const msp = (state, ownProps) => {
@@ -14,7 +14,7 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
-    deleteNotifications: (user) => dispatch(deleteNotifications(user))
+    deleteNotification: (notification) => dispatch(deleteNotification(notification))
   };
 };
 

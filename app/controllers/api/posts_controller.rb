@@ -11,9 +11,9 @@ class Api::PostsController < ApplicationController
         @posts += friend.posts_made
       end
     end
-    @comments = {};
+    @comments = [];
     @posts.each do |post|
-      @comments[post.id] = post.comments 
+      @comments += post.comments
     end
   end
   def create

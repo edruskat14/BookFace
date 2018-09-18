@@ -1,10 +1,10 @@
 class Api::CommentsController < ApplicationController
   def index
-    @comments = Post.find(params[:post_id]).comments
+    @comments = Comment.where(post_id: params[:post_id])
   end
 
   def create
-    @comment = Comment.new(post_params)
+    @comment = Comment.new(comment_params)
 
     if @comment.save
       render :show
@@ -12,9 +12,13 @@ class Api::CommentsController < ApplicationController
       render json: @comment.errors.full_messages, status: 401
     end
   end
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    render :show
+  end
 
-
-  def post_params
+  def comment_params
     params.require(:comment).permit(:body, :commenter_id, :post_id)
   end
 end

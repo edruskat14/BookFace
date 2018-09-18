@@ -14,8 +14,10 @@ class Api::NotificationsController < ApplicationController
   end
 
   def destroy
-    @notifications = User.find(params[:id]).notifications
-    @notifications.destroy
+    @notification = Notification.find(params[:id])
+
+    @notification.destroy
+    render :show
   end
 
   private #pirate

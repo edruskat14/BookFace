@@ -6,8 +6,8 @@ export const REMOVE_POST = 'REMOVE_POST';
 
 export const fetchAllPosts = (user, feed) => {
   return dispatch => {
-    return PostApiUtil.fetchAllPosts(user, feed).then((posts) => {
-      return dispatch({ type: RECEIVE_ALL_POSTS, posts });
+    return PostApiUtil.fetchAllPosts(user, feed).then((data) => {
+      return dispatch({ type: RECEIVE_ALL_POSTS, data });
     });
   };
 };

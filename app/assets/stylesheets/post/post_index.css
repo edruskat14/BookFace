@@ -28,7 +28,13 @@
 }
 .poster-name{
   position: relative;
+}
+.post-name-link {
+  text-decoration: none;
   color: #365899;
+}
+.post-name-link:hover {
+  text-decoration: underline;
 }
 .post-body {
   margin-bottom: 36px;

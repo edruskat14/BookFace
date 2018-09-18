@@ -2,7 +2,7 @@ import * as NotificationApiUtil from '../util/notification_api_util';
 
 export const RECEIVE_NOTIFICATIONS = 'RECEIVE_NOTIFICATIONS';
 export const RECEIVE_NOTIFICATION = 'RECEIVE_NOTIFICATION';
-export const REMOVE_NOTIFICATIONS = 'REMOVE_NOTIFICATION';
+export const REMOVE_NOTIFICATION = 'REMOVE_NOTIFICATION';
 
 export const fetchNotifications = (user) => {
   return dispatch => {
@@ -18,10 +18,10 @@ export const createNotification = (notification) => {
     });
   };
 };
-export const deleteNotifications = (user) => {
+export const deleteNotification = (notification) => {
   return dispatch => {
-    return NotificationApiUtil.deleteNotifications(user).then(() => {
-      return dispatch({ type: REMOVE_NOTIFICATIONS });
+    return NotificationApiUtil.deleteNotification(notification).then((notification) => {
+      return dispatch({ type: REMOVE_NOTIFICATION, notification });
     });
   };
 };

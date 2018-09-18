@@ -15,7 +15,7 @@ class CreatePostForm extends React.Component {
   onSubmit(e) {
     e.preventDefault();
     this.props.createPost(this.props.pageOwner, this.state);
-    this.props.createNotification({ user_id:this.props.pageOwner.id, message: `${this.props.currentUser.username} has commented on your wall.`});
+    this.props.createNotification({ user_id:this.props.pageOwner.id, message: `${this.props.currentUser.username} has posted to your wall.`});
     this.setState({body: ''})
   }
 

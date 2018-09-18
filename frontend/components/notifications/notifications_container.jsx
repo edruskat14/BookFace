@@ -1,13 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const NotificationIndexItem = (props) => {
-  debugger
   return (
     <li className='notification-li'>
-      {props.notification.message}
+      <button className='single-notification' onClick={() => props.deleteNotification(props.notification)}>
+        {props.notification.message}
+      </button>
     </li>
   );
 };
-
 
 export default NotificationIndexItem;

@@ -23,7 +23,7 @@ const floatingNavBar = (props) => {
           <button className='find-friends-button'>Find Friends</button>
           <p className='separator-line'></p>
         </nav>
-        <RightSymbols notifications={props.notifications} deleteNotifications={props.deleteNotifications}/>
+        <RightSymbols notifications={props.notifications} deleteNotification={props.deleteNotification}/>
       </div>
     </div>
   );

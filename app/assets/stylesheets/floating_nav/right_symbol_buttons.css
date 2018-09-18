@@ -3,7 +3,7 @@
   height: 27px;
   width: 250px;
   font-size: 12px;
-  left: -66px;
+  left: 6px;
   display: flex;
   top: 8px;
 }
@@ -13,7 +13,7 @@
   margin-right: 7px;
   position: relative;
   top: 3px;
-  left: -4px;
+  left: -2px;
 }
 .nav-messages-symbol {
   height: 22px;
@@ -21,7 +21,7 @@
   margin-right: 7px;
   position: relative;
   top: 3px;
-  left: -4px;
+  left: -2px;
 }
 .nav-notifications-symbol {
   height: 23px;
@@ -34,19 +34,27 @@
   z-index: 1;
 }
 
+.notifications-button {
+  position: relative;
+  background-color: red;
+  width: 27px;
+  height: 23px;
+  top: 3px;
+  left: -2px;
+  margin-right: 9px;
+}
+
 .nav-quick-help-symbol {
   height: 22px;
   width: 24px;
   margin-right: 9px;
   margin-left: 16px;
-  position: fixed;
-  top: 11px;
-  left: 965px;
+  position: relative;
+  top: 2.8px;
 }
 .nav-downward-arrow-symbol {
-  position: fixed;
+  position: relative;
   width: 17px;
   height: 13px;
-  top: 15px;
-  left: 1010px;
+  top: 7px;
 }
