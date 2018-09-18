@@ -5,6 +5,7 @@ import { fetchUsers, fetchFriends } from '../../actions/user_actions';
 import { fetchAllPosts } from '../../actions/post_actions';
 import { fetchFriendRequests } from '../../actions/friend_actions';
 import { fetchAllComments } from '../../actions/comment_actions';
+import { fetchNotifications } from '../../actions/notification_actions';
 
 const msp = (state) => {
   return {
@@ -21,7 +22,8 @@ const mdp = (dispatch) => {
     fetchUsers: () => dispatch(fetchUsers()),
     fetchFriends: (user) => dispatch(fetchFriends(user)),
     fetchAllPosts: (user, feed) => dispatch(fetchAllPosts(user, feed)),
-    fetchAllComments: (posts) => dispatch(fetchAllComments(posts))
+    fetchAllComments: (posts) => dispatch(fetchAllComments(posts)),
+    fetchNotifications: (user) => dispatch(fetchNotifications(user))
   };
 };
 

@@ -6,13 +6,14 @@ Rails.application.routes.draw do
       resource :profile, only: [:create, :show, :update]
       resources :posts, only: [:index, :create]
       resources :friendships, only: [:index]
+      resources :notifications, only: [:index, :create, :destroy]
     end
-    resource :session, only: [:create, :destroy]
-    resources :friendships, only: [:update, :create, :destroy]
-    # resources :profiles, only: [:index]
     resources :posts, only: [:update, :destroy, :show] do
       resources :comments, only: [:create]
     end
+    resource :session, only: [:create, :destroy]
+    resources :friendships, only: [:update, :create, :destroy]
     resources :comments, only: [:update, :destroy, :index]
+    # resources :profiles, only: [:index]
   end
 end
