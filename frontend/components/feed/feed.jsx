@@ -20,9 +20,10 @@ class Feed extends React.Component {
   //   this.props.fetchProfiles();
 
   render() {
-    const toRenderPosts = this.props.posts;
+    const postsToRender = this.props.posts;
 
-    const posts = toRenderPosts.map((post) => {
+    postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
+    const posts = postsToRender.map((post) => {
       return <PostIndexItem post={post} key={post.id}/>;
     });
     const requests = this.props.pendingRequests.map((request) => {

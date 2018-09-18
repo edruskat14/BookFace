@@ -17,7 +17,8 @@ class userShow extends React.Component {
   }
 
   render() {
-    const postsToRender = this.props.posts.reverse();
+    const postsToRender = this.props.posts;
+    postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
     const posts = postsToRender.map((post) => {
       return <PostIndexItem post={post} key={post.id}/>;
     });

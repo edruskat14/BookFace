@@ -13,10 +13,9 @@ class Api::PostsController < ApplicationController
     end
     @comments = {};
     @posts.each do |post|
-      @comments[post.id] = post.comments # {post.id => post.comments }
+      @comments[post.id] = post.comments 
     end
   end
-
   def create
     @post = Post.new(post_params)
 
