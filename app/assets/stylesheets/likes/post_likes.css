@@ -12,6 +12,10 @@
   cursor:pointer
 }
 
+.post-like-button:focus {
+  outline: none;
+}
+
 .post-like-symbol {
   width: 30px;
   height: 27px;

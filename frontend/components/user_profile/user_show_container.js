@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { fetchAllPosts } from '../../actions/post_actions';
 import userShow from './user_show';
-import { fetchUser, fetchFriends } from '../../actions/user_actions';
+import { fetchUsers, fetchFriends } from '../../actions/user_actions';
 import { fetchNotifications } from '../../actions/notification_actions';
 import { fetchFriendRequests } from '../../actions/friend_actions';
 
@@ -19,7 +19,7 @@ const mdp = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
     fetchAllPosts: (userId, feed) => dispatch(fetchAllPosts(userId, feed)),
-    fetchUser: (id) => dispatch(fetchUser(id)),
+    fetchUsers: () => dispatch(fetchUsers()),
     fetchNotifications: (user) => dispatch(fetchNotifications(user)),
     fetchFriendRequests: (user) => dispatch(fetchFriendRequests(user)),
     fetchFriends: (user) => dispatch(fetchFriends(user))

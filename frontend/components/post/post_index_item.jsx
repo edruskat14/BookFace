@@ -9,18 +9,20 @@ const PostIndexItem = (props) => {
     com = props.comments.map((comment) => {
       return <CommentIndexItem comment={comment} post={props.post} currentUser={props.currentUser} key={comment.id}/> }
       )}
+      const poster = props.poster || { username: '' }
+      const postee = props.postee || { username: '' }
   return (
     <div className='post-main'>
       <header className='post-names'>
         <div className='postee-name'>
-          <Link to={`/users/${props.poster.id}`} className='post-name-link'>
-            {props.poster.username}
+          <Link to={`/users/${poster.id}`} className='post-name-link'>
+            {poster.username}
           </Link>
         </div>
         <img className='post-right-arrow' src={window.right_arrow_symbol} />
         <div className='poster-name'>
-          <Link to={`/users/${props.postee.id}`} className='post-name-link'>
-            {props.postee.username}
+          <Link to={`/users/${postee.id}`} className='post-name-link'>
+            {postee.username}
           </Link>
         </div>
       </header>
