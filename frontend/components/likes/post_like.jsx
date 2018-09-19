@@ -7,8 +7,12 @@ const PostLike = (props) => {
     return like.liker_id === props.currentUser.id;
   });
 
-  let likeButton = <button className='post-like-button' onClick={() => props.createPostLike(props.post, {liker_id: props.currentUser.id, post_id: props.post.id })}>Like
-  </button>
+  const likeAndNotify = () => {
+    debugger
+    props.createPostLike(props.post, {liker_id: props.currentUser.id, post_id: props.post.id });
+    props.createNotification({ user_id: props.poster.id, message: `${props.currentUser.username} has liked your post!` });
+  }
+  let likeButton = <button className='post-like-button' onClick={likeAndNotify}>Like</button>
 
   if (alreadyLiked.length > 0) {
     likeButton = <button className='post-unlike-button' onClick={() => props.deletePostLike(thisPostLikes[0])}>

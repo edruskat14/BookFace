@@ -28,7 +28,7 @@ const PostIndexItem = (props) => {
         {props.post.body}
       </div>
       <div className='post-likes'>
-        <PostLikeContainer post={props.post}/>
+        <PostLikeContainer post={props.post} poster={props.poster}/>
       </div>
       <div className='comments'>
         {com}
