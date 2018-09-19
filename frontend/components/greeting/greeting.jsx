@@ -45,6 +45,7 @@ const Greeting = (props) => {
               <div className='greet-su-form'>
                 <SignupFormContainer />
               </div>
+              <button className='demo-login-button' onClick={() => props.login({username: 'DemoUser', password: 'password'})}>Login Demo User</button>
             </div>
           </main>
         </div>

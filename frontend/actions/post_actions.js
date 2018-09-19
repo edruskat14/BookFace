@@ -4,9 +4,10 @@ export const RECEIVE_ALL_POSTS = 'RECEIVE_ALL_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const REMOVE_POST = 'REMOVE_POST';
 
-export const fetchAllPosts = (user, feed) => {
+export const fetchAllPosts = (user_id, feed) => {
+
   return dispatch => {
-    return PostApiUtil.fetchAllPosts(user, feed).then((data) => {
+    return PostApiUtil.fetchAllPosts(user_id, feed).then((data) => {
       return dispatch({ type: RECEIVE_ALL_POSTS, data });
     });
   };

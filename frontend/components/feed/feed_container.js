@@ -21,7 +21,7 @@ const mdp = (dispatch) => {
     logout: () => dispatch(logout()),
     fetchUsers: () => dispatch(fetchUsers()),
     fetchFriends: (user) => dispatch(fetchFriends(user)),
-    fetchAllPosts: (user, feed) => dispatch(fetchAllPosts(user, feed)),
+    fetchAllPosts: (userId, feed) => dispatch(fetchAllPosts(userId, feed)),
     fetchAllComments: (posts) => dispatch(fetchAllComments(posts)),
     fetchNotifications: (user) => dispatch(fetchNotifications(user))
   };

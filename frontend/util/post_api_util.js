@@ -1,7 +1,8 @@
-export const fetchAllPosts = (user, feed) => {
+export const fetchAllPosts = (user_id, feed) => {
+
   return $.ajax({
     method: 'GET',
-    url: `/api/users/${user.id}/posts/?feed=${feed}`
+    url: `/api/users/${user_id}/posts/?feed=${feed}`
   });
 };
 
@@ -29,7 +30,7 @@ export const updatePost = (post) => {
 };
 
 export const deletePost = (post) => {
-  debugger
+
   return $.ajax({
     method: 'DELETE',
     url: `/api/posts/${post.id}`

@@ -7,23 +7,32 @@ import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_contai
 
 class userShow extends React.Component {
   constructor(props) {
+
     super(props);
     this.state = { pageOwner: this.props.pageOwner }
 
   }
-  componentWillMount(){
-    this.props.fetchAllPosts(this.props.pageOwner, false);
+  componentWillMount() {
+
+  }
+  componentDidMount(){
+
     this.props.fetchUser(this.props.match.params.userId);
+    this.props.fetchAllPosts(this.props.match.params.userId, false);
     this.props.fetchNotifications(this.props.currentUser);
     this.props.fetchFriendRequests(this.props.currentUser);
     this.props.fetchFriends(this.props.currentUser);
   }
 
   render() {
+    const pageOwner = this.props.pageOwner || { username: '' };
+    const currentUser = this.props.currentUser || { username: '' };
+
     let requestButton = null
     if (!this.props.friendsWith) {
-      requestButton = <FriendRequest currentUser={this.props.currentUser} pageOwner={this.props.pageOwner} />
+      requestButton = <FriendRequest currentUser={currentUser} pageOwner={pageOwner} />
     };
+    if (pageOwner === currentUser) { requestButton = null }
     const postsToRender = this.props.posts;
 
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
@@ -43,7 +52,7 @@ class userShow extends React.Component {
             <img src={window.bookface_jim} className='profile-picture'/>
           </div>
           <div className='username-f-and-c'>
-            {this.props.pageOwner.username}
+            {pageOwner.username}
           </div>
           {requestButton}
           <nav className='below-cover-nav '>
@@ -58,7 +67,7 @@ class userShow extends React.Component {
         <main className='show-page-main'>
 
             <div className='show-page-post-section'>
-              <CreatePostFormContainer pageOwner={this.props.pageOwner} />
+              <CreatePostFormContainer pageOwner={pageOwner} />
               <br /><br />
               {posts}
             </div>

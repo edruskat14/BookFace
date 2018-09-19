@@ -29,9 +29,11 @@
   top: 1px;
 }
 .greet-li-form {
-  position: fixed;
-  top: 0;
-  left: 914px;
+  position: relative;
+  width: 400px;
+  margin-right: 0;
+  top: -95px;
+  left: 600px;
 }
 .greet-full {
   background-color: rgb(237, 240, 245);
@@ -105,4 +107,24 @@
   margin: 0 auto;
   height: 543.5px;
   width: 399px;
+}
+
+.demo-login-button {
+  position: relative;
+  height: 35px;
+  width: 100px;
+  position: relative;
+  height: 37px;
+  width: 190px;
+  top: -140px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 700;
+  background-color: cornflowerblue;
+  font-size: 16px;
+}
+.demo-login-button:hover {
+  cursor: pointer;
+  background-color: blue;
 }

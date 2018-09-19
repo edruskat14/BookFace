@@ -40,6 +40,9 @@
 .notification-li:hover + .notifications-div {
   display: block;
 }
+li:hover .notifications-div {
+  display: block;
+}
 
 .notifications-badge {
   padding: 4px;

@@ -13,7 +13,7 @@ class Feed extends React.Component {
     this.props.fetchFriendRequests(this.props.currentUser);
     this.props.fetchUsers();
     this.props.fetchFriends(this.props.currentUser);
-    this.props.fetchAllPosts(this.props.currentUser, true);
+    this.props.fetchAllPosts(this.props.currentUser.id, true);
     this.props.fetchNotifications(this.props.currentUser);
     // this.props.fetchAllComments(this.props.posts);
 

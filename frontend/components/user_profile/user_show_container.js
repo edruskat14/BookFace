@@ -18,7 +18,7 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
-    fetchAllPosts: (user, feed) => dispatch(fetchAllPosts(user, feed)),
+    fetchAllPosts: (userId, feed) => dispatch(fetchAllPosts(userId, feed)),
     fetchUser: (id) => dispatch(fetchUser(id)),
     fetchNotifications: (user) => dispatch(fetchNotifications(user)),
     fetchFriendRequests: (user) => dispatch(fetchFriendRequests(user)),
