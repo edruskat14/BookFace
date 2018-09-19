@@ -34,6 +34,10 @@
 .notifications-button:focus + .notifications-div {
   display: block;
 }
+
+.notifications-div:hover + .notifications-div {
+  display: block;
+}
 .notification-li:focus + .notifications-div {
   display: block;
 }
