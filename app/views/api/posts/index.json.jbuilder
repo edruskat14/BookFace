@@ -9,3 +9,9 @@ json.comments @comments.each do |com|
     json.extract! com, :id, :post_id, :commenter_id, :body
   end
 end
+
+json.postLikes @post_likes.each do |like|
+  json.set! like.id do
+    json.extract! like, :id, :post_id, :liker_id
+  end
+end

@@ -20,7 +20,6 @@ class userShow extends React.Component {
   }
 
   render() {
-    debugger
     let requestButton = null
     if (!this.props.friendsWith) {
       requestButton = <FriendRequest currentUser={this.props.currentUser} pageOwner={this.props.pageOwner} />

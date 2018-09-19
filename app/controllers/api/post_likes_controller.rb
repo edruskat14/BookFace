@@ -13,7 +13,7 @@ class Api::PostLikesController < ApplicationController
   end
 
   def destroy
-    @post_like = PostLike.find(paramd[:id])
+    @post_like = PostLike.find(params[:id])
     @post_like.destroy
     render :show
   end

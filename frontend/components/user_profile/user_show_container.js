@@ -7,7 +7,6 @@ import { fetchNotifications } from '../../actions/notification_actions';
 import { fetchFriendRequests } from '../../actions/friend_actions';
 
 const msp = (state, ownProps) => {
-  debugger
   return {
     currentUser: state.entities.users.general[state.session.id],
     pageOwner: state.entities.users.general[ownProps.match.params.userId],

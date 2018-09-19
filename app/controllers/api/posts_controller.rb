@@ -12,10 +12,13 @@ class Api::PostsController < ApplicationController
       end
     end
     @comments = [];
+    @post_likes = [];
     @posts.each do |post|
       @comments += post.comments
+      @post_likes += post.likes
     end
   end
+
   def create
     @post = Post.new(post_params)
 

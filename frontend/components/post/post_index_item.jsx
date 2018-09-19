@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CreateCommentFormContainer from '../comments/create_comment_form_container';
 import CommentIndexItem from '../comments/comment_index_item';
-
+import PostLikeContainer from '../likes/post_like_container';
 const PostIndexItem = (props) => {
   let com = null;
   if (props.comments) {
@@ -26,6 +26,9 @@ const PostIndexItem = (props) => {
       </header>
       <div className='post-body'>
         {props.post.body}
+      </div>
+      <div className='post-likes'>
+        <PostLikeContainer post={props.post}/>
       </div>
       <div className='comments'>
         {com}

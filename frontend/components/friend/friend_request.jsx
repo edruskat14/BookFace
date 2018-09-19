@@ -16,7 +16,6 @@ const mdp = (dispatch) => {
 };
 
 const FriendRequest = (props) => {
-  debugger
   const pend = props.pending.some((req) => {
     return ((props.currentUser.id === req.friender_id || props.currentUser.id === req.friendee_id) && (props.pageOwner.id === req.friender_id || props.pageOwner.id === req.friendee_id));
   });
