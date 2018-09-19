@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBarSearch from './search';
+import NavBarSearchContainer from './search_container';
 import RightSymbols from './right_symbol_buttons';
 
 const floatingNavBar = (props) => {
@@ -11,7 +11,7 @@ const floatingNavBar = (props) => {
           <img src={window.nav_bar_fb_logo} className='nav-fb-logo'/>
         </Link>
         <div className='nav-search-bar'>
-          <NavBarSearch />
+          <NavBarSearchContainer />
         </div>
       </div>
       <div className='nav-all-clickables'>

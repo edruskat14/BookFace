@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:update, :index, :destroy]
     resources :notifications, only: [:destroy]
     resources :post_likes, only: [:destroy]
+    resources :searches, only: [:index]
     # resources :profiles, only: [:index]
   end
 end

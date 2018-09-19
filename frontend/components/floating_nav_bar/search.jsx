@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class NavBarSearch extends React.Component {
   constructor(props) {
@@ -15,8 +16,13 @@ class NavBarSearch extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
-    this.setState({text: ''})
+    if (this.state.text === '') {
+      return;
+    } else {
+      this.props.searchUsers(this.state.text);
+      this.setState({text: ''});
+      <Redirect to={'/search_results'} />
+    }
   }
 
   render() {

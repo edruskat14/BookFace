@@ -6,7 +6,7 @@ import friendRequestReducer from './friend_request_reducer';
 import commentsReducer from './comments_reducer';
 import notificationsReducer from './notifications_reducer';
 import postLikesReducer from './post_likes_reducer';
-
+import searchReducer from './search_reducer';
 const entitiesReducer = combineReducers({
   users: usersReducer,
   profiles: profilesReducer,
@@ -14,7 +14,8 @@ const entitiesReducer = combineReducers({
   pendingRequests: friendRequestReducer,
   comments: commentsReducer,
   notifications: notificationsReducer,
-  postLikes: postLikesReducer
+  postLikes: postLikesReducer,
+  searchResults: searchReducer
 });
 
 export default entitiesReducer;

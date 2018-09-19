@@ -36,7 +36,7 @@ class Feed extends React.Component {
       <div className='feed-all-content'>
         <div className='feed-main'>
           <FloatingNavBarContainer />
-
+          <Link to='/search_results'>SR</Link>
           <div className='feed-posts'>
             <CreatePostFormContainer pageOwner={this.props.currentUser}/>
             <br /><br />
