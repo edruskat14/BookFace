@@ -1,0 +1,35 @@
+.post-like-div {
+  border-top: 1px solid rgb(221, 223, 226);
+  margin-bottom: 25px;
+}
+.post-like-button {
+  background-color: #fff;
+  border: none;
+  display: flex;
+}
+
+.post-like-button:hover {
+  cursor:pointer
+}
+
+.post-like-symbol {
+  width: 30px;
+  height: 27px;
+
+}
+.post-like-unlike {
+  position: relative;
+  top: -6px;
+  left: 8px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin-bottom: 0;
+}
+.post-like-sentence {
+
+}
+
+.post-like-separator-line {
+  background-color: rgb(221, 223, 226);
+  height: 1px;
+}

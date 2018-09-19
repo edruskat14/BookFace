@@ -6,17 +6,14 @@ const PostLike = (props) => {
   const alreadyLiked = thisPostLikes.filter((like) => {
     return like.liker_id === props.currentUser.id;
   });
-
   const likeAndNotify = () => {
-    debugger
     props.createPostLike(props.post, {liker_id: props.currentUser.id, post_id: props.post.id });
     props.createNotification({ user_id: props.poster.id, message: `${props.currentUser.username} has liked your post!` });
   }
-  let likeButton = <button className='post-like-button' onClick={likeAndNotify}>Like</button>
+  let likeButton = <button className='post-like-button' onClick={likeAndNotify}><img src={window.like_symbol} className='post-like-symbol' /> <p className='post-like-unlike' >Like</p> </button>
 
   if (alreadyLiked.length > 0) {
-    likeButton = <button className='post-unlike-button' onClick={() => props.deletePostLike(thisPostLikes[0])}>
-    Unlike </button>;
+    likeButton = <button className='post-like-button' onClick={() => props.deletePostLike(alreadyLiked[0])}><img src={window.already_liked_symbol} className='post-like-symbol' /> <p className='post-like-unlike' >Unlike</p> </button>;
   }
   let keyWord1 = 'person';
   let keyWord2 = 'likes';
@@ -24,11 +21,11 @@ const PostLike = (props) => {
   let sentence = `${thisPostLikes.length} ${keyWord1} ${keyWord2} this post!`
 
   if (thisPostLikes.length === 0) { sentence = null };
-
   return (
-    <div>
-      <p>{sentence}</p>
+    <div className='post-like-div'>
+      <p className='post-like-sentence'>{sentence}</p>
       {likeButton}
+      <p className='post-like-separator-line'></p>
     </div>
   );
 }

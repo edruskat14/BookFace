@@ -5,7 +5,8 @@ const notificationsReducer = (state = {}, action) => {
     case RECEIVE_NOTIFICATIONS:
       return action.notifications;
     case RECEIVE_NOTIFICATION:
-      return Object.assign({}, state, { [action.notification.id]: action.notification });
+      return state;
+      // return Object.assign({}, state, { [action.notification.id]: action.notification });
     case REMOVE_NOTIFICATION:
       const newState = Object.assign({}, state);
       delete newState[action.notification.id];
