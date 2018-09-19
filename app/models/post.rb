@@ -13,4 +13,7 @@ class Post < ApplicationRecord
   foreign_key: :wall_id,
   class_name: :User
 
+  has_many :likes,
+  foreign_key: :post_id,
+  class_name: :PostLike
 end

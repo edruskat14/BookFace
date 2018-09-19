@@ -15,9 +15,16 @@ class userShow extends React.Component {
     this.props.fetchAllPosts(this.props.pageOwner, false);
     this.props.fetchUser(this.props.match.params.userId);
     this.props.fetchNotifications(this.props.currentUser);
+    this.props.fetchFriendRequests(this.props.currentUser);
+    this.props.fetchFriends(this.props.currentUser);
   }
 
   render() {
+    debugger
+    let requestButton = null
+    if (!this.props.friendsWith) {
+      requestButton = <FriendRequest currentUser={this.props.currentUser} pageOwner={this.props.pageOwner} />
+    };
     const postsToRender = this.props.posts;
 
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
@@ -39,9 +46,14 @@ class userShow extends React.Component {
           <div className='username-f-and-c'>
             {this.props.pageOwner.username}
           </div>
-          <div className='add-friend-user-show-button'>
-            <FriendRequest currentUser={this.props.currentUser} pageOwner={this.props.pageOwner} />
-          </div>
+          {requestButton}
+          <nav className='below-cover-nav '>
+            <button className='all-below-cover-buttons timeline-button'>Timeline</button>
+            <button className='all-below-cover-buttons'>About</button>
+            <button className='all-below-cover-buttons'>Friends</button>
+            <button className='all-below-cover-buttons'>Photos</button>
+            <button className='all-below-cover-buttons'>More</button>
+          </nav>
         </div>
 
         <main className='show-page-main'>

@@ -35,6 +35,9 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Notification
 
+  has_many :posts_liked,
+  foreign_key: :liker_id,
+  class_name: :PostLike
 
   def self.find_by_credentials(un, pw)
     user = User.find_by(username: un)

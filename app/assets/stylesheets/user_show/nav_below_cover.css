@@ -1,0 +1,35 @@
+.below-cover-nav {
+  position: relative;
+  height: 43px;
+  width: 651px;
+  top: -236px;
+  left: 126px;
+  background-color: #fff;
+  border: 1px solid #e9eaed;
+  border-top: none;
+  display: flex;
+  padding-left: 201px;
+}
+
+.all-below-cover-buttons {
+  color: #365899;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-right: 1px solid #e9eaed;
+  padding: 0 20px;
+}
+
+.timeline-button {
+  border-left: 1px solid #e9eaed;
+}
+
+.all-below-cover-buttons:focus {
+  outline: none;
+  color: #4b4f56;
+}
+.all-below-cover-buttons:hover {
+  cursor: pointer;
+  background-color: #f5f6f7;
+}
