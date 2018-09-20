@@ -43,7 +43,7 @@
 .logout-button:hover {
   cursor: pointer;
   color: #fff;
-  background-color: rgb(66, 103, 178);
+  background-color: #29487d;
 }
 .logout-button:focus {
   outline: none;
