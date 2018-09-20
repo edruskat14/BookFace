@@ -12,7 +12,7 @@
 }
 .post-names {
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .postee-name{
   position: relative;
@@ -36,6 +36,14 @@
 .post-name-link:hover {
   text-decoration: underline;
 }
+.post-date-posted {
+  position: relative;
+  font-size: 11px;
+  color: #616770;
+  left: 2px;
+}
 .post-body {
   margin-bottom: 36px;
+  width: 470px;
+  margin: 14px auto 36px auto;
 }

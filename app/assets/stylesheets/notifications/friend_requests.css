@@ -1,0 +1,103 @@
+
+.friend-responses-div {
+  position: fixed;
+  display: none;
+  width: 431px;
+  max-height: 200px;
+  list-style: none;
+  top: 43px;
+  right: 504px;
+  overflow: scroll;
+  border-right: 1px solid rgba(100, 100, 100, 0.4);
+}
+
+.friend-response-li {
+  position: relative;
+  width: 381px;
+  height: 36px;
+  background-color: #edf2fa;
+  color: black;
+  font-family: sans-serif;
+  font-size: 14px;
+  border: 1px solid rgba(100, 100, 100, 0.4);
+  border-top: none;
+  padding: 10px 25px;
+}
+
+.friend-response-button:hover {
+  cursor: pointer;
+}
+.friend-response-button:focus {
+  outline: none;
+}
+
+.friend-response-button:focus + .friend-responses-div {
+  display: block;
+}
+
+.friend-responses-div:hover {
+  display: block;
+}
+
+.friend-requests-badge {
+  padding: 4px;
+  background-color: red;
+  color: white;
+  margin: 0;
+  position: relative;
+  height: 7px;
+  width: 7px;
+  z-index: 4;
+  border: 0px solid;
+  border-radius: 10px;
+  font-family: sans-serif;
+  line-height: .67;
+  top: -29px;
+  left: 7px;
+  display: inline-table;
+}
+
+.single-friend-response {
+  width: 381px;
+  height: 36px;
+  background-color: #edf2fa;
+  border: none;
+  display: flex;
+}
+
+.friend-requestor-name {
+  margin: 0;
+  position: relative;
+  padding-top: 10px;
+}
+.friend-response-approve-decline-div {
+  width: 194px;
+  position: absolute;
+  left: 230px;
+}
+.approve-friend-request {
+  position: relative;
+  border: none;
+  height: 35px;
+  width: 80px;
+  color: #4267b2;
+  border-right: 1px solid rgba(100, 100, 100, 0.4);
+}
+
+.decline-friend-request {
+  position: relative;
+  border: none;
+  height: 35px;
+  width: 114px;
+  color: #cc0000;
+}
+.approve-friend-request:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #4267b2;
+}
+.decline-friend-request:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #cc0000;
+}

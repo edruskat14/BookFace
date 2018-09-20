@@ -8,7 +8,7 @@ const UserDisplay = (props) => {
 
   if (props.users.length > 0) {
     displays = props.users.map((user) => {
-    return <UserDisplayItem user={user} />;
+    return <UserDisplayItem user={user} key={user.id}/>;
     });
     message = props.present;
   }

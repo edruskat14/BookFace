@@ -1,11 +1,7 @@
 class Api::FriendshipsController < ApplicationController
   def index
     @friendships = User.find(params[:user_id]).pending_friendships
-    @frienders = {}
-    @friendships.each do |ship|
-      frndr = User.find(ship.friender_id)
-      @frienders[ship.id] = frndr
-    end
+    @friendships ||= [];
   end
 
   def create
@@ -23,7 +19,6 @@ class Api::FriendshipsController < ApplicationController
     @friendship = Friendship.find(params[:id])
     if @friendship
       @friendship.update(status: 'approved')
-      @friender = User.find(@friendship.friender_id)
       render :show
     else
       render json: ['No existing request']

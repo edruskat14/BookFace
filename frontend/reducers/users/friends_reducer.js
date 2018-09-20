@@ -6,7 +6,7 @@ const friendsReducer = (state = {}, action) => {
     case RECEIVE_ALL_FRIENDS:
       return Object.assign({}, state, action.friends);
     case RECEIVE_FRIEND:
-      return Object.assign({}, state, { [action.friendship.friender.id]: action.friendship.friender });
+      return state;
     case REMOVE_FRIEND:
       return state;
       const newState = Object.assign({}, state);

@@ -35,16 +35,7 @@
   display: block;
 }
 
-.notifications-div:hover + .notifications-div {
-  display: block;
-}
-.notification-li:focus + .notifications-div {
-  display: block;
-}
-.notification-li:hover + .notifications-div {
-  display: block;
-}
-li:hover .notifications-div {
+.notifications-div:hover {
   display: block;
 }
 

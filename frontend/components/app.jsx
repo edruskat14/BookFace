@@ -14,7 +14,7 @@ const App = () => {
     <div>
       <AuthRoute exact path='/' component={GreetingContainer} />
       <ProtRoute path='/feed' component={FeedContainer} />
-      <ProtRoute path='/users/:userId' component={userShowContainer} />
+      <ProtRoute exact path='/users/:userId' component={userShowContainer} />
       <ProtRoute exact path='/users/:userId/edit' component={userProfileEditContainer} />
       <ProtRoute path='/search_results' component={UserSearchDisplay} />
     </div>

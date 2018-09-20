@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class NavBarSearch extends React.Component {
   constructor(props) {
@@ -19,9 +19,7 @@ class NavBarSearch extends React.Component {
     if (this.state.text === '') {
       return;
     } else {
-      this.props.searchUsers(this.state.text);
-      this.setState({text: ''});
-      <Redirect to={'/search_results'} />
+      this.props.searchUsers(this.state.text).then(() => this.props.history.push('/search_results'));
     }
   }
 
@@ -37,4 +35,4 @@ class NavBarSearch extends React.Component {
   }
 }
 
-export default NavBarSearch;
+export default withRouter(NavBarSearch);

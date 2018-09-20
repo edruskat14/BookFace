@@ -36,7 +36,6 @@ class Feed extends React.Component {
       <div className='feed-all-content'>
         <div className='feed-main'>
           <FloatingNavBarContainer />
-          <Link to='/search_results'>SR</Link>
           <div className='feed-posts'>
             <CreatePostFormContainer pageOwner={this.props.currentUser}/>
             <br /><br />
@@ -52,7 +51,6 @@ class Feed extends React.Component {
             <Link to={'/users/21'}>Test3</Link>
             <button onClick={this.props.logout}>LOGOUT</button>
             <br />
-            {requests}
           </div>
           <br />
           <br />
