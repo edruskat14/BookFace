@@ -49,6 +49,25 @@
   height: 160px;
   width: 160px;
 }
+.pro-pic-edit-button {
+  display: none;
+  background-color: black;
+  opacity: 0.5;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  top: -60px;
+  z-index: 2;
+}
+.profile-picture:hover + .pro-pic-edit-button {
+  display: block;
+}
+.pro-pic-edit-button:hover {
+  display: block;
+  cursor: pointer;
+  opacity: 0.8;
+}
 .username-f-and-c {
   max-width: 275px;
   font-size: 30px;

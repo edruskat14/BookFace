@@ -57,7 +57,8 @@ class userShow extends React.Component {
             </nav>
           </div>
           <div className='profile-picture-container'>
-            <img src={window.bookface_jim} className='profile-picture'/>
+            <img src={pageOwner.photoUrl} className='profile-picture'/>
+            <div className='pro-pic-edit-button'></div>
           </div>
           <div className='username-f-and-c'>
             {pageOwner.username}

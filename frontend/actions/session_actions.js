@@ -33,7 +33,9 @@ export const logout = () => {
 export const signup = (inputUser) => {
   return dispatch => {
     return SessionApiUtil.signup(inputUser).then((user) => {
-      return dispatch({type: RECEIVE_CURRENT_USER, user, profile: user.profile })
+      return dispatch({type: RECEIVE_CURRENT_USER, user, profile: user.profile }), err => {
+        return dispatch(receiveErrors(err))
+      }
     });
   };
 };

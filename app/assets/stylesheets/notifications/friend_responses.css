@@ -1,12 +1,12 @@
 
 .friend-responses-div {
-  position: fixed;
+  position: relative;
   display: none;
   width: 431px;
   max-height: 200px;
   list-style: none;
-  top: 43px;
-  right: 504px;
+  top: 7px;
+  right: 400px;
   overflow: scroll;
   border-right: 1px solid rgba(100, 100, 100, 0.4);
 }

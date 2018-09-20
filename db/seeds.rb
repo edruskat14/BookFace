@@ -10,11 +10,27 @@ User.destroy_all
 Post.destroy_all
 Friendship.destroy_all
 
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
 demo = User.create({ username: 'DemoUser', password: 'password' })
+demo.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
 trundle = User.create({ username: 'TrundleTheGreat', password: 'paddyspub' })
-tes = User.create({ username: 'test', password: 'password'})
-lomez = User.create({ username: 'Lomez', password: 'heybuddy'})
-scarn = User.create({ username: 'MichaelScarn', password: 'aisle5'})
+trundle.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
+tes = User.create({ username: 'test', password: 'password' })
+tes.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
+lomez = User.create({ username: 'Lomez', password: 'heybuddy' })
+lomez.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
+scarn = User.create({ username: 'MichaelScarn', password: 'aisle5' })
+scarn.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+
 
 Post.create({ wall_id: demo.id, poster_id: tes.id, body: 'Welcome to Bookface' })
 Post.create({ wall_id: tes.id, poster_id: lomez.id, body: 'you left your vacuum cleaner at my place' })

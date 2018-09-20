@@ -39,6 +39,8 @@ class User < ApplicationRecord
   foreign_key: :liker_id,
   class_name: :PostLike
 
+  has_one_attached :photo
+
   def self.find_by_credentials(un, pw)
     user = User.find_by(username: un)
     if user && user.is_password?(pw)

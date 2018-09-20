@@ -11,14 +11,24 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
+    defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
+    @user.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
     if @user.save
-      @profile = Profile.new({user_id: @user.id})
-      @profile.save
+      # @profile = Profile.new({user_id: @user.id})
+      # @profile.save
       login(@user)
       render :show
     else
       render json: @user.errors, status: 401
+    end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      render :show
+    else
+      render json: ['Un updatable entity']
     end
   end
 
@@ -31,6 +41,6 @@ class Api::UsersController < ApplicationController
   private #pirate
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password, :photo)
   end
 end

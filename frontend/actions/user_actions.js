@@ -27,3 +27,12 @@ export const fetchUser = (id) => {
     });
   };
 };
+
+export const updateUser = (user, data) => {
+  debugger
+  return dispatch => {
+    return UserApiUtil.updateUser(user, data).then((user) => {
+      return dispatch({ type: RECEIVE_USER, user });
+    });
+  };
+};

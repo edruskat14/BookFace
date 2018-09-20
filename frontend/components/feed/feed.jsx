@@ -4,6 +4,7 @@ import CreatePostFormContainer from '../post/create_post_form_container';
 import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_container';
 import PostIndexItemContainer from '../post/post_index_item_container';
 import FriendResponse from '../friend/friend_response';
+import ProPicFormContainer from '../profile_picture/pro_pic_form_container';
 
 class Feed extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class Feed extends React.Component {
             {posts}
           </div>
           <div className='feed-left'>
-          
+            <ProPicFormContainer />
           </div>
           <br />
           <br />
