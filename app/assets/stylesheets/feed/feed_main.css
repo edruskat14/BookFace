@@ -8,8 +8,9 @@
   overflow-y: scroll;
 }
 .feed-main {
-  top: 43px;
+  position: relative;
   display: flex;
+  margin-bottom: 85px;
 }
 
 .feed-posts {

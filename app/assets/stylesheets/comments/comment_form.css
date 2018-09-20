@@ -9,11 +9,10 @@
   border: 1px solid #ccd0d5;
   resize: none;
   border-radius: 20px;
-  padding: 11px 7px 8px 10px;
+  padding: 8px 7px 10px 10px;
   background-color: #f2f3f5;
-  top: 4px;
   overflow-y: auto;
-
+  margin-bottom: 23px;
 }
 .create-comment-text:focus {
   outline: none;
@@ -30,4 +29,7 @@
 .create-comment-submit-button:hover {
   background-color: #365899;
   cursor: pointer;
+}
+.create-comment-submit-button:focus{
+  outline: none;
 }

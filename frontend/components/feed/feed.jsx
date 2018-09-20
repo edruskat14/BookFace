@@ -42,15 +42,7 @@ class Feed extends React.Component {
             {posts}
           </div>
           <div className='feed-left'>
-            <Link to={'/users/18'}>Test</Link>
-            <br />
-            <Link to={'/users/19'}>Test1</Link>
-            <br />
-            <Link to={'/users/20'}>Test2</Link>
-            <br />
-            <Link to={'/users/21'}>Test3</Link>
-            <button onClick={this.props.logout}>LOGOUT</button>
-            <br />
+          
           </div>
           <br />
           <br />

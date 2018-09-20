@@ -1,9 +1,9 @@
 .below-cover-nav {
   position: relative;
+  top: -4px;
+  left: -1px;
   height: 43px;
   width: 651px;
-  top: -236px;
-  left: 126px;
   background-color: #fff;
   border: 1px solid #e9eaed;
   border-top: none;

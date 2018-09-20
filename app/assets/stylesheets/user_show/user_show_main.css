@@ -17,10 +17,9 @@
 .cover-photo-container {
   position: relative;
   z-index: 0;
-  margin: 0 auto;
   width: 851px;
   height: 315px;
-  left: -168px;
+  left: 126px;
 }
 .cover-photo {
   position: relative;
@@ -63,15 +62,14 @@
 
 .show-page-main {
   position: relative;
-  top: 271px;
+  top: 78px;
   width: 851px;
   left: 128px;
-
+  margin-bottom: 85px;
 }
 
 .show-page-post-section {
   position: relative;
   left: 334px;
   width: 518px;
-  top: -189px;
 }

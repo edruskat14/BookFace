@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { makeFriendRequest } from '../../actions/friend_actions';
+import { makeFriendRequest, removeFriend } from '../../actions/friend_actions';
 import React from 'react';
 
 const msp = (state, ownProps) => {
@@ -11,7 +11,8 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
   return {
-    makeFriendRequest: (request) => dispatch(makeFriendRequest(request))
+    makeFriendRequest: (request) => dispatch(makeFriendRequest(request)),
+    removeFriend: (userA, userB) => dispatch(removeFriend(userA, userB))
   };
 };
 
@@ -23,7 +24,7 @@ const FriendRequest = (props) => {
     pend ? buttonText = 'Request pending...' : buttonText = 'AddFriend'
 
   return (
-    <div>
+    <div className='friend-button-div'>
       <button className='add-friend-button' onClick={() => props.makeFriendRequest({friender_id: props.currentUser.id, friendee_id: props.pageOwner.id})}>{buttonText}</button>
     </div>
   )

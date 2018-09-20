@@ -53,28 +53,4 @@ const Greeting = (props) => {
     )
 };
 
-
-
-
-
-
-// const Greeting = (props) => {
-//   if(!props.currentUser) {
-//     return(
-//       <div>
-//         <Link to='/login'>Log In</Link>
-//         <Link to='/signup'>Sign Up</Link>
-//       </div>
-//     )
-//   } else {
-//     return(
-//       <div>
-//         <h1>Welcome to BookFace!</h1>
-//       </div>
-//     )
-//   }
-// };
-
 export default Greeting;
-
-// <button onClick={props.logout}>Logout</button>

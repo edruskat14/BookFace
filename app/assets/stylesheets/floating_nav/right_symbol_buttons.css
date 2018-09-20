@@ -63,9 +63,16 @@
   position: relative;
   top: 2.8px;
 }
+.downward-arrow-div {
+
+}
 .nav-downward-arrow-symbol {
   position: relative;
   width: 17px;
   height: 13px;
   top: 7px;
+}
+
+.outer-nav-button-dropdown-div {
+  width: 37px;
 }

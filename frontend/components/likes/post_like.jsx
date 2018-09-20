@@ -8,8 +8,11 @@ const PostLike = (props) => {
   });
   const likeAndNotify = () => {
     props.createPostLike(props.post, {liker_id: props.currentUser.id, post_id: props.post.id });
-    props.createNotification({ user_id: props.poster.id, message: `${props.currentUser.username} has liked your post!` });
-  }
+    if (props.currentUser !== props.poster) {
+      props.createNotification({ user_id: props.poster.id, message: `${props.currentUser.username} has liked your post!` });
+    }
+  };
+
   let likeButton = <button className='post-like-button' onClick={likeAndNotify}><img src={window.like_symbol} className='post-like-symbol' /> <p className='post-like-unlike' >Like</p> </button>
 
   if (alreadyLiked.length > 0) {

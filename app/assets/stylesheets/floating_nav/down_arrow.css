@@ -1,0 +1,50 @@
+.down-arrow-div {
+  position: relative;
+}
+.nav-down-arrow-symbol {
+  position: relative;
+  width: 17px;
+  height: 15px;
+  top: -2px;
+  left: -8px;
+}
+.down-arrow-button {
+  position: relative;
+  width: 17px;
+  height: 13px;
+  top: 7px;
+  left: 5px;
+}
+.down-arrow-button:hover {
+  cursor: pointer;
+}
+.down-arrow-button:focus + .down-arrow-dropdown {
+  display: block;
+}
+.down-arrow-dropdown:hover {
+  display: block;
+}
+
+.down-arrow-dropdown {
+  display: none;
+  height: 40px;
+  width: 120px;
+  position: relative;
+  top: 15px;
+  left: -70px;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-top: none;
+}
+.logout-button {
+  height: 40px;
+  width: 120px;
+  border: none;
+}
+.logout-button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(66, 103, 178);
+}
+.logout-button:focus {
+  outline: none;
+}

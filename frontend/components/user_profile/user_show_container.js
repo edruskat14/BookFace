@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
 import { fetchAllPosts } from '../../actions/post_actions';
 import userShow from './user_show';
 import { fetchUsers, fetchFriends } from '../../actions/user_actions';
@@ -17,7 +16,6 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
   return {
-    logout: () => dispatch(logout()),
     fetchAllPosts: (userId, feed) => dispatch(fetchAllPosts(userId, feed)),
     fetchUsers: () => dispatch(fetchUsers()),
     fetchNotifications: (user) => dispatch(fetchNotifications(user)),

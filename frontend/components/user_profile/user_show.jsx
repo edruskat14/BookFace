@@ -31,7 +31,7 @@ class userShow extends React.Component {
     let requestButton = null
     if (!this.props.friendsWith) {
       requestButton = <FriendRequest currentUser={currentUser} pageOwner={pageOwner} />
-    };
+    }
     if (pageOwner === currentUser) { requestButton = null }
     const postsToRender = this.props.posts;
 
@@ -47,6 +47,14 @@ class userShow extends React.Component {
         <div className='show-page-topper'>
           <div className='cover-photo-container'>
             <img src={window.beatles} className='cover-photo'/>
+
+            <nav className='below-cover-nav '>
+              <button className='all-below-cover-buttons timeline-button'>Timeline</button>
+              <button className='all-below-cover-buttons'>About</button>
+              <button className='all-below-cover-buttons'>Friends</button>
+              <button className='all-below-cover-buttons'>Photos</button>
+              <button className='all-below-cover-buttons'>More</button>
+            </nav>
           </div>
           <div className='profile-picture-container'>
             <img src={window.bookface_jim} className='profile-picture'/>
@@ -55,13 +63,7 @@ class userShow extends React.Component {
             {pageOwner.username}
           </div>
           {requestButton}
-          <nav className='below-cover-nav '>
-            <button className='all-below-cover-buttons timeline-button'>Timeline</button>
-            <button className='all-below-cover-buttons'>About</button>
-            <button className='all-below-cover-buttons'>Friends</button>
-            <button className='all-below-cover-buttons'>Photos</button>
-            <button className='all-below-cover-buttons'>More</button>
-          </nav>
+
         </div>
 
         <main className='show-page-main'>
@@ -72,7 +74,6 @@ class userShow extends React.Component {
               {posts}
             </div>
             <br />
-            <button onClick={this.props.logout}>LOGOUT</button>
         </main>
       </div>
     );

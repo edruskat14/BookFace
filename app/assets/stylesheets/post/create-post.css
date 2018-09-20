@@ -39,3 +39,6 @@
   cursor: pointer;
   background-color: #365899;
 }
+.create-post-submit-button:focus{
+  outline: none;
+}

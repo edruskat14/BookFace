@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
 import userProfileEdit from './user_profile_edit';
 
 
@@ -12,7 +11,6 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
   return {
-    logout: () => dispatch(logout())
   };
 };
 

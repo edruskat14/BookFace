@@ -13,7 +13,6 @@ class userProfileEdit extends React.Component {
 
         <Link to={'/feed'}>Back To Feed</Link>
         <br /> <br />
-        <button onClick={this.props.logout}>LOGOUT</button>
       </div>
     );
   }

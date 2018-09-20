@@ -42,6 +42,7 @@
 
 .single-user-search-item:hover {
   background-color: #e9ebee;
+  border: none;
 }
 
 .user-search-link {
