@@ -26,7 +26,7 @@ class CreatePostForm extends React.Component {
     if (this.props.currentUser !== this.props.pageOwner) {
       placehold = `Write something to ${this.props.pageOwner.username}...`
     }
-    debugger
+
     return (
       <form className='create-post-form' onSubmit={this.onSubmit}>
         <textarea className='create-post-text' onChange={this.handleChange}value={this.state.body} placeholder={placehold}/>

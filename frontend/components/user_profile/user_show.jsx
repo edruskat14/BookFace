@@ -34,7 +34,7 @@ class userShow extends React.Component {
 
     const pageOwner = this.props.pageOwner || { username: '', id: 1000 };
     const currentUser = this.props.currentUser || { username: '' };
-    debugger
+
     let requestButton = null
     if (!this.props.friendsWith) {
       requestButton = <FriendRequest currentUser={currentUser} pageOwner={pageOwner} />
