@@ -4,6 +4,7 @@ import { createPost } from '../../actions/post_actions';
 import { createNotification } from '../../actions/notification_actions';
 
 const msp = (state, ownProps) => {
+  debugger
   return {
     currentUser: state.entities.users.general[state.session.id],
     post: {body: ''}

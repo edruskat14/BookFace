@@ -17,6 +17,7 @@ class userShow extends React.Component {
       if (this.props.match.params.userId !== nextProps.match.params.userId) {
         this.props.fetchAllPosts(nextProps.match.params.userId, false);
         this.props.fetchFriends(nextProps.match.params.userId)
+        this.props.fetchUsers();
       }
   }
 
@@ -30,9 +31,10 @@ class userShow extends React.Component {
   }
 
   render() {
-    const pageOwner = this.props.pageOwner || { username: '' };
-    const currentUser = this.props.currentUser || { username: '' };
 
+    const pageOwner = this.props.pageOwner || { username: '', id: 1000 };
+    const currentUser = this.props.currentUser || { username: '' };
+    debugger
     let requestButton = null
     if (!this.props.friendsWith) {
       requestButton = <FriendRequest currentUser={currentUser} pageOwner={pageOwner} />
