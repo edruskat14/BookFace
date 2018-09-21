@@ -17,14 +17,15 @@ const mdp = (dispatch) => {
 
 const CommentIndexItem = (props) => {
   let delButton = null;
+  const commenter = props.commenter || { id : null, username: '' }
   if (props.currentUser.id === props.comment.commenter_id) {
     delButton =   <button onClick={() => props.deleteComment(props.comment)} className='delete-comment-button'>Remove</button>
   }
   return (
     <div className='comment-main'>
       <header className='comment-name'>
-        <Link to={`/users/${props.commenter.id}`} className='comment-name-link'>
-          {props.commenter.username}
+        <Link to={`/users/${commenter.id}`} className='comment-name-link'>
+          {commenter.username}
         </Link>
       </header>
       <div className='comment-body'>

@@ -17,7 +17,6 @@ class ProPicForm extends React.Component {
     if (this.state.proPic !== null) {
       const formData = new FormData();
       formData.append('user[photo]', this.state.proPic);
-      debugger
       this.props.updateUser(this.props.currentUser, formData);
     }
   }

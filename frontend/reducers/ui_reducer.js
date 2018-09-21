@@ -11,7 +11,7 @@ const uiReducer = (state = preState, action) => {
     case OFF_MODAL:
       return Object.assign({}, state, { modal: 'off' });
     default:
-      return state;
+      return preState;
   };
 };
 

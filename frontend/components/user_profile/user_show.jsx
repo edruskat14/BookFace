@@ -14,7 +14,7 @@ class userShow extends React.Component {
 
   }
   componentWillMount() {
-
+    this.props.fetchUser(this.props.pageOwner)
   }
   componentDidMount(){
 
@@ -22,7 +22,7 @@ class userShow extends React.Component {
     this.props.fetchAllPosts(this.props.match.params.userId, false);
     this.props.fetchNotifications(this.props.currentUser);
     this.props.fetchFriendRequests(this.props.currentUser);
-    this.props.fetchFriends(this.props.currentUser);
+    this.props.fetchFriends(this.props.match.params.userId);
   }
 
   render() {
@@ -33,13 +33,20 @@ class userShow extends React.Component {
     if (!this.props.friendsWith) {
       requestButton = <FriendRequest currentUser={currentUser} pageOwner={pageOwner} />
     }
-    if (pageOwner === currentUser) { requestButton = null }
+    let proPicButton = null
+    if (pageOwner === currentUser) {
+      proPicButton = <button onClick={this.props.turnOnModal} className='pro-pic-edit-button'><img className='pro-pic-camera' src={window.camera_icon} /><p className='update-profile-picture'>Update Profile Picture</p>
+      </button>
+      requestButton = null
+     }
     const postsToRender = this.props.posts;
 
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
     const posts = postsToRender.map((post) => {
       return <PostIndexItemContainer post={post} key={post.id}/>;
     });
+
+
     return (
         <div className='user-show-all-content'>
           <nav>
@@ -65,8 +72,7 @@ class userShow extends React.Component {
             </div>
             <div className='profile-picture-container'>
               <img src={pageOwner.photoUrl} className='profile-picture'/>
-                <button onClick={this.props.turnOnModal} className='pro-pic-edit-button'><img className='pro-pic-camera' src={window.camera_icon} /><p className='update-profile-picture'>Update Profile Picture</p>
-                </button>
+            {proPicButton}
             </div>
             <div className='username-f-and-c'>
               {pageOwner.username}

@@ -20,7 +20,7 @@ const mdp = (dispatch) => {
     fetchFriendRequests: (user) => dispatch(fetchFriendRequests(user)),
     logout: () => dispatch(logout()),
     fetchUsers: () => dispatch(fetchUsers()),
-    fetchFriends: (user) => dispatch(fetchFriends(user)),
+    fetchFriends: (id) => dispatch(fetchFriends(id)),
     fetchAllPosts: (userId, feed) => dispatch(fetchAllPosts(userId, feed)),
     fetchAllComments: (posts) => dispatch(fetchAllComments(posts)),
     fetchNotifications: (user) => dispatch(fetchNotifications(user))

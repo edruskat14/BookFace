@@ -11,6 +11,7 @@
     height: 42px;
     align-items: center;
     z-index: 1;
+    font-family: sans-serif;
 }
 
 .nav-search-with-logo {
@@ -95,6 +96,7 @@
   padding: 0 10px;
   text-align: center;
   text-decoration: none;
+  font-family: sans-serif;
 }
 .show-page-button:hover {
   cursor: pointer;

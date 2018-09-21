@@ -2,6 +2,7 @@ import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions';
 import { RECEIVE_ALL_POSTS } from '../actions/post_actions';
 
 const commentsReducer = (state = {}, action) => {
+  Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ALL_POSTS:
       const allComs = action.data.comments

@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 .down-arrow-button:focus + .down-arrow-dropdown {
-  display: block;
+  display: grid;
 }
 .down-arrow-dropdown:hover {
   display: block;

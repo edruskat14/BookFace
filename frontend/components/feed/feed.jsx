@@ -13,7 +13,7 @@ class Feed extends React.Component {
   componentDidMount() {
     this.props.fetchFriendRequests(this.props.currentUser);
     this.props.fetchUsers();
-    this.props.fetchFriends(this.props.currentUser);
+    this.props.fetchFriends(this.props.currentUser.id);
     this.props.fetchAllPosts(this.props.currentUser.id, true);
     this.props.fetchNotifications(this.props.currentUser);
     // this.props.fetchAllComments(this.props.posts);
@@ -43,7 +43,7 @@ class Feed extends React.Component {
             {posts}
           </div>
           <div className='feed-left'>
-            
+
           </div>
           <br />
           <br />

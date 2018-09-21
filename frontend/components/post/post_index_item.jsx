@@ -12,20 +12,26 @@ const PostIndexItem = (props) => {
 
       const poster = props.poster || { username: '' }
       const postee = props.postee || { username: '' }
-
+      let name1 = poster.username
+      let name2 = postee.username
+      let arrow = <img className='post-right-arrow' src={window.right_arrow_symbol} />
+      if (name1 === name2) {
+        name2 = null;
+        arrow = null;
+      }
       const postDate = new Date(props.post.created_at).toString().split(' ').slice(1, 4).join(' ');
   return (
     <div className='post-main'>
         <div className='post-names'>
           <div className='postee-name'>
             <Link to={`/users/${poster.id}`} className='post-name-link'>
-              {poster.username}
+              {name1}
             </Link>
           </div>
-          <img className='post-right-arrow' src={window.right_arrow_symbol} />
+          {arrow}
           <div className='poster-name'>
             <Link to={`/users/${postee.id}`} className='post-name-link'>
-              {postee.username}
+              {name2}
             </Link>
           </div>
         </div>

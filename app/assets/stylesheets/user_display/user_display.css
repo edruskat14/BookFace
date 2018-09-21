@@ -32,12 +32,12 @@
 /* display item */
 
 .single-user-search-item {
-  height: 65px;
+  height: 110px;
   background-color: #fff;
   border: 1px solid #dddfe2;
   text-align: center;
   margin: 5px;
-  padding-top: 45px;
+  padding-top: 20px;
 }
 
 .single-user-search-item:hover {
@@ -47,4 +47,15 @@
 
 .user-search-link {
   text-decoration: none;
+}
+.search-img-div {
+  position: relative;
+}
+.user-search-photo {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  position: relative;
+  margin-top: 10px;
 }

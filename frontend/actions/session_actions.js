@@ -13,6 +13,7 @@ const receiveCurrentUser = (user) => {
 }
 
 export const login = (inputUser) => {
+  debugger
   return dispatch => {
     return SessionApiUtil.login(inputUser).then((user) => {
       return dispatch(receiveCurrentUser(user)), err => {
@@ -41,6 +42,7 @@ export const signup = (inputUser) => {
 };
 
 export const receiveErrors = (errors) => {
+  debugger
   return {
     type: RECEIVE_SESSION_ERRORS,
     errors

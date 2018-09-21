@@ -12,9 +12,9 @@ export const fetchUsers = () => {
   };
 };
 
-export const fetchFriends = (user) => {
+export const fetchFriends = (id) => {
   return dispatch => {
-    return UserApiUtil.fetchFriends(user).then((friends) => {
+    return UserApiUtil.fetchFriends(id).then((friends) => {
       return dispatch({ type: RECEIVE_ALL_FRIENDS, friends })
     });
   };
@@ -29,7 +29,6 @@ export const fetchUser = (id) => {
 };
 
 export const updateUser = (user, data) => {
-  debugger
   return dispatch => {
     return UserApiUtil.updateUser(user, data).then((user) => {
       return dispatch({ type: RECEIVE_USER, user });
