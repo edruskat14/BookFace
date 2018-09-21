@@ -4,6 +4,7 @@ import PostIndexItemContainer from '../post/post_index_item_container';
 import CreatePostFormContainer from '../post/create_post_form_container';
 import FriendRequest from '../friend/friend_request';
 import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_container';
+import ProPicFormContainer from '../profile_picture/pro_pic_form_container';
 
 class userShow extends React.Component {
   constructor(props) {
@@ -40,43 +41,51 @@ class userShow extends React.Component {
       return <PostIndexItemContainer post={post} key={post.id}/>;
     });
     return (
-      <div className='user-show-all-content'>
-        <nav>
-          <FloatingNavBarContainer />
-        </nav>
-        <div className='show-page-topper'>
-          <div className='cover-photo-container'>
-            <img src={window.beatles} className='cover-photo'/>
-
-            <nav className='below-cover-nav '>
-              <button className='all-below-cover-buttons timeline-button'>Timeline</button>
-              <button className='all-below-cover-buttons'>About</button>
-              <button className='all-below-cover-buttons'>Friends</button>
-              <button className='all-below-cover-buttons'>Photos</button>
-              <button className='all-below-cover-buttons'>More</button>
-            </nav>
+        <div className='user-show-all-content'>
+          <nav>
+            <FloatingNavBarContainer />
+          </nav>
+          <div className={`modal-${this.props.modal}`}>
+            <ProPicFormContainer />
+            <button onClick={this.props.turnOffModal} className={`modal-${this.props.modal}-button`}>
+            </button>
           </div>
-          <div className='profile-picture-container'>
-            <img src={pageOwner.photoUrl} className='profile-picture'/>
-            <div className='pro-pic-edit-button'></div>
-          </div>
-          <div className='username-f-and-c'>
-            {pageOwner.username}
-          </div>
-          {requestButton}
 
-        </div>
+          <div className='show-page-topper'>
+            <div className='cover-photo-container'>
+              <img src={window.beatles} className='cover-photo'/>
 
-        <main className='show-page-main'>
-
-            <div className='show-page-post-section'>
-              <CreatePostFormContainer pageOwner={pageOwner} />
-              <br /><br />
-              {posts}
+              <nav className='below-cover-nav '>
+                <button className='all-below-cover-buttons timeline-button'>Timeline</button>
+                <button className='all-below-cover-buttons'>About</button>
+                <button className='all-below-cover-buttons'>Friends</button>
+                <button className='all-below-cover-buttons'>Photos</button>
+                <button className='all-below-cover-buttons'>More</button>
+              </nav>
             </div>
-            <br />
-        </main>
-      </div>
+            <div className='profile-picture-container'>
+              <img src={pageOwner.photoUrl} className='profile-picture'/>
+                <button onClick={this.props.turnOnModal} className='pro-pic-edit-button'><img className='pro-pic-camera' src={window.camera_icon} /><p className='update-profile-picture'>Update Profile Picture</p>
+                </button>
+            </div>
+            <div className='username-f-and-c'>
+              {pageOwner.username}
+            </div>
+            {requestButton}
+
+          </div>
+
+          <main className='show-page-main'>
+
+              <div className='show-page-post-section'>
+                <CreatePostFormContainer pageOwner={pageOwner} />
+                <br /><br />
+                {posts}
+              </div>
+              <br />
+
+          </main>
+        </div>
     );
   }
 }

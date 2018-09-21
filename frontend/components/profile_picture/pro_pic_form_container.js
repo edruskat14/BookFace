@@ -4,7 +4,8 @@ import ProPicForm from './pro_pic_form';
 
 const msp = (state) => {
   return {
-    currentUser: state.entities.users.general[state.session.id]
+    currentUser: state.entities.users.general[state.session.id],
+    modal: state.ui.modal
   };
 };
 

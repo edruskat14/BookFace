@@ -43,7 +43,7 @@ class Feed extends React.Component {
             {posts}
           </div>
           <div className='feed-left'>
-            <ProPicFormContainer />
+            
           </div>
           <br />
           <br />

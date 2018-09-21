@@ -24,10 +24,14 @@ class ProPicForm extends React.Component {
 
   render() {
     return (
-      <form className='upload-pro-pic-form' onSubmit={this.handleSubmit}>
-        <input type='file' onChange={this.handleChange}/>
-        <input type='submit' value='Update' />
-      </form>
+
+      <div className={`upload-pro-pic-all`}>
+        <form className='upload-pro-pic-form' onSubmit={this.handleSubmit}>
+          <input type='file' className='select-file-button'   onChange={this.handleChange}/>
+          <input type='submit' className='select-file-submit' value='Update' />
+        </form>
+      </div>
+
     );
   }
 };

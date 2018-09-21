@@ -28,7 +28,7 @@ class NavBarSearch extends React.Component {
       <div className='nav-search'>
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} className='nav-search-text' type='text' value={this.state.text} placeholder='Search'/>
-          <input type='submit' onClick={this.handleSubmit} className='nav-search-button' value={`${<img src={window.search_mag_glass} className='search=mag-glass' />}`} />
+          <input type='submit' onClick={this.handleSubmit} className='nav-search-button' value='GO!' />
         </form>
       </div>
     );
