@@ -92,8 +92,15 @@ class userShow extends React.Component {
                 <br /><br />
                 {posts}
               </div>
-              <br />
-
+              <div className='show-page-left'>
+                <div className='balloons-div'>
+                  <img src={window.birthday_balloons} className='birthday-balloons' />
+                  <p className='happy-birthday'>Happy Birthday!</p>
+                </div>
+                <div>
+                  <p className='birthday-if-statement'>(if its your birthday)</p>
+                </div>
+              </div>
           </main>
         </div>
     );

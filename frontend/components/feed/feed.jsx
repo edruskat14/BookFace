@@ -16,10 +16,7 @@ class Feed extends React.Component {
     this.props.fetchFriends(this.props.currentUser.id);
     this.props.fetchAllPosts(this.props.currentUser.id, true);
     this.props.fetchNotifications(this.props.currentUser);
-    // this.props.fetchAllComments(this.props.posts);
-
   }
-  //   this.props.fetchProfiles();
 
   render() {
     const postsToRender = this.props.posts;
@@ -43,7 +40,9 @@ class Feed extends React.Component {
             {posts}
           </div>
           <div className='feed-left'>
-
+            <div>
+              <img src={window.thumbs_up} className='thumbs-up-sponge'/>
+            </div>
           </div>
           <br />
           <br />

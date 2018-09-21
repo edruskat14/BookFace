@@ -16,11 +16,18 @@
 .feed-posts {
   position: relative;
   top: 12px;
-  left: 304px;
+  left: 414px;
 }
 
 .feed-left {
-  position: absolute;
-  left: 111px;
-  top: 16px;
+  position: relative;
+  left: -420px;
+  top: 13px;
+  height: 700px;
+  width: 300px;
+}
+
+.thumbs-up-sponge {
+  position: relative;
+  width: 300px;
 }

@@ -49,10 +49,35 @@
   width: 851px;
   left: 128px;
   margin-bottom: 85px;
+  display: flex;
 }
 
 .show-page-post-section {
   position: relative;
   left: 334px;
   width: 518px;
+}
+
+.show-page-left {
+  position: relative;
+  height: 700px;
+  width: 314px;
+  margin: 0;
+  left: -514px;
+}
+.balloons-div {
+  display: flex;
+}
+.birthday-balloons {
+  height: 230px;
+  width: 180px;
+}
+.happy-birthday {
+  font-size: 18px;
+  color: blue;
+}
+.birthday-if-statement {
+  font-size: 8px;
+  position: relative;
+  left: 100px;
 }
