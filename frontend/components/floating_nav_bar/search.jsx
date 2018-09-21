@@ -20,6 +20,7 @@ class NavBarSearch extends React.Component {
       return;
     } else {
       this.props.searchUsers(this.state.text).then(() => this.props.history.push('/search_results'));
+      this.setState({ text: '' })
     }
   }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { deleteComment }  from '../../actions/comment_actions';
 import { Link } from 'react-router-dom';
+import { fetchAllPosts } from '../../actions/post_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -11,13 +12,15 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
   return {
-    deleteComment: (com) => dispatch(deleteComment(com))
+    deleteComment: (com) => dispatch(deleteComment(com)),
+    fetchAllPosts: (id, val) => dispatch(fetchAllPosts(id, val))
   };
 };
 
 const CommentIndexItem = (props) => {
   let delButton = null;
   const commenter = props.commenter || { id : null, username: '' }
+
   if (props.currentUser.id === props.comment.commenter_id) {
     delButton =   <button onClick={() => props.deleteComment(props.comment)} className='delete-comment-button'>Remove</button>
   }

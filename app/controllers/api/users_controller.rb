@@ -34,7 +34,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    n = 1
+    render :show
   end
 
 

@@ -3,6 +3,7 @@ import CreateCommentForm from './create_comment_form';
 import { createComment } from '../../actions/comment_actions';
 import { createNotification } from '../../actions/notification_actions';
 
+
 const msp = (state, ownProps) => {
   return {
     currentUser: state.entities.users.general[state.session.id],
@@ -13,7 +14,7 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
   return {
     createComment: (post, comment) => dispatch(createComment(post, comment)),
-    createNotification: (user, notif) => dispatch(createNotification(user, notif))
+    createNotification: (user, notif) => dispatch(createNotification(user, notif)),
   };
 };
 

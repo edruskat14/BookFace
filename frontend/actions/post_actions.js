@@ -3,6 +3,7 @@ import * as PostApiUtil from '../util/post_api_util';
 export const RECEIVE_ALL_POSTS = 'RECEIVE_ALL_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const REMOVE_POST = 'REMOVE_POST';
+export const CLEAR_POSTS = 'CLEAR_POSTS';
 
 export const fetchAllPosts = (user_id, feed) => {
 
@@ -32,4 +33,10 @@ export const deletePost = (post) => {
       return dispatch({ type: REMOVE_POST, post });
     });
   };
+};
+
+export const clearPosts = () => {
+  return ({
+    type: CLEAR_POSTS
+  });
 };

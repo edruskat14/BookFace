@@ -13,11 +13,15 @@ class userShow extends React.Component {
     this.state = { pageOwner: this.props.pageOwner }
 
   }
-  componentWillMount() {
-    this.props.fetchUser(this.props.pageOwner)
+  componentWillReceiveProps(nextProps) {
+      if (this.props.match.params.userId !== nextProps.match.params.userId) {
+        this.props.fetchAllPosts(nextProps.match.params.userId, false);
+        this.props.fetchFriends(nextProps.match.params.userId)
+      }
   }
-  componentDidMount(){
 
+
+  componentDidMount(){
     this.props.fetchUsers();
     this.props.fetchAllPosts(this.props.match.params.userId, false);
     this.props.fetchNotifications(this.props.currentUser);

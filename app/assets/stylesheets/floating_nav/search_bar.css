@@ -23,3 +23,11 @@
   cursor: pointer;
   background-color: #ebedf0;
 }
+
+.nav-search-text:focus {
+  outline: none;
+}
+
+.nav-search-button:focus {
+  outline: none;
+}

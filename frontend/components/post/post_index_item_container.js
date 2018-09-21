@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import PostIndexItem from './post_index_item';
 import { deleteComment } from '../../actions/comment_actions';
+import { fetchAllPosts } from '../../actions/post_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -13,4 +14,11 @@ const msp = (state, ownProps) => {
   };
 };
 
-export default connect(msp)(PostIndexItem);
+const mdp = (dispatch) => {
+  return {
+    clearPosts: () => dispatch(clearPosts()),
+    fetchAllPosts: (id, val) => dispatch(fetchAllPosts(id, val))
+  };
+};
+
+export default connect(msp, mdp)(PostIndexItem);
