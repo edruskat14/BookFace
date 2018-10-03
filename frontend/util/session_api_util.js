@@ -9,7 +9,7 @@ export const login = (user) => {
   return $.ajax({
     method: 'POST',
     url: '/api/session',
-    data: { user, profile: user.profile }
+    data: { user, profile: user.profile },
   })
 };
 export const logout = () => {

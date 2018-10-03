@@ -14,13 +14,15 @@ class userShow extends React.Component {
 
   }
   componentWillReceiveProps(nextProps) {
-      if (this.props.match.params.userId !== nextProps.match.params.userId) {
-        this.props.fetchAllPosts(nextProps.match.params.userId, false);
-        this.props.fetchFriends(nextProps.match.params.userId)
-        this.props.fetchUsers();
-      }
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.fetchAllPosts(nextProps.match.params.userId, false);
+      this.props.fetchFriends(nextProps.match.params.userId)
+      this.props.fetchUsers();
+    }
   }
+  componentDidUpdate() {
 
+  }
 
   componentDidMount(){
     this.props.fetchUsers();
@@ -31,8 +33,10 @@ class userShow extends React.Component {
   }
 
   render() {
-
-    const pageOwner = this.props.pageOwner || { username: '', id: 1000 };
+    let pageOwner = { username: '' };
+    if (this.props.pageOwner) {
+      pageOwner = this.props.pageOwner;
+    }
     const currentUser = this.props.currentUser || { username: '' };
 
     let requestButton = null
@@ -46,13 +50,10 @@ class userShow extends React.Component {
       requestButton = null
      }
     const postsToRender = this.props.posts;
-
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
     const posts = postsToRender.map((post) => {
       return <PostIndexItemContainer post={post} key={post.id}/>;
     });
-
-
     return (
         <div className='user-show-all-content'>
           <nav>
@@ -69,11 +70,7 @@ class userShow extends React.Component {
               <img src={window.beatles} className='cover-photo'/>
 
               <nav className='below-cover-nav '>
-                <button className='all-below-cover-buttons timeline-button'>Timeline</button>
-                <button className='all-below-cover-buttons'>About</button>
-                <button className='all-below-cover-buttons'>Friends</button>
-                <button className='all-below-cover-buttons'>Photos</button>
-                <button className='all-below-cover-buttons'>More</button>
+
               </nav>
             </div>
             <div className='profile-picture-container'>
@@ -100,7 +97,7 @@ class userShow extends React.Component {
                   <p className='happy-birthday'>Happy Birthday!</p>
                 </div>
                 <div>
-                  <p className='birthday-if-statement'>(if its your birthday)</p>
+                  <p className='birthday-if-statement'>(if it's your birthday)</p>
                 </div>
               </div>
           </main>
@@ -110,3 +107,8 @@ class userShow extends React.Component {
 }
 
 export default userShow;
+// <button className='all-below-cover-buttons timeline-button'>Timeline</button>
+// <button className='all-below-cover-buttons'>About</button>
+// <button className='all-below-cover-buttons'>Friends</button>
+// <button className='all-below-cover-buttons'>Photos</button>
+// <button className='all-below-cover-buttons'>More</button>

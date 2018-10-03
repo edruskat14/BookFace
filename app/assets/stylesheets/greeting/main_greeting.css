@@ -128,3 +128,8 @@
   cursor: pointer;
   background-color: blue;
 }
+
+.session-error {
+  font-size: 10px;
+  color: red;
+}

@@ -6,7 +6,8 @@
   list-style: none;
   top: 7px;
   right: 397px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   border-right: 1px solid rgba(100, 100, 100, 0.4);
 }
 

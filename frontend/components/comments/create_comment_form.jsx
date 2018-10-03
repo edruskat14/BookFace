@@ -14,12 +14,13 @@ class CreateCommentForm extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.props.createComment(this.props.post, this.state);
-    if (this.props.currentUser.id !== this.props.post.poster_id) {
-      this.props.createNotification({ user_id: this.props.post.poster_id, message: `${this.props.currentUser.username} has commented on your post.` })
+    if (this.state.body !== '') {
+      this.props.createComment(this.props.post, this.state);
+      if (this.props.currentUser.id !== this.props.post.poster_id) {
+        this.props.createNotification({ user_id: this.props.post.poster_id, message: `${this.props.currentUser.username} has commented on your post.` })
+      }
+      this.setState({body: ''});
     }
-    this.setState({body: ''});
-
   }
 
   render() {

@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
       store = configureStore();
     }
     //test
-    window.fetchAllComments = fetchAllComments;
-    window.dispatch = store.dispatch;
-    window.logout = logout;
+    // window.fetchAllComments = fetchAllComments;
+    // window.dispatch = store.dispatch;
+    // window.logout = logout;
     // window.fetchProfiles = fetchProfiles;
-    window.fetchProfile = fetchProfile;
+    // window.fetchProfile = fetchProfile;
     window.getState = store.getState;
-    window.dispatch = store.dispatch;
-    window.fetchUsers = fetchUsers;
-    window.fetchAllPosts = fetchAllPosts;
+    // window.dispatch = store.dispatch;
+    // window.fetchUsers = fetchUsers;
+    // window.fetchAllPosts = fetchAllPosts;
     //test
 
   window.ajaxLogin = SessionApiUtil.login;

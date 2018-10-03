@@ -7,7 +7,7 @@ const msp = (state, ownProps) => {
 
   return {
     currentUser: state.entities.users.general[state.session.id],
-    post: {body: ''}
+    post: {body: ''},
   };
 };
 

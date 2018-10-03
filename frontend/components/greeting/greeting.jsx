@@ -8,6 +8,12 @@ import SignupFormContainer from '../session/signup_form_container';
 
 
 const Greeting = (props) => {
+  let errors = null;
+  if (props.errors.length > 0){
+    errors = props.errors.map((err) => {
+      return <p className='session-error'>{err}</p>;
+    })
+  }
     return(
 
       <div>
@@ -42,6 +48,9 @@ const Greeting = (props) => {
               </div>
             </div>
             <div className='greet-right'>
+              <div>
+                {errors}
+              </div>
               <div className='greet-su-form'>
                 <SignupFormContainer />
               </div>

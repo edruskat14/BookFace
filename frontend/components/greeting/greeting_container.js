@@ -4,7 +4,8 @@ import Greeting from './greeting';
 
 const msp = (state) => {
   return {
-    currentUser: state.entities.users.general[state.session.id]
+    currentUser: state.entities.users.general[state.session.id],
+    errors: state.errors.session
   };
 };
 
@@ -15,5 +16,3 @@ const mdp = (dispatch) => {
 };
 
 export default connect(msp, mdp)(Greeting);
-
-//TODO not even used???

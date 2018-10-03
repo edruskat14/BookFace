@@ -7,7 +7,6 @@ import { fetchFriendRequests } from '../../actions/friend_actions';
 import { turnOnModal, turnOffModal } from '../../actions/ui_actions';
 
 const msp = (state, ownProps) => {
-
   return {
     currentUser: state.entities.users.general[state.session.id],
     pageOwner: state.entities.users.general[ownProps.match.params.userId],
