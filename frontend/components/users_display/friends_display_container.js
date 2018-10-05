@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const msp = (state) => {
   return {
-    // users: Object.values(state.entities.searchResults),
+    friendships: Object.values(state.entities.friendships.approved),
     present: 'Friends',
     absent: 'No Friends'
   };

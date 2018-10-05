@@ -51,7 +51,7 @@ class userShow extends React.Component {
       requestButton = null
      }
     let posts = null;
-    let postForm = null;
+    let postForm = <p>Befriend {pageOwner.username} to share posts with them!</p>;
     const postsToRender = this.props.posts;
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
     if (this.props.friendsWith || this.props.pageOwner === this.props.currentUser) {

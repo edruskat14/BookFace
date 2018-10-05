@@ -11,7 +11,9 @@ const msp = (state, ownProps) => {
     currentUser: state.entities.users.general[state.session.id],
     pageOwner: state.entities.users.general[ownProps.match.params.userId],
     posts: Object.values(state.entities.posts),
-    friendsWith: state.entities.users.friends[ownProps.match.params.userId],
+    friendsWith: Object.values(state.entities.friendships.approved).some((ship) => {
+      return ((ship.friender_id === state.session.id || ship.friendee_id === state.session.id) && (ship.friender_id === ownProps.match.params.userId || ship.friendee_id === ownProps.match.params.userId))
+    }),
     modal: state.ui.modal
   };
 };
