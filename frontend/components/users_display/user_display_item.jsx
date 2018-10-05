@@ -5,7 +5,7 @@ const UserDisplayItem = (props) => {
   return (
     <Link className='user-search-link' to={`/users/${props.user.id}`}>
       <div className='single-user-search-item'>
-        {props.user.username}
+        <div className='user-display-username'>{props.user.username}</div>
         <br />
         <img src={props.user.photoUrl} className='user-search-photo'/>
       </div>

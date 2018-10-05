@@ -2,8 +2,9 @@ import React from 'react';
 
 class CreatePostForm extends React.Component {
   constructor(props) {
+    debugger
     super(props);
-    this.state = {body: '', wall_id: this.props.pageOwner.id, poster_id: this.props.currentUser.id }
+    this.state = {body: '', poster_id: this.props.currentUser.id }
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -14,11 +15,13 @@ class CreatePostForm extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.props.createPost(this.props.pageOwner, this.state);
-    if (this.props.pageOwner !== this.props.currentUser) {
-      this.props.createNotification({ user_id:this.props.pageOwner.id, message: `${this.props.currentUser.username} has posted to your wall.`});
+    if (this.state.body !== '') {
+      this.props.createPost(this.props.pageOwner, {body: this.state.body, poster_id: this.state.poster_id, wall_id: this.props.pageOwner.id});
+      if (this.props.pageOwner !== this.props.currentUser) {
+        this.props.createNotification({ user_id:this.props.pageOwner.id, message: `${this.props.currentUser.username} has posted to your wall.`});
+      }
+      this.setState({body: ''})
     }
-    this.setState({body: ''})
   }
   render() {
     let placehold = "What's on your mind?"
