@@ -4,18 +4,15 @@ const approvedReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_FRIENDSHIPS:
       const allShips = Object.values(action.friendships);
-      const aprobado = {};
+      const aprobado = Object.assign({}, state);
       allShips.forEach((ship) => {
         if (ship.status === 'approved') {
           aprobado[ship.id] = ship;
         }
       })
       return aprobado;
-    case REQUEST_FRIEND:
-      return Object.assign({}, state, { [action.friendship.id]: action.friendship });
     case RECEIVE_FRIEND:
-      const stateNew = Object.assign({}, state);
-      delete stateNew[action.friendship.id];
+      const stateNew = Object.assign({}, state, {[action.friendship.id]: action.friendship});
       return stateNew;
     case REMOVE_FRIEND:
       const newState = Object.assign({}, state);

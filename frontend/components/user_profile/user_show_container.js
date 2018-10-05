@@ -22,7 +22,7 @@ const mdp = (dispatch) => {
     fetchUsers: (user) => dispatch(fetchUsers(user)),
     fetchUser: (user) => dispatch(fetchUser(user)),
     fetchNotifications: (user) => dispatch(fetchNotifications(user)),
-    fetchFriendships: (user) => dispatch(fetchFriendships(user)),
+    fetchFriendships: (id) => dispatch(fetchFriendships(id)),
     fetchFriends: (id) => dispatch(fetchFriends(id)),
     turnOnModal: () => dispatch(turnOnModal()),
     turnOffModal: () => dispatch(turnOffModal())

@@ -5,9 +5,9 @@ export const RECEIVE_FRIEND = 'RECEIVE_FRIEND';
 export const REMOVE_FRIEND = 'REMOVE_FRIEND';
 export const REQUEST_FRIEND = 'REQUEST_FRIEND';
 
-export const fetchFriendships = (user) => {
+export const fetchFriendships = (id) => {
   return dispatch => {
-    return FriendshipApiUtil.fetchFriendships(user).then((friendships) => {
+    return FriendshipApiUtil.fetchFriendships(id).then((friendships) => {
       return dispatch({ type: RECEIVE_ALL_FRIENDSHIPS, friendships });
     });
   };

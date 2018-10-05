@@ -11,7 +11,7 @@ class Feed extends React.Component {
     super(props)
   }
   componentDidMount() {
-    this.props.fetchFriendships(this.props.currentUser);
+    this.props.fetchFriendships(this.props.currentUser.id);
     this.props.fetchUsers();
     this.props.fetchFriends(this.props.currentUser.id);
     this.props.fetchAllPosts(this.props.currentUser.id, true);

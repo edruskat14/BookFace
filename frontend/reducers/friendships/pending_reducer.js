@@ -4,7 +4,7 @@ const pendingReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_FRIENDSHIPS:
       const allShips = Object.values(action.friendships);
-      const esperando = {};
+      const esperando = Object.assign({}, state);
       allShips.forEach((ship) => {
         if (ship.status === 'pending') {
           esperando[ship.id] = ship;

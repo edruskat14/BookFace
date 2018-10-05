@@ -2,7 +2,6 @@ import React from 'react';
 
 class CreatePostForm extends React.Component {
   constructor(props) {
-    debugger
     super(props);
     this.state = {body: '', poster_id: this.props.currentUser.id }
     this.handleChange = this.handleChange.bind(this);

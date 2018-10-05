@@ -17,7 +17,7 @@ const msp = (state) => {
 
 const mdp = (dispatch) => {
   return {
-    fetchFriendships: (user) => dispatch(fetchFriendships(user)),
+    fetchFriendships: (id) => dispatch(fetchFriendships(id)),
     logout: () => dispatch(logout()),
     fetchUsers: () => dispatch(fetchUsers()),
     fetchFriends: (id) => dispatch(fetchFriends(id)),

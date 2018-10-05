@@ -25,10 +25,11 @@ class userShow extends React.Component {
   }
 
   componentDidMount(){
+    this.props.fetchFriendships(this.props.match.params.userId);
     this.props.fetchUsers();
     this.props.fetchAllPosts(this.props.match.params.userId, false);
     this.props.fetchNotifications(this.props.currentUser);
-    this.props.fetchFriendships(this.props.currentUser);
+    this.props.fetchFriendships(this.props.currentUser.id);
     this.props.fetchFriends(this.props.match.params.userId);
   }
 
@@ -49,11 +50,16 @@ class userShow extends React.Component {
       </button>
       requestButton = null
      }
+    let posts = null;
+    let postForm = null;
     const postsToRender = this.props.posts;
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
-    const posts = postsToRender.map((post) => {
-      return <PostIndexItemContainer post={post} key={post.id}/>;
-    });
+    if (this.props.friendsWith || this.props.pageOwner === this.props.currentUser) {
+      posts = postsToRender.map((post) => {
+        return <PostIndexItemContainer post={post} key={post.id}/>;
+      });
+      postForm = <CreatePostFormContainer pageOwner={pageOwner} />;
+    }
     return (
         <div className='user-show-all-content'>
           <nav>
@@ -87,7 +93,7 @@ class userShow extends React.Component {
           <main className='show-page-main'>
 
               <div className='show-page-post-section'>
-                <CreatePostFormContainer pageOwner={pageOwner} />
+                {postForm}
                 <br /><br />
                 {posts}
               </div>
