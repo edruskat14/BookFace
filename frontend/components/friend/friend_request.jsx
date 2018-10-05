@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import { makeFriendRequest, removeFriend } from '../../actions/friend_actions';
+import { makeFriendRequest, removeFriend } from '../../actions/friendship_actions';
 import React from 'react';
 
 const msp = (state, ownProps) => {
   return {
-    pending: Object.values(state.entities.pendingRequests),
+    pending: Object.values(state.entities.friendships.pending),
     friends: state.entities.users.friends[ownProps.pageOwner]
   };
 };

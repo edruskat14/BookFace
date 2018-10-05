@@ -1,4 +1,4 @@
-export const fetchFriendRequests = (user) => {
+export const fetchFriendships = (user) => {
   return $.ajax({
     method: 'GET',
     url: `/api/users/${user.id}/friendships`

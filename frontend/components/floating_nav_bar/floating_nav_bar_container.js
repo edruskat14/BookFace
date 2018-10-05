@@ -8,7 +8,7 @@ const msp = (state, ownProps) => {
   return {
     currentUser: state.entities.users.general[state.session.id],
     notifications: Object.values(state.entities.notifications),
-    requests: Object.values(state.entities.pendingRequests).filter((req) => { return req.friendee_id === state.session.id })
+    requests: Object.values(state.entities.friendships.pending).filter((req) => { return req.friendee_id === state.session.id })
   };
 };
 

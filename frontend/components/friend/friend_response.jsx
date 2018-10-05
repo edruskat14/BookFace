@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { approveFriendRequest, removeFriend } from '../../actions/friend_actions';
+import { approveFriendRequest, removeFriend } from '../../actions/friendship_actions';
 import React from 'react';
 
 const msp = (state, ownProps) => {

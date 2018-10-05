@@ -28,7 +28,7 @@ class userShow extends React.Component {
     this.props.fetchUsers();
     this.props.fetchAllPosts(this.props.match.params.userId, false);
     this.props.fetchNotifications(this.props.currentUser);
-    this.props.fetchFriendRequests(this.props.currentUser);
+    this.props.fetchFriendships(this.props.currentUser);
     this.props.fetchFriends(this.props.match.params.userId);
   }
 

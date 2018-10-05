@@ -3,7 +3,7 @@ import { fetchAllPosts } from '../../actions/post_actions';
 import userShow from './user_show';
 import { fetchUsers, fetchUser, fetchFriends } from '../../actions/user_actions';
 import { fetchNotifications } from '../../actions/notification_actions';
-import { fetchFriendRequests } from '../../actions/friend_actions';
+import { fetchFriendships } from '../../actions/friendship_actions';
 import { turnOnModal, turnOffModal } from '../../actions/ui_actions';
 
 const msp = (state, ownProps) => {
@@ -22,7 +22,7 @@ const mdp = (dispatch) => {
     fetchUsers: (user) => dispatch(fetchUsers(user)),
     fetchUser: (user) => dispatch(fetchUser(user)),
     fetchNotifications: (user) => dispatch(fetchNotifications(user)),
-    fetchFriendRequests: (user) => dispatch(fetchFriendRequests(user)),
+    fetchFriendships: (user) => dispatch(fetchFriendships(user)),
     fetchFriends: (id) => dispatch(fetchFriends(id)),
     turnOnModal: () => dispatch(turnOnModal()),
     turnOffModal: () => dispatch(turnOffModal())
