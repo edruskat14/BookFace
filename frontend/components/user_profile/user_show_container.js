@@ -12,7 +12,7 @@ const msp = (state, ownProps) => {
     pageOwner: state.entities.users.general[ownProps.match.params.userId],
     posts: Object.values(state.entities.posts),
     friendsWith: Object.values(state.entities.friendships.approved).some((ship) => {
-      return ((ship.friender_id === state.session.id || ship.friendee_id === state.session.id) && (ship.friender_id === ownProps.match.params.userId || ship.friendee_id === ownProps.match.params.userId))
+      return ((ship.friender_id === state.session.id || ship.friendee_id === state.session.id) && (ship.friender_id.toString() === ownProps.match.params.userId || ship.friendee_id.toString() === ownProps.match.params.userId))
     }),
     modal: state.ui.modal
   };
