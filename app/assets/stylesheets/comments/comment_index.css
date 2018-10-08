@@ -17,7 +17,7 @@
 }
 
 .comment-name {
-  margin-right: 5px;
+  margin-right: 14px;
   font-weight: 700;
 }
 
@@ -43,9 +43,10 @@
   position: relative;
   border: none;
   background-color: #ebedf0;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 22px 22px 0;
   height: 100%;
   padding-right: 14px;
+  width: 14px;
 }
 .delete-comment-button {
   position: relative;
@@ -62,4 +63,7 @@
   border: 1px solid #4267b2;
   cursor: pointer;
   color: #fff;
+}
+.delete-comment-button:focus {
+  outline: none;
 }
