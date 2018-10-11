@@ -1,4 +1,5 @@
 .post-main {
+  position: relative;
   width: 492px;
   min-height: 140px;
   padding: 12px 12px 0 12px;
@@ -9,6 +10,9 @@
   font-family: helvetica;
   margin-bottom: 20px;
   overflow-wrap: break-word;
+}
+.post-top-row {
+  display: flex;
 }
 .post-names {
   display: flex;
@@ -46,4 +50,24 @@
   margin-bottom: 36px;
   width: 470px;
   margin: 14px auto 36px auto;
+}
+
+.delete-post-div {
+  width: 20px;
+}
+.delete-post-button {
+  border: none;
+  font-size: 16px;
+  color: #e9ebee;
+  position: absolute;
+  left: 460px;
+  top: 14px;
+}
+
+.delete-post-button:hover {
+  cursor: pointer;
+  color: #365899;
+}
+.delete-post-button:focus {
+  outline: none;
 }

@@ -29,9 +29,9 @@ export const updatePost = (post) => {
   });
 };
 
-export const deletePost = (post) => {
+export const deletePost = (id) => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/posts/${post.id}`
+    url: `/api/posts/${id}`
   });
 };

@@ -27,9 +27,9 @@ export const updatePost = (post) => {
     });
   };
 };
-export const deletePost = (post) => {
+export const deletePost = (id) => {
   return dispatch => {
-    return PostApiUtil.deletePost(post).then((post) => {
+    return PostApiUtil.deletePost(id).then((post) => {
       return dispatch({ type: REMOVE_POST, post });
     });
   };

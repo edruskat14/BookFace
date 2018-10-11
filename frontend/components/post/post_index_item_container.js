@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import PostIndexItem from './post_index_item';
 import { deleteComment } from '../../actions/comment_actions';
-import { fetchAllPosts } from '../../actions/post_actions';
+import { deletePost } from '../../actions/post_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -16,8 +16,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
   return {
-    clearPosts: () => dispatch(clearPosts()),
-    fetchAllPosts: (id, val) => dispatch(fetchAllPosts(id, val))
+    deletePost: (id) => dispatch(deletePost(id))
   };
 };
 

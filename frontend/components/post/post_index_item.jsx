@@ -12,12 +12,16 @@ const PostIndexItem = (props) => {
 
       const poster = props.poster || { username: '' }
       const postee = props.postee || { username: '' }
-      let name1 = poster.username
-      let name2 = postee.username
+      let name1 = poster.username;
+      let name2 = postee.username;
+      let remove = null;
       let arrow = <img className='post-right-arrow' src={window.right_arrow_symbol} />
       if (name1 === name2) {
         name2 = null;
         arrow = null;
+      }
+      if (poster === props.currentUser) {
+        remove = <button onClick={() => props.deletePost(props.post.id)} className='delete-post-button'>X</button>
       }
       const postDate = new Date(props.post.created_at).toString().split(' ').slice(1, 4).join(' ');
   return (
@@ -35,6 +39,7 @@ const PostIndexItem = (props) => {
             </Link>
           </div>
         </div>
+        {remove}
         <div className='post-date-posted'>
           {postDate}
         </div>
