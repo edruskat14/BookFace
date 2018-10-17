@@ -10,7 +10,7 @@ class userShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = { status: 'Timeline' }
-
+    this.handleState = this.handleState.bind(this);
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
@@ -30,6 +30,11 @@ class userShow extends React.Component {
     this.props.fetchNotifications(this.props.currentUser);
     this.props.fetchFriendships(this.props.currentUser.id);
     this.props.fetchFriends(this.props.match.params.userId);
+  }
+
+  handleState(event) {
+    debugger
+    this.setState({ status: event.currentTarget.value})
   }
 
   render() {
@@ -75,8 +80,8 @@ class userShow extends React.Component {
               <img src={window.beatles} className='cover-photo'/>
 
               <nav className='below-cover-nav '>
-                <button className='all-below-cover-buttons timeline-button'>Timeline</button>
-                <button className='all-below-cover-buttons'>Friends</button>
+                <button className='all-below-cover-buttons timeline-button' value='Timeline' onClick={this.handleState} >Timeline</button>
+                <button className='all-below-cover-buttons' value='Friends' onClick={this.handleState} >Friends</button>
 
               </nav>
             </div>

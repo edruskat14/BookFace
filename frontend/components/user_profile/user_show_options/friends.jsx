@@ -3,7 +3,9 @@ import React from 'react';
 const Friends = (props) => {
 
   return (
-    'These are my friends'
+    <div className='show-page-post-section'>
+      These are my friends
+    </div>
   )
 }
 
