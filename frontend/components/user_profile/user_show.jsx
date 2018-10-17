@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PostIndexItemContainer from '../post/post_index_item_container';
-import CreatePostFormContainer from '../post/create_post_form_container';
+
 import FriendRequest from '../friend/friend_request';
 import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_container';
 import ProPicFormContainer from '../profile_picture/pro_pic_form_container';
+import UserShowMain from './user_show_main_section';
 
 class userShow extends React.Component {
   constructor(props) {
-
     super(props);
-    this.state = { pageOwner: this.props.pageOwner }
+    this.state = { status: 'Timeline' }
 
   }
   componentWillReceiveProps(nextProps) {
@@ -50,16 +49,16 @@ class userShow extends React.Component {
       </button>
       requestButton = null
      }
-    let posts = null;
-    let postForm = <p>Befriend {pageOwner.username} to share posts with them!</p>;
-    const postsToRender = this.props.posts;
-    postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
-    if (this.props.friendsWith || this.props.pageOwner === this.props.currentUser) {
-      posts = postsToRender.map((post) => {
-        return <PostIndexItemContainer post={post} key={post.id}/>;
-      });
-      postForm = <CreatePostFormContainer pageOwner={pageOwner} />;
-    }
+    // let posts = null;
+    // let postForm = <p>Befriend {pageOwner.username} to share posts with them!</p>;
+    // const postsToRender = this.props.posts;
+    // postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
+    // if (this.props.friendsWith || this.props.pageOwner === this.props.currentUser) {
+    //   posts = postsToRender.map((post) => {
+    //     return <PostIndexItemContainer post={post} key={post.id}/>;
+    //   });
+    //   postForm = <CreatePostFormContainer pageOwner={pageOwner} />;
+    // }
     return (
         <div className='user-show-all-content'>
           <nav>
@@ -76,6 +75,8 @@ class userShow extends React.Component {
               <img src={window.beatles} className='cover-photo'/>
 
               <nav className='below-cover-nav '>
+                <button className='all-below-cover-buttons timeline-button'>Timeline</button>
+                <button className='all-below-cover-buttons'>Friends</button>
 
               </nav>
             </div>
@@ -91,12 +92,7 @@ class userShow extends React.Component {
           </div>
 
           <main className='show-page-main'>
-
-              <div className='show-page-post-section'>
-                {postForm}
-                <br /><br />
-                {posts}
-              </div>
+            <UserShowMain all={this.props} pageOwner={pageOwner} status={this.state.status}/>
               <div className='show-page-left'>
                 <div className='balloons-div'>
                   <img src={window.birthday_balloons} className='birthday-balloons' />
@@ -113,8 +109,11 @@ class userShow extends React.Component {
 }
 
 export default userShow;
-// <button className='all-below-cover-buttons timeline-button'>Timeline</button>
+// <div className='show-page-post-section'>
+//   {postForm}
+//   <br /><br />
+//   {posts}
+// </div>
 // <button className='all-below-cover-buttons'>About</button>
-// <button className='all-below-cover-buttons'>Friends</button>
 // <button className='all-below-cover-buttons'>Photos</button>
 // <button className='all-below-cover-buttons'>More</button>
