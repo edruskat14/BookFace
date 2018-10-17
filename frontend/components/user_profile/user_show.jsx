@@ -33,7 +33,6 @@ class userShow extends React.Component {
   }
 
   handleState(event) {
-    debugger
     this.setState({ status: event.currentTarget.value})
   }
 
