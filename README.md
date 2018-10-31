@@ -2,7 +2,7 @@
 
 ## BookFace  
 
-[Live site link]("https://bookface14.herokuapp.com/")  
+[Live site link](https://bookface14.herokuapp.com/)  
 
 ## Main goal
   The objective here is to make a functional Facebook clone using Ruby on Rails. While it lacks many bells and whistles included in the real Facebook, BookFace aims to support most of Facebook's basic features.
