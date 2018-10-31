@@ -20,6 +20,6 @@
   Lastly, the logout button can be accessed by clicking the downward facing triangle on the upper nav bar.
 
 ## Technologies
-  Bookface is built using the Ruby on Rails framework. Ruby is used on the backend paired with JavaScript on the frontend.  
+  BookFace is built using the Ruby on Rails framework. Ruby is used on the backend paired with JavaScript on the frontend.  
   SQL is implemented for querying the backend database.  
   React-Redux along with HTML and CSS are used on the front end to make the app real-time responsive.
