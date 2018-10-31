@@ -112,6 +112,7 @@
   cursor: pointer;
   background-color: rgba(0, 0, 0, .1);
 } */
+
 .find-friends-button:focus {
   outline: none;
 }

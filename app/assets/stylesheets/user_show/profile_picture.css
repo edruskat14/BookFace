@@ -97,8 +97,8 @@
 .select-file-button {
   position: relative;
   top: 50px;
-  left: 109px;
-  width: 12px;
+  left: 70px;
+  /* width: 12px; */
   display: block;
   color: black;
 }
