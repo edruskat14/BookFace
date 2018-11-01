@@ -25,7 +25,7 @@
   React-Redux along with HTML and CSS are used on the front end to make the app real-time responsive.
 
 
-##Features
+## Features
 
 Upon navigating to a user's profile page, BookFace will verify that the current user is friends with the owner of that page. The user can only see the posts to the page owner's wall if the two of them are friends.
 
