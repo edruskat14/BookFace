@@ -33,10 +33,6 @@ class LoginForm extends React.Component {
             <input type='password' className='login-form-ele' onChange={this.handleChange('password')} value={this.state.password}/>
           <input className='login-submit' type='submit' value='Log In'/>
         </form>
-        <div className='forgot-account-div'>
-          <p>Forgot   </p>
-          <p>account?</p>
-        </div>
       </div>
     );
   }

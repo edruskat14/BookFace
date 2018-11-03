@@ -36,6 +36,7 @@
 }
 .nav-search-bar {
   height: 25px;
+  /* width: 100%; */
   width: 446px;
   position: relative;
   left: 25px;
