@@ -42,6 +42,6 @@ class Api::UsersController < ApplicationController
   private #pirate
 
   def user_params
-    params.require(:user).permit(:username, :password, :photo)
+    params.require(:user).permit(:username, :password, :photo, :firstname, :lastname, :gender, :month, :day, :year)
   end
 end

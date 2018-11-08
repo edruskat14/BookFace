@@ -5,7 +5,7 @@ import { signup } from '../../actions/session_actions';
 const msp = (state, ownProps) => {
   return {
     errors: state.errors.session,
-    defaultState: {firstname: '', lastname: '', username: '', password: ''}
+    defaultState: {firstname: '', lastname: '', username: '', password: '', day: '' , month: '' , year: '' , gender: ''}
   };
 };
 
