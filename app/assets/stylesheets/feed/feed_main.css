@@ -25,8 +25,36 @@
   top: 13px;
   height: 700px;
   width: 300px;
+  text-align: center;
 }
-
+.other-work-head {
+  /* font-size: 14px; */
+  /* margin: 0 auto; */
+}
+.other-work-link {
+  border: none;
+  background-color: #e9ebee;
+  text-decoration: none;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.other-work-link:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+.other-work-link:focus {
+    outline: none;
+}
+.other-work-img {
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+}
 .thumbs-up-sponge {
   position: relative;
   width: 300px;
