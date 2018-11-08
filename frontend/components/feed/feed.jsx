@@ -47,7 +47,7 @@ class Feed extends React.Component {
       return <PostIndexItemContainer post={post} key={post.id}/>;
     });
 
-    const suggesters = this.findFriendsToSuggest();
+    const suggesters = this.findFriendsToSuggest().slice(0, 6);
     const makeFriends = suggesters.map((user) => {
       return <MakeNewFriendsItem user={user} key={user.id} />
     })
@@ -70,7 +70,7 @@ class Feed extends React.Component {
             </div>
           </div>
           <div className='feed-right'>
-            <h2>Make new friends</h2>
+            <h2 className='make-new-friends-header'>Make new friends</h2>
             <div className='feed-make-friends'>
               {makeFriends}
             </div>

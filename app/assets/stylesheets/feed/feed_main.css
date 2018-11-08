@@ -55,14 +55,37 @@
 .feed-right {
   position: relative;
   left: 150px;
+  width: 320px;
+  text-align: center;
 }
 .feed-make-friends {
   background-color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 320px;
+  height: 210px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
 }
+/* .make-new-friends-header {
+  margin: 0 auto;
+} */
 .make-new-friends-item {
-  
+  width: 100px;
+  height: 100px;
+
+}
+.make-new-friends-photo {
+  width: 100px;
+  height: 100px;
+
+}
+.make-new-friends-username {
+  position: relative;
+  color: #fff;
+  top: -40px;
+  overflow-wrap: break-word;
+  text-decoration: none;
+  font-weight: 700;
 }
 /* .thumbs-up-sponge {
   position: relative;
