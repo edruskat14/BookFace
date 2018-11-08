@@ -27,10 +27,7 @@
   width: 300px;
   text-align: center;
 }
-.other-work-head {
-  /* font-size: 14px; */
-  /* margin: 0 auto; */
-}
+
 .other-work-link {
   border: none;
   background-color: #e9ebee;
@@ -55,7 +52,19 @@
   width: 35px;
   margin-right: 5px;
 }
-.thumbs-up-sponge {
+.feed-right {
+  position: relative;
+  left: 150px;
+}
+.feed-make-friends {
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+}
+.make-new-friends-item {
+  
+}
+/* .thumbs-up-sponge {
   position: relative;
   width: 300px;
-}
+} */

@@ -11,7 +11,9 @@ const msp = (state) => {
   return {
     currentUser: state.entities.users.general[state.session.id],
     posts: Object.values(state.entities.posts),
-    pendingRequests: Object.values(state.entities.friendships.pending)
+    pendingRequests: Object.values(state.entities.friendships.pending),
+    approvedRequests: Object.values(state.entities.friendships.approved),
+    allUsers: Object.values(state.entities.users.general)
   };
 };
 

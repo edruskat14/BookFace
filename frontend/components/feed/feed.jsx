@@ -5,6 +5,7 @@ import FloatingNavBarContainer from '../floating_nav_bar/floating_nav_bar_contai
 import PostIndexItemContainer from '../post/post_index_item_container';
 import FriendResponse from '../friend/friend_response';
 import ProPicFormContainer from '../profile_picture/pro_pic_form_container';
+import MakeNewFriendsItem from './make_new_friends_item';
 
 class Feed extends React.Component {
   constructor(props) {
@@ -18,18 +19,39 @@ class Feed extends React.Component {
     this.props.fetchNotifications(this.props.currentUser);
   }
 
+  activeFriendship(user) {
+    return this.props.approvedRequests.some((ship) => {
+      return (ship.friender_id === user.id && ship.friendee_id === this.props.currentUser.id) || (ship.friendee_id === user.id && ship.friender_id === this.props.currentUser.id)
+    })
+  }
+  pendingFriendship(user) {
+    return this.props.pendingRequests.some((ship) => {
+      return ((ship.friender_id === user.id && ship.friendee_id === this.props.currentUser.id) || (ship.friendee_id === user.id && ship.friender_id === this.props.currentUser.id));
+    })
+  }
+
+  findFriendsToSuggest() {
+    const allUsers = this.props.allUsers;
+    const suggested = [];
+    allUsers.forEach((user) => {
+      if (this.pendingFriendship(user) === false && this.activeFriendship(user) === false && this.props.currentUser !== user) {
+        suggested.push(user)
+      }
+    })
+    return suggested;
+  }
   render() {
     const postsToRender = this.props.posts;
-
     postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
     const posts = postsToRender.map((post) => {
       return <PostIndexItemContainer post={post} key={post.id}/>;
     });
-    const requests = this.props.pendingRequests.map((request) => {
-      if (request.friendee_id === this.props.currentUser.id) {
-        return <FriendResponse friendship={request} key={request.id}/>
-      }
-    });
+
+    const suggesters = this.findFriendsToSuggest();
+    const makeFriends = suggesters.map((user) => {
+      return <MakeNewFriendsItem user={user} key={user.id} />
+    })
+
     return (
       <div className='feed-all-content'>
         <div className='feed-main'>
@@ -47,6 +69,12 @@ class Feed extends React.Component {
               <a target='_blank' href='https://edruskat14.live'><button className='other-work-link'><img src={window.linkedin_icon} className='other-work-img' />LinkedIn</button></a>
             </div>
           </div>
+          <div className='feed-right'>
+            <h2>Make new friends</h2>
+            <div className='feed-make-friends'>
+              {makeFriends}
+            </div>
+          </div>
           <br />
           <br />
           <br />
@@ -58,3 +86,9 @@ class Feed extends React.Component {
 
 // <img src={window.thumbs_up} className='thumbs-up-sponge'/>
 export default Feed;
+
+// const requests = this.props.pendingRequests.map((request) => {
+//   if (request.friendee_id === this.props.currentUser.id) {
+//     return <FriendResponse friendship={request} key={request.id}/>
+//   }
+// });
