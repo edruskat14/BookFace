@@ -58,15 +58,15 @@
 .delete-post-button {
   border: none;
   font-size: 16px;
-  color: #e9ebee;
   position: absolute;
   left: 460px;
   top: 14px;
+  color: #365899;
 }
 
 .delete-post-button:hover {
   cursor: pointer;
-  color: #365899;
+  color: #e9ebee;
 }
 .delete-post-button:focus {
   outline: none;
