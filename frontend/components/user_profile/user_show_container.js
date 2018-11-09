@@ -11,6 +11,17 @@ const msp = (state, ownProps) => {
     currentUser: state.entities.users.general[state.session.id],
     pageOwner: state.entities.users.general[ownProps.match.params.userId],
     posts: Object.values(state.entities.posts),
+    pageFriends: Object.values(state.entities.users.general).filter((user) => {
+      return (
+        Object.values(state.entities.friendships.approved).some((ship) => {
+          return (
+            (ship.friender_id === user.id && ship.friendee_id.toString() === ownProps.match.params.userId) ||
+            (ship.friendee_id === user.id && ship.friender_id.toString() === ownProps.match.params.userId)
+          )
+        })
+      )
+    }),
+    // friendships: Object.values(state.entities.friendships.approved),
     friendsWith: Object.values(state.entities.friendships.approved).some((ship) => {
       return ((ship.friender_id === state.session.id || ship.friendee_id === state.session.id) && (ship.friender_id.toString() === ownProps.match.params.userId || ship.friendee_id.toString() === ownProps.match.params.userId))
     }),

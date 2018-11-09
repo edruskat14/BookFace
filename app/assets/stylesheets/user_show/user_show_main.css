@@ -58,26 +58,39 @@
   width: 518px;
 }
 
-.show-page-left {
+/* .show-page-left {
   position: relative;
   height: 700px;
-  width: 314px;
+  width: 320px;
+  left: -519px;
+}
+
+.profile-info {
+  background-color: #fff;
+  height: 286px;
+  width: 280px;
+  padding: 20px;
+}
+.p {
   margin: 0;
-  left: -514px;
+} */
+.nine-friends-title {
+  position: absolute;
+  background-color: #fff;
+  width: 292px;
+  padding: 5px 14px;
+  top: 2px;
+  left: -336px;
+  font-family: sans-serif, serif;
 }
-.balloons-div {
-  display: flex;
-}
-.birthday-balloons {
-  height: 230px;
-  width: 180px;
-}
-.happy-birthday {
-  font-size: 18px;
-  color: blue;
-}
-.birthday-if-statement {
-  font-size: 8px;
-  position: relative;
-  left: 100px;
+.nine-friends {
+  background-color: #fff;
+  width: 320px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+  position: absolute;
+  top: 60px;
+  left: -336px;
 }

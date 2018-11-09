@@ -1,4 +1,9 @@
 import React from 'react';
 
 
-NineFriends
+const NineFriends = (props) => {
+
+  return (
+
+  )
+}

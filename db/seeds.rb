@@ -12,23 +12,23 @@ Friendship.destroy_all
 
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-demo = User.create({ username: 'DemoUser', password: 'password' })
+demo = User.create({ firstname: 'Demon', lastname: 'Strate', username: 'DemoUser', password: 'password', gender: 'female', day: '5', month: '7', year: '1990' })
 demo.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-trundle = User.create({ username: 'TrundleTheGreat', password: 'paddyspub' })
+trundle = User.create({ firstname: 'Trundle', lastname: 'Kelly', username: 'TrundleTheGreat', password: 'paddyspub', gender: 'male', day: '10', month: '3', year: '1987' })
 trundle.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-tes = User.create({ username: 'test', password: 'password' })
+tes = User.create({ firstname: 'test', lastname: 'account', gender: 'female', username: 'test', password: 'password', day: '18', month: '11', year: '1978' })
 tes.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-lomez = User.create({ username: 'Lomez', password: 'heybuddy' })
+lomez = User.create({ firstname: 'Lomez', lastname: '', username: 'Lomez', password: 'heybuddy', gender: 'male', day: '1', month: '1', year: '1960' })
 lomez.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-scarn = User.create({ username: 'MichaelScarn', password: 'aisle5' })
+scarn = User.create({ firstname: 'Michael', lastname: 'Scarn', username: 'MichaelScarn', password: 'aisle5', gender: 'male', day: '13', month: '2', year: '1974' })
 scarn.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 

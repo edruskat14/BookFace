@@ -15,8 +15,8 @@ class userShow extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.fetchAllPosts(nextProps.match.params.userId, false);
-      this.props.fetchFriends(nextProps.match.params.userId)
       this.props.fetchUsers();
+      this.props.fetchFriends(nextProps.match.params.userId)
     }
   }
   componentDidUpdate() {
@@ -97,20 +97,19 @@ class userShow extends React.Component {
 
           <main className='show-page-main'>
             <UserShowMain all={this.props} pageOwner={pageOwner} status={this.state.status}/>
-              <div className='show-page-left'>
-                <div className='balloons-div'>
-                  <img src={window.birthday_balloons} className='birthday-balloons' />
-                  <p className='happy-birthday'>Happy Birthday!</p>
-                </div>
-                <div>
-                  <p className='birthday-if-statement'>(if it's your birthday)</p>
-                </div>
-              </div>
           </main>
         </div>
     );
   }
 }
+// <div className='show-page-left'>
+//   <div className='profile-info'>
+//     <p className='p' >Name: {pageOwner.firstname} {pageOwner.lastname}</p>
+//     <br />
+//     <p className='p' >Born on {pageOwner.month} {pageOwner.day}, {pageOwner.year}</p>
+//
+//   </div>
+// </div>
 
 export default userShow;
 // <div className='show-page-post-section'>
