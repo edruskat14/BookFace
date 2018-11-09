@@ -18,7 +18,7 @@ class Signup extends React.Component {
   }
 
   handleGender(e) {
-    this.setState({gender: e.target.value})
+    this.setState({'gender': e.target.value})
   }
 
   handleBirthday(field) {
