@@ -17,21 +17,30 @@
 .post-names {
   display: flex;
   margin-bottom: 8px;
+  align-items: center;
 }
 .postee-name{
   position: relative;
   margin-right: 5px;
   color: #365899;
+  top: -2px
 }
 .post-right-arrow {
   position: relative;
   height: 13px;
   width: 10px;
   margin-right: 5px;
-  top: 2px;
+  top: -3px
+}
+.post-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 .poster-name{
   position: relative;
+  top: -2px
 }
 .post-name-link {
   text-decoration: none;

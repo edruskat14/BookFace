@@ -27,6 +27,9 @@ const PostIndexItem = (props) => {
   return (
     <div className='post-main'>
         <div className='post-names'>
+          <Link to={`/users/${poster.id}`} className='post-image-ink'>
+            <img src={poster.photoUrl} className='post-image'/>
+          </Link>
           <div className='postee-name'>
             <Link to={`/users/${poster.id}`} className='post-name-link'>
               {name1}
