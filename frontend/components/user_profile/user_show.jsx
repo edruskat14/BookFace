@@ -13,11 +13,12 @@ class userShow extends React.Component {
     this.handleState = this.handleState.bind(this);
   }
   componentWillReceiveProps(nextProps) {
+
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.fetchAllPosts(nextProps.match.params.userId, false);
       this.props.fetchUsers();
       this.props.fetchFriends(nextProps.match.params.userId);
-      this.props.fetchFriendships(this.props.match.params.userId);
+      this.props.fetchFriendships(nextProps.match.params.userId);
     }
   }
   componentDidUpdate() {
