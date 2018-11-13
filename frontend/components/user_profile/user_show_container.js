@@ -5,7 +5,7 @@ import { fetchUsers, fetchUser, fetchFriends } from '../../actions/user_actions'
 import { fetchNotifications } from '../../actions/notification_actions';
 import { fetchFriendships } from '../../actions/friendship_actions';
 import { turnOnModal, turnOffModal } from '../../actions/ui_actions';
-import { fetchProfile } from '../../actions/profile_actions';
+import { fetchProfile, updateProfile } from '../../actions/profile_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -22,6 +22,7 @@ const msp = (state, ownProps) => {
         })
       )
     }),
+    profile: state.entities.profile[ownProps.match.params.userId],
     // friendships: Object.values(state.entities.friendships.approved),
     friendsWith: Object.values(state.entities.friendships.approved).some((ship) => {
       return ((ship.friender_id === state.session.id || ship.friendee_id === state.session.id) && (ship.friender_id.toString() === ownProps.match.params.userId || ship.friendee_id.toString() === ownProps.match.params.userId))
@@ -40,7 +41,8 @@ const mdp = (dispatch) => {
     fetchFriends: (id) => dispatch(fetchFriends(id)),
     fetchProfile: (id) => dispatch(fetchProfile(id)),
     turnOnModal: () => dispatch(turnOnModal()),
-    turnOffModal: () => dispatch(turnOffModal())
+    turnOffModal: () => dispatch(turnOffModal()),
+    updateProfile: (id) => dispatch(updateProfile(id))
   };
 };
 
