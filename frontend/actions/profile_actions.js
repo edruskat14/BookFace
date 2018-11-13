@@ -21,8 +21,8 @@ export const fetchProfile = (id) => {
 
 export const updateProfile = (profile) => {
   return dispatch => {
-    return ProfileApiUtil.updateProfile(profile).then((newProfile) => {
-        return dispatch({ type: RECEIVE_PROFILE, newProfile });
+    return ProfileApiUtil.updateProfile(profile).then((profile) => {
+        return dispatch({ type: RECEIVE_PROFILE, profile });
     });
   };
 };

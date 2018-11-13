@@ -5,8 +5,7 @@ const usersProfileReducer = (state = {}, action) => {
     // case RECEIVE_ALL_PROFILES:
     //   return action.profiles;
     case RECEIVE_PROFILE:
-      const newState = Object.assign({}, state, { [action.profile.user.id]: action.profile });
-      return newState;
+      return action.profile;
     default:
       return state;
   };

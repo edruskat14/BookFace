@@ -19,6 +19,7 @@ class userShow extends React.Component {
       this.props.fetchUsers();
       this.props.fetchFriends(nextProps.match.params.userId);
       this.props.fetchFriendships(nextProps.match.params.userId);
+      this.props.fetchProfile(nextProps.match.params.userId);
     }
   }
   componentDidUpdate() {
@@ -32,6 +33,7 @@ class userShow extends React.Component {
     this.props.fetchNotifications(this.props.currentUser);
     this.props.fetchFriendships(this.props.currentUser.id);
     this.props.fetchFriends(this.props.match.params.userId);
+    this.props.fetchProfile(this.props.match.params.userId);
   }
 
   handleState(event) {

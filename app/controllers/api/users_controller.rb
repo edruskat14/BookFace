@@ -14,8 +14,8 @@ class Api::UsersController < ApplicationController
     defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
     @user.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
     if @user.save
-      # @profile = Profile.new({user_id: @user.id})
-      # @profile.save
+      @profile = Profile.new({user_id: @user.id})
+      @profile.save
       login(@user)
       render :show
     else

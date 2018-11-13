@@ -31,6 +31,32 @@ defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
 scarn = User.create({ firstname: 'Michael', lastname: 'Scarn', username: 'MichaelScarn', password: 'aisle5', gender: 'male', day: '13', month: '2', year: '1974' })
 scarn.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
+choc = User.create({ firstname: 'Chocolate', lastname: '', username: 'chocolate', password: 'password', gender: 'female', day: '1', month: '1', year: '1999' })
+choc.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
+kman = User.create({ firstname: 'Kramer', lastname: '', username: 'theKman', password: 'heybuddy', gender: 'male', day: '9', month: '7', year: '1965' })
+kman.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
+newguy = User.create({ firstname: 'New', lastname: 'Guy', username: 'theNewGuy', password: 'password', gender: 'male', day: '31', month: '12', year: '2000' })
+newguy.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
+drew = User.create({ firstname: 'Drew', lastname: 'Barrymore', username: 'originalDB', password: 'password', gender: 'female', day: '22', month: '2', year: '1975' })
+drew.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
+
+
+Profile.create(user_id: demo.id)
+Profile.create(user_id: trundle.id)
+Profile.create(user_id: tes.id)
+Profile.create(user_id: lomez.id)
+Profile.create(user_id: scarn.id)
+Profile.create(user_id: choc.id)
+Profile.create(user_id: kman.id)
+Profile.create(user_id: newguy.id)
+Profile.create(user_id: drew.id)
 
 
 Post.create({ wall_id: demo.id, poster_id: tes.id, body: 'Welcome to Bookface' })

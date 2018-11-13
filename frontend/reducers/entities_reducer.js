@@ -9,7 +9,7 @@ import postLikesReducer from './post_likes_reducer';
 import searchReducer from './search_reducer';
 const entitiesReducer = combineReducers({
   users: usersReducer,
-  profiles: profilesReducer,
+  profile: profilesReducer,
   posts: postsReducer,
   friendships: friendshipsReducer,
   comments: commentsReducer,

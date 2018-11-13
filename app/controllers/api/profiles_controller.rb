@@ -11,7 +11,6 @@ class Api::ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find_by(user_id: params[:user_id])
-    @user = @profile.user
   end
 
   def update
