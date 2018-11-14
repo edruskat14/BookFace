@@ -65,7 +65,9 @@
   border: none;
   display: flex;
 }
-
+.friend-response-link {
+  text-decoration: none;
+}
 .friend-requestor-name {
   margin: 0;
   position: relative;
