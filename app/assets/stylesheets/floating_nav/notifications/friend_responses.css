@@ -67,6 +67,10 @@
 }
 .friend-response-link {
   text-decoration: none;
+  color: #365899;
+}
+.friend-response-link:hover {
+  color: black;
 }
 .friend-requestor-name {
   margin: 0;

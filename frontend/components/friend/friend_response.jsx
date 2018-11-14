@@ -20,7 +20,7 @@ const FriendResponse = (props) => {
   return (
     <li className='friend-response-li'>
       <div className='single-friend-response'>
-        <Link to={`users/${friender.id}`} className='friend-response-link'>
+        <Link to={`/users/${friender.id}`} className='friend-response-link'>
           <p className='friend-requestor-name'>{friender.username}</p>
         </Link>
         <div    className='friend-response-approve-decline-div'>

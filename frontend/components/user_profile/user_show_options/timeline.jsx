@@ -67,7 +67,7 @@ const Timeline = (props) => {
             Location: {location}
             <br />
             <br />
-            DoB: {month} {day} {year}
+            DoB: {month} {day}, {year}
             <h2 className='nine-friends-title'>Friends: {props.all.pageFriends.length}</h2>
             <div className='nine-friends'>
               {nineFriends}

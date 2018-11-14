@@ -94,16 +94,25 @@
   position: absolute;
   top: 238px;
   left: 0px;
+  margin-bottom: 100px;
 }
 .info-show {
   margin-top: 0;
 }
 .mini-about {
   background-color: #fff;
+  font-family: sans-serif, serif;
   position: absolute;
   padding: 14px;
   left: -336px;
-  top: 0;
+  top: 1px;
   width: 300px;
   min-height: 90px;
+}
+.about-section {
+  background-color: #fff;
+  font-family: sans-serif, serif;
+  width: 300px;
+  height: 300px;
+  padding: 5px 14px;
 }
