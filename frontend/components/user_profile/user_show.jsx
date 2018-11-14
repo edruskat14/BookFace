@@ -57,7 +57,6 @@ class userShow extends React.Component {
       </button>
       requestButton = null
      }
-     debugger
     // let posts = null;
     // let postForm = <p>Befriend {pageOwner.username} to share posts with them!</p>;
     // const postsToRender = this.props.posts;

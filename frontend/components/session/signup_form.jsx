@@ -50,6 +50,7 @@ class Signup extends React.Component {
           <h4 className='birthday-title'>Birthday</h4>
           <br />
           <select value={this.state.month} onChange={this.handleBirthday('month')} className='signup-month'>
+            <option value='' selected disabled>Month</option>
             <option value='Jan'>Jan</option>
             <option value='Feb'>Feb</option>
             <option value='Mar'>Mar</option>
@@ -64,6 +65,7 @@ class Signup extends React.Component {
             <option value='Dec'>Dec</option>
           </select>
           <select value={this.state.day} onChange={this.handleBirthday('day')} className='signup-day'>
+            <option value='' selected disabled>Day</option>
             <option value='1'>1</option>
             <option value='2'>2</option>
             <option value='3'>3</option>
@@ -97,6 +99,27 @@ class Signup extends React.Component {
             <option value='31'>31</option>
           </select>
           <select value={this.state.year} onChange={this.handleBirthday('year')} className='signup-year'>
+            <option value='' selected='selected' disabled >Year</option>
+            <option value='1930'>1930</option>
+            <option value='1931'>1931</option>
+            <option value='1932'>1932</option>
+            <option value='1933'>1933</option>
+            <option value='1934'>1934</option>
+            <option value='1935'>1935</option>
+            <option value='1936'>1936</option>
+            <option value='1937'>1937</option>
+            <option value='1938'>1938</option>
+            <option value='1939'>1939</option>
+            <option value='1940'>1940</option>
+            <option value='1941'>1941</option>
+            <option value='1942'>1942</option>
+            <option value='1943'>1943</option>
+            <option value='1944'>1944</option>
+            <option value='1945'>1945</option>
+            <option value='1946'>1946</option>
+            <option value='1947'>1947</option>
+            <option value='1948'>1948</option>
+            <option value='1949'>1949</option>
             <option value='1950'>1950</option>
             <option value='1951'>1951</option>
             <option value='1952'>1952</option>

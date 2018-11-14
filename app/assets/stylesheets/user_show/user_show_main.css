@@ -31,7 +31,6 @@
   border-top: none;
 }
 
-
 .username-f-and-c {
   max-width: 275px;
   font-size: 30px;
@@ -41,7 +40,6 @@
   left: 376px;
   text-shadow: 0 0 10px rgba(0,0,0,.8);
 }
-
 
 .show-page-main {
   position: relative;
@@ -79,7 +77,7 @@
   background-color: #fff;
   width: 292px;
   padding: 5px 14px;
-  top: 2px;
+  top: 200px;
   left: -336px;
   font-family: sans-serif, serif;
 }
@@ -91,6 +89,13 @@
   grid-template-columns: 100px 100px 100px;
   grid-gap: 10px;
   position: absolute;
-  top: 60px;
+  top: 260px;
   left: -336px;
+}
+.mini-about {
+  position: absolute;
+  left: -336px;
+  width: 292px;
+  height: 90px;
+  top: 0;
 }

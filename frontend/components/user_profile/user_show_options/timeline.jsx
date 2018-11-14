@@ -28,7 +28,7 @@ const Timeline = (props) => {
     return <MakeNewFriendsItem user={friend} key={friend.id} />
   })
 
-  // const birthday = propt.all.
+  const profile = props.all.profile || { location: '' }
 
   const postsToRender = props.all.posts;
   postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
@@ -46,9 +46,9 @@ const Timeline = (props) => {
         <div className='mini-about'>
           <h3>Mini About:
             </h3>
-            Location: {props.all.profile}
+            Location: {profile.location}
             <br />
-            DoB:
+            DoB: {props.pageOwner.month} {props.pageOwner.day} {props.pageOwner.year}
         </div>
         <h2 className='nine-friends-title'>Friends: {props.all.pageFriends.length}</h2>
         <div className='nine-friends'>
