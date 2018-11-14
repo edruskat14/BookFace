@@ -12,39 +12,39 @@ Friendship.destroy_all
 
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-demo = User.create({ firstname: 'Demon', lastname: 'Strate', username: 'DemoUser', password: 'password', gender: 'female', day: '5', month: '7', year: '1990' })
+demo = User.create({ firstname: 'Demon', lastname: 'Strate', username: 'DemoUser', password: 'password', gender: 'female', day: '5', month: 'Jul', year: '1990' })
 demo.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-trundle = User.create({ firstname: 'Trundle', lastname: 'Kelly', username: 'TrundleTheGreat', password: 'paddyspub', gender: 'male', day: '10', month: '3', year: '1987' })
+trundle = User.create({ firstname: 'Trundle', lastname: 'Kelly', username: 'TrundleTheGreat', password: 'paddyspub', gender: 'male', day: '10', month: 'Mar', year: '1987' })
 trundle.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-tes = User.create({ firstname: 'test', lastname: 'account', gender: 'female', username: 'test', password: 'password', day: '18', month: '11', year: '1978' })
+tes = User.create({ firstname: 'test', lastname: 'account', gender: 'female', username: 'test', password: 'password', day: '18', month: 'Nov', year: '1978' })
 tes.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-lomez = User.create({ firstname: 'Lomez', lastname: '', username: 'Lomez', password: 'heybuddy', gender: 'male', day: '1', month: '1', year: '1960' })
+lomez = User.create({ firstname: 'Lomez', lastname: '', username: 'Lomez', password: 'heybuddy', gender: 'male', day: '1', month: 'Jan', year: '1960' })
 lomez.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-scarn = User.create({ firstname: 'Michael', lastname: 'Scarn', username: 'MichaelScarn', password: 'aisle5', gender: 'male', day: '13', month: '2', year: '1974' })
+scarn = User.create({ firstname: 'Michael', lastname: 'Scarn', username: 'MichaelScarn', password: 'aisle5', gender: 'male', day: '13', month: 'Feb', year: '1974' })
 scarn.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-choc = User.create({ firstname: 'Chocolate', lastname: '', username: 'chocolate', password: 'password', gender: 'female', day: '1', month: '1', year: '1999' })
+choc = User.create({ firstname: 'Chocolate', lastname: '', username: 'chocolate', password: 'password', gender: 'female', day: '1', month: 'Jan', year: '1999' })
 choc.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-kman = User.create({ firstname: 'Kramer', lastname: '', username: 'theKman', password: 'heybuddy', gender: 'male', day: '9', month: '7', year: '1965' })
+kman = User.create({ firstname: 'Kramer', lastname: '', username: 'theKman', password: 'heybuddy', gender: 'male', day: '9', month: 'Jul', year: '1965' })
 kman.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-newguy = User.create({ firstname: 'New', lastname: 'Guy', username: 'theNewGuy', password: 'password', gender: 'male', day: '31', month: '12', year: '2000' })
+newguy = User.create({ firstname: 'New', lastname: 'Guy', username: 'theNewGuy', password: 'password', gender: 'male', day: '31', month: 'Dec', year: '2000' })
 newguy.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 defaultProPic = File.open('app/assets/images/user_show/bookface-jim.png')
-drew = User.create({ firstname: 'Drew', lastname: 'Barrymore', username: 'originalDB', password: 'password', gender: 'female', day: '22', month: '2', year: '1975' })
+drew = User.create({ firstname: 'Drew', lastname: 'Barrymore', username: 'originalDB', password: 'password', gender: 'female', day: '22', month: 'Feb', year: '1975' })
 drew.photo.attach(io: defaultProPic, filename: 'bookface-jim.png')
 
 

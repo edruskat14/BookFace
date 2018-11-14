@@ -28,7 +28,22 @@ const Timeline = (props) => {
     return <MakeNewFriendsItem user={friend} key={friend.id} />
   })
 
-  const profile = props.all.profile || { location: '' }
+  const profile = props.all.profile || { location: undefined };
+
+  const location = profile.location || 'N/A';
+  let firstname = props.pageOwner.firstname;
+  let lastname = props.pageOwner.lastname;
+  if (firstname === '' && lastname === '') {
+    firstname = 'N/A';
+  }
+  let day = props.pageOwner.day;
+  let month = props.pageOwner.month;
+  let year = props.pageOwner.year;
+  if (day === '' || month === '' || year === '') {
+    day = 'N/A';
+    month = '';
+    year = '';
+  }
 
   const postsToRender = props.all.posts;
   postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
@@ -44,15 +59,19 @@ const Timeline = (props) => {
       <br /><br />
       {posts}
         <div className='mini-about'>
-          <h3>Mini About:
+          <h3 className='info-show'>Info
             </h3>
-            Location: {profile.location}
+            Name: {firstname} {lastname}
             <br />
-            DoB: {props.pageOwner.month} {props.pageOwner.day} {props.pageOwner.year}
-        </div>
-        <h2 className='nine-friends-title'>Friends: {props.all.pageFriends.length}</h2>
-        <div className='nine-friends'>
-          {nineFriends}
+            <br />
+            Location: {location}
+            <br />
+            <br />
+            DoB: {month} {day} {year}
+            <h2 className='nine-friends-title'>Friends: {props.all.pageFriends.length}</h2>
+            <div className='nine-friends'>
+              {nineFriends}
+            </div>
         </div>
     </div>
   )

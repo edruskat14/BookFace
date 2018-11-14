@@ -75,27 +75,34 @@
 .nine-friends-title {
   position: absolute;
   background-color: #fff;
-  width: 292px;
+  width: 300px;
   padding: 5px 14px;
+  margin: 0;
   top: 200px;
-  left: -336px;
+  left: 0px;
   font-family: sans-serif, serif;
 }
 .nine-friends {
   background-color: #fff;
-  width: 320px;
-  height: 320px;
+  width: 324px;
+  height: 324px;
+  padding: 2px 0px 2px 4px;
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-gap: 10px;
   position: absolute;
-  top: 260px;
-  left: -336px;
+  top: 238px;
+  left: 0px;
+}
+.info-show {
+  margin-top: 0;
 }
 .mini-about {
+  background-color: #fff;
   position: absolute;
+  padding: 14px;
   left: -336px;
-  width: 292px;
-  height: 90px;
   top: 0;
+  width: 300px;
+  min-height: 90px;
 }
