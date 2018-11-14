@@ -27,8 +27,8 @@ const About = (props) => {
     <div className='show-page-post-section'>
         <div className='about-section'>
           <p>Name: {firstname} {lastname}</p>
-          <p>Location: {location}</p>
           <p>Birthday: {month} {day}, {year}</p>
+          <p>Location: {location}</p>
           <p>{milkCereal}</p>
           <p>{catchPhrase}</p>
           <p>{favoriteThing}</p>

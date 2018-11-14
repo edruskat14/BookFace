@@ -42,7 +42,7 @@ const mdp = (dispatch) => {
     fetchProfile: (id) => dispatch(fetchProfile(id)),
     turnOnModal: () => dispatch(turnOnModal()),
     turnOffModal: () => dispatch(turnOffModal()),
-    updateProfile: (id) => dispatch(updateProfile(id))
+    updateProfile: (profile) => dispatch(updateProfile(profile))
   };
 };
 

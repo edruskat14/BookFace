@@ -12,10 +12,10 @@ export const fetchProfile = (id) => {
   });
 };
 
-export const updateProfile =  (id) => {
+export const updateProfile =  (profile) => {
   return $.ajax({
       method: 'PATCH',
-      url: `/api/users/${id}/profile`,
+      url: `/api/users/${profile.user_id}/profile`,
       data: { profile }
   });
 };

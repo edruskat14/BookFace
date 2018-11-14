@@ -10,9 +10,9 @@ export const fetchProfile = (id) => {
   };
 };
 
-export const updateProfile = (id) => {
+export const updateProfile = (profile) => {
   return dispatch => {
-    return ProfileApiUtil.updateProfile(id).then((profile) => {
+    return ProfileApiUtil.updateProfile(profile).then((profile) => {
         return dispatch({ type: RECEIVE_PROFILE, profile });
     });
   };

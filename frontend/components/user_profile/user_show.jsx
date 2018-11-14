@@ -86,6 +86,7 @@ class userShow extends React.Component {
                 <button className='all-below-cover-buttons timeline-button' value='Timeline' onClick={this.handleState} >Timeline</button>
                 <button className='all-below-cover-buttons' value='Friends' onClick={this.handleState} >Friends</button>
                 <button className='all-below-cover-buttons' value='About' onClick={this.handleState} >About</button>
+                <button className='all-below-cover-buttons' value='EditAbout' onClick={this.handleState} >EditAbout</button>
               </nav>
             </div>
             <div className='profile-picture-container'>
