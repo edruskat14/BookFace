@@ -64,7 +64,7 @@ class EditAbout extends React.Component {
               <input type='text' onChange={this.handleChange('favorite_speed_limit')} value={this.state.favorite_speed_limit} />
             </label>
           <br />
-          <input type='submit' value='About' onClick={this.handleSubmit} />
+          <button type='submit' value='About' onClick={this.handleSubmit}>Update</button>
           </form>
       </div>
     )

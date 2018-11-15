@@ -1,0 +1,28 @@
+.info-show {
+  margin-top: 0;
+}
+.mini-about {
+  background-color: #fff;
+  font-family: sans-serif, serif;
+  position: absolute;
+  padding: 14px;
+  left: -336px;
+  top: 1px;
+  width: 300px;
+  min-height: 90px;
+}
+.about-section {
+  width: 90%;
+  padding: 5%;
+  background-color: #fff;
+  font-family: sans-serif, serif;
+  height: 300px;
+  /* padding: 5px 14px; */
+}
+.about-section > p {
+  
+}
+.edit-about-form {
+  background-color: #fff;
+  width: 100%;
+}
