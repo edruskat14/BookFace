@@ -14,11 +14,11 @@ class Api::ProfilesController < ApplicationController
   end
 
   def update
-    @profile = Profile.find_by(id: params[:id])
+    @profile = Profile.find_by(user_id: params[:user_id])
 
     if @profile
       @profile.update(profile_params)
-      render json: :show
+      render :show
     else
       render json: ['Not a real profile'], status: 401
     end
@@ -29,7 +29,7 @@ class Api::ProfilesController < ApplicationController
   private #pirate
 
   def profile_params
-    params.require(:profile).permit(:user_id, :location, :catch_phrase, :milk_cereal, :favorite_thing)
+    params.require(:profile).permit(:user_id, :location, :catch_phrase, :milk_cereal, :favorite_thing, :occupation, :favorite_speed_limit)
   end
 
 end

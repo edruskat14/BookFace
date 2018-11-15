@@ -4,7 +4,7 @@ class EditAbout extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = props.all.profile || { location: '', catch_phrase: '', milk_cereal: '', favorite_thing: '', user_id: props.all.pageOwner.id };
+    this.state = props.all.profile;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -15,14 +15,12 @@ class EditAbout extends React.Component {
     };
   }
   handleSubmit(e) {
-    debugger
     e.preventDefault();
     this.props.all.updateProfile(this.state);
     this.props.handleState(e);
   }
 
   render() {
-    debugger
     // const profile = this.props.all.profile || { location: undefined, catch_phrase: undefined, milk_cereal: undefined, favorite_thing: undefined };
 
     // const location = profile.location || '';
@@ -54,8 +52,16 @@ class EditAbout extends React.Component {
               <input type='text' onChange={this.handleChange('favorite_thing')} value={this.state.favorite_thing} />
             </label>
             <br />
-            <label>catch_phrase:
+            <label>Catch Phrase:
               <input type='text' onChange={this.handleChange('catch_phrase')} value={this.state.catch_phrase} />
+            </label>
+            <br />
+            <label>Occupation:
+              <input type='text' onChange={this.handleChange('occupation')} value={this.state.occupation} />
+            </label>
+            <br />
+            <label>Favorite Speed Limit:
+              <input type='text' onChange={this.handleChange('favorite_speed_limit')} value={this.state.favorite_speed_limit} />
             </label>
           <br />
           <input type='submit' value='About' onClick={this.handleSubmit} />

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const About = (props) => {
-
-  const profile = props.all.profile || { location: undefined, catch_phrase: undefined, milk_cereal: undefined, favorite_thing: undefined };
+debugger
+  const profile = props.all.profile;
 
   const location = profile.location || 'N/A';
   const catchPhrase = profile.catch_phrase || 'N/A';
