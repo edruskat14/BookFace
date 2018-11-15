@@ -4,7 +4,6 @@ class EditAbout extends React.Component {
 
   constructor(props) {
     super(props);
-    debugger
     this.state = props.all.profile || { location: '', catch_phrase: '', milk_cereal: '', favorite_thing: '', user_id: props.all.pageOwner.id };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,10 +18,12 @@ class EditAbout extends React.Component {
     debugger
     e.preventDefault();
     this.props.all.updateProfile(this.state);
+    this.props.handleState(e);
   }
 
   render() {
-    const profile = this.props.all.profile || { location: undefined, catch_phrase: undefined, milk_cereal: undefined, favorite_thing: undefined };
+    debugger
+    // const profile = this.props.all.profile || { location: undefined, catch_phrase: undefined, milk_cereal: undefined, favorite_thing: undefined };
 
     // const location = profile.location || '';
     // const catchPhrase = profile.catch_phrase || 'N/A';
@@ -57,7 +58,7 @@ class EditAbout extends React.Component {
               <input type='text' onChange={this.handleChange('catch_phrase')} value={this.state.catch_phrase} />
             </label>
           <br />
-          <input type='submit' onClick={this.handleSubmit} />
+          <input type='submit' value='About' onClick={this.handleSubmit} />
           </form>
       </div>
     )

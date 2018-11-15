@@ -32,8 +32,8 @@ class userShow extends React.Component {
     this.props.fetchAllPosts(this.props.match.params.userId, false);
     this.props.fetchNotifications(this.props.currentUser);
     this.props.fetchFriendships(this.props.currentUser.id);
-    this.props.fetchFriends(this.props.match.params.userId);
     this.props.fetchProfile(this.props.match.params.userId);
+    this.props.fetchFriends(this.props.match.params.userId);
   }
 
   handleState(event) {
@@ -101,7 +101,7 @@ class userShow extends React.Component {
           </div>
 
           <main className='show-page-main'>
-            <UserShowMain all={this.props} pageOwner={pageOwner} status={this.state.status}/>
+            <UserShowMain all={this.props} handleState={this.handleState} pageOwner={pageOwner} status={this.state.status}/>
           </main>
         </div>
     );

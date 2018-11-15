@@ -22,7 +22,7 @@ const msp = (state, ownProps) => {
         })
       )
     }),
-    profile: state.entities.profile[ownProps.match.params.userId],
+    profile: state.entities.profile,
     // friendships: Object.values(state.entities.friendships.approved),
     friendsWith: Object.values(state.entities.friendships.approved).some((ship) => {
       return ((ship.friender_id === state.session.id || ship.friendee_id === state.session.id) && (ship.friender_id.toString() === ownProps.match.params.userId || ship.friendee_id.toString() === ownProps.match.params.userId))

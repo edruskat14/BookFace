@@ -13,7 +13,7 @@ const UserShowMain = (props) => {
   } else if (props.status === 'About') {
     main = <About all={props.all} />
   } else if (props.status === 'EditAbout') {
-    main = <EditAbout all={props.all} />
+    main = <EditAbout all={props.all} handleState={props.handleState} />
   }
   return (
     main
