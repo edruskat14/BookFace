@@ -1,13 +1,17 @@
 import React from 'react';
 
 const About = (props) => {
-debugger
   const profile = props.all.profile;
-
+  debugger
   const location = profile.location || 'N/A';
   const occupation = profile.occupation || 'N/A';
   const favoriteThing = profile.favorite_thing || 'undecided';
-  const milkCereal = profile.milk_cereal || null;
+  let milkCereal = null;
+  if (profile.milk_cereal === true) {
+    milkCereal = 'I do cereal the right way';
+  } else if (profile.milk_cereal === false) {
+    milkCereal = 'Life'
+  }
   let favSpeedLim =  null;
   if (profile.favorite_speed_limit){
     favSpeedLim = "The best speed limit is " + profile.favorite_speed_limit + 'mph'

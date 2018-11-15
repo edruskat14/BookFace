@@ -20,9 +20,54 @@
   /* padding: 5px 14px; */
 }
 .about-section > p {
-  
+  margin: 0 0 20px 0;
 }
 .edit-about-form {
   background-color: #fff;
+  font-family: sans-serif, serif;
+  width: 90%;
+  padding: 5%;
+}
+.milk-c-question {
+  /* width: 300px; */
+  margin: 0;
+}
+.edit-about-single {
+  margin: 0 0 20px 0;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 29px;
+  display: flex;
+}
+.edit-about-input {
+  border-radius: 3px;
+  margin-left: 5px;
+  height: 20px;
+  width: 250px;
+  padding: 3px;
+  font-size: 14px;
+  position: absolute;
+  left: 210px;
+}
+.edit-about-input:focus {
+  outline: none;
+}
+.edit-about-radio {
+  margin-left: 21px;
+}
+.about-edit-submit {
+  background-color: #4267b2;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  height: 41px;
   width: 100%;
+}
+.about-edit-submit:hover {
+  cursor: pointer;
+  background-color: #365899;
+  color: #e9ebee;
+}
+.about-edit-submit:focus {
+  outline: none;
 }

@@ -5,7 +5,6 @@ const usersProfileReducer = (state = {}, action) => {
     // case RECEIVE_ALL_PROFILES:
     //   return action.profiles;
     case RECEIVE_PROFILE:
-      debugger
       return action.profile;
     default:
       return state;

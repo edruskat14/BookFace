@@ -7,6 +7,7 @@ class EditAbout extends React.Component {
     this.state = props.all.profile;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCereal = this.handleCereal.bind(this);
   }
 
   handleChange(field) {
@@ -14,57 +15,66 @@ class EditAbout extends React.Component {
       this.setState({ [field]: event.target.value})
     };
   }
+
+  handleCereal(e) {
+    this.setState({ milk_cereal: e.target.value })
+  }
+
   handleSubmit(e) {
+    debugger
     e.preventDefault();
     this.props.all.updateProfile(this.state);
     this.props.handleState(e);
   }
 
   render() {
-    // const profile = this.props.all.profile || { location: undefined, catch_phrase: undefined, milk_cereal: undefined, favorite_thing: undefined };
 
-    // const location = profile.location || '';
-    // const catchPhrase = profile.catch_phrase || 'N/A';
-    // const favoriteThing = profile.favorite_thing || 'N/A';
-    // const milkCereal = profile.milk_cereal || null;
-    //
-    // let firstname = this.props.all.pageOwner.firstname;
-    // let lastname = this.props.all.pageOwner.lastname;
-    // if (firstname === '' && lastname === '') {
-    //   firstname = 'N/A';
-    // }
-    // let day = this.props.all.pageOwner.day;
-    // let month = this.props.all.pageOwner.month;
-    // let year = this.props.all.pageOwner.year;
-    // if (day === '' || month === '' || year === '') {
-    //   day = 'N/A';
-    //   month = '';
-    //   year = '';
-    // }
     return (
       <div className='show-page-post-section'>
           <form className='edit-about-form'>
-            <label>Location:
-              <input type='text' onChange={this.handleChange('location')} value={this.state.location} />
-            </label>
+            <div className='edit-about-single'>
+              <label>Location:
+                <input type='text' className='edit-about-input' onChange={this.handleChange('location')} value={this.state.location} />
+              </label>
+            </div>
             <br />
-            <label>Favorite Thing:
-              <input type='text' onChange={this.handleChange('favorite_thing')} value={this.state.favorite_thing} />
-            </label>
-            <br />
-            <label>Catch Phrase:
-              <input type='text' onChange={this.handleChange('catch_phrase')} value={this.state.catch_phrase} />
-            </label>
-            <br />
-            <label>Occupation:
-              <input type='text' onChange={this.handleChange('occupation')} value={this.state.occupation} />
-            </label>
-            <br />
-            <label>Favorite Speed Limit:
-              <input type='text' onChange={this.handleChange('favorite_speed_limit')} value={this.state.favorite_speed_limit} />
-            </label>
+            <div className='edit-about-single'>
+              <label>Occupation:
+                <input type='text' className='edit-about-input' onChange={this.handleChange('occupation')} value={this.state.occupation} />
+              </label>
+            </div>
           <br />
-          <button type='submit' value='About' onClick={this.handleSubmit}>Update</button>
+            <div className='edit-about-single'>
+              <label>Favorite Thing:
+                <input type='text' className='edit-about-input' onChange={this.handleChange('favorite_thing')} value={this.state.favorite_thing} />
+              </label>
+            </div>
+            <br />
+            <div className='edit-about-single'>
+              <p className='milk-c-question'>You pour the cereal before the milk, right?</p>
+              <label>
+                <input type='radio' className='edit-about-radio' onChange={this.handleCereal} value={true} name='milk_cereal' />
+                Y
+              </label>
+              <label>
+                <input type='radio' className='edit-about-radio' onChange={this.handleCereal} value={false} name='milk_cereal' />
+                N
+              </label>
+            </div>
+            <br />
+            <div className='edit-about-single'>
+              <label>Favorite Speed Limit:
+                <input type='text' className='edit-about-input' onChange={this.handleChange('favorite_speed_limit')} value={this.state.favorite_speed_limit} />
+              </label>
+            </div>
+            <br />
+            <div className='edit-about-single'>
+              <label>Catch Phrase:
+                <input type='text' className='edit-about-input' onChange={this.handleChange('catch_phrase')} value={this.state.catch_phrase} />
+              </label>
+            </div>
+          <br />
+          <button type='submit' value='About' className='about-edit-submit' onClick={this.handleSubmit}>Update</button>
           </form>
       </div>
     )
