@@ -7,9 +7,9 @@ const About = (props) => {
   const favoriteThing = profile.favorite_thing || 'undecided';
   let milkCereal = null;
   if (profile.milk_cereal === true) {
-    milkCereal = 'I do cereal the right way';
+    milkCereal = 'I do cereal the right way.';
   } else if (profile.milk_cereal === false) {
-    milkCereal = 'Life'
+    milkCereal = 'I should be banned from cereal.';
   }
   let favSpeedLim;
   if (profile.favorite_speed_limit) {
@@ -71,9 +71,7 @@ const About = (props) => {
           <div className='about-piece'>
             <p className='about-label'>{milkCereal}</p>
           </div>
-          <div className='about-piece'>
-            <p className='about-label'>{catchPhrase}</p>
-          </div>
+            <p className='about-catch-phrase'>{catchPhrase}</p>
         </div>
     </div>
   )

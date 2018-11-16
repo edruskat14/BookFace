@@ -20,6 +20,10 @@ class EditAbout extends React.Component {
     this.setState({ milk_cereal: e.target.value })
   }
 
+  handleSpeed(e) {
+    this.setState({ favorite_speed_limit: e.target.value})
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.all.updateProfile(this.state);
@@ -63,7 +67,19 @@ class EditAbout extends React.Component {
             <br />
             <div className='edit-about-single'>
               <label>Favorite Speed Limit:
-                <input type='text' className='edit-about-input' onChange={this.handleChange('favorite_speed_limit')} value={this.state.favorite_speed_limit} />
+                <select type='text' className='edit-about-input' onChange={this.handleChange('favorite_speed_limit')} value={this.state.favorite_speed_limit}>
+                <option value='5'>5</option>
+                <option value='10'>10</option>
+                <option value='15'>15</option>
+                <option value='20'>20</option>
+                <option value='25'>25</option>
+                <option value='30'>30</option>
+                <option value='35'>35</option>
+                <option value='40'>40</option>
+                <option value='45'>45</option>
+                <option value='45'>45</option>
+                <option value='50'>50</option>
+                </select>
               </label>
             </div>
             <br />

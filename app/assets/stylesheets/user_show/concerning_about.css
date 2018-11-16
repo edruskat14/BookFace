@@ -28,6 +28,10 @@
   margin-left: 20px;
   display: table-cell;
 }
+.about-catch-phrase {
+  margin: 0 auto;
+  font-weight: 700;
+}
 .edit-about-form {
   background-color: #fff;
   font-family: sans-serif, serif;
