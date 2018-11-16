@@ -77,8 +77,8 @@ class EditAbout extends React.Component {
                 <option value='35'>35</option>
                 <option value='40'>40</option>
                 <option value='45'>45</option>
-                <option value='45'>45</option>
                 <option value='50'>50</option>
+                <option value='55'>55</option>
                 </select>
               </label>
             </div>
