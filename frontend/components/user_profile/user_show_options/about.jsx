@@ -53,20 +53,20 @@ const About = (props) => {
             <p className='about-response'>{month} {day}, {year}</p>
           </div>
           <div className='about-piece'>
-            <p className='about-label'>Favorite Speed Limit:</p>
-              <p className='about-response'>{favSpeedLim}</p>
-          </div>
-          <div className='about-piece'>
-            <p className='about-label'>My Favorite Thing: </p>
-            <p className='about-response'>{favoriteThing}</p>
-          </div>
-          <div className='about-piece'>
             <p className='about-label'>Location:</p>
             <p className='about-response'>{location}</p>
           </div>
           <div className='about-piece'>
             <p className='about-label'>Occupation: </p>
             <p className='about-response'>{occupation}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>Favorite Speed Limit:</p>
+              <p className='about-response'>{favSpeedLim}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>My Favorite Thing: </p>
+            <p className='about-response'>{favoriteThing}</p>
           </div>
           <div className='about-piece'>
             <p className='about-label'>{milkCereal}</p>
