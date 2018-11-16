@@ -7,11 +7,11 @@ import EditAbout from './user_show_options/edit_about';
 const UserShowMain = (props) => {
   let main = null;
   if (props.status === 'Timeline') {
-    main = <Timeline all={props.all} pageOwner={props.pageOwner}/>
+    main = <Timeline all={props.all} pageOwner={props.pageOwner} handleState={props.handleState} />
   } else if (props.status === 'Friends') {
     main = <Friends all={props.all} pageOwner={props.pageOwner} />
   } else if (props.status === 'About') {
-    main = <About all={props.all} />
+    main = <About all={props.all} handleState={props.handleState} />
   } else if (props.status === 'EditAbout') {
     main = <EditAbout all={props.all} handleState={props.handleState} />
   }

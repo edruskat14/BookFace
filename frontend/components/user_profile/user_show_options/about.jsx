@@ -2,7 +2,6 @@ import React from 'react';
 
 const About = (props) => {
   const profile = props.all.profile;
-  debugger
   const location = profile.location || 'N/A';
   const occupation = profile.occupation || 'N/A';
   const favoriteThing = profile.favorite_thing || 'undecided';
@@ -12,11 +11,20 @@ const About = (props) => {
   } else if (profile.milk_cereal === false) {
     milkCereal = 'Life'
   }
-  let favSpeedLim =  null;
-  if (profile.favorite_speed_limit){
-    favSpeedLim = "The best speed limit is " + profile.favorite_speed_limit + 'mph'
+  let favSpeedLim;
+  if (profile.favorite_speed_limit) {
+    favSpeedLim = profile.favorite_speed_limit + 'mph'
+  } else {
+    favSpeedLim = 'undecided';
   }
   const catchPhrase = profile.catch_phrase || null;
+
+  let editButton = null;
+  if (props.all.currentUser === props.all.pageOwner) {
+    editButton = <button value='EditAbout' onClick={props.handleState} className='edit-about-about' >
+      <img src={window.edit_about} className='edit-about-about-pic'/>
+    </button>
+  }
 
   let firstname = props.all.pageOwner.firstname;
   let lastname = props.all.pageOwner.lastname;
@@ -34,15 +42,38 @@ const About = (props) => {
 
   return (
     <div className='show-page-post-section'>
+        {editButton}
         <div className='about-section'>
-          <p>Name: {firstname} {lastname}</p>
-          <p>Birthday: {month} {day}, {year}</p>
-          <p>Location: {location}</p>
-          <p>Occupation: {occupation}</p>
-          <p>My Favorite Thing: {favoriteThing}</p>
-          <p>{milkCereal}</p>
-          <p>{favSpeedLim}</p>
-          <p>{catchPhrase}</p>
+          <div className='about-piece'>
+            <p className='about-label'>Name: </p>
+            <p className='about-response'>{firstname} {lastname}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>Birthday: </p>
+            <p className='about-response'>{month} {day}, {year}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>Favorite Speed Limit:</p>
+              <p className='about-response'>{favSpeedLim}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>My Favorite Thing: </p>
+            <p className='about-response'>{favoriteThing}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>Location:</p>
+            <p className='about-response'>{location}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>Occupation: </p>
+            <p className='about-response'>{occupation}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>{milkCereal}</p>
+          </div>
+          <div className='about-piece'>
+            <p className='about-label'>{catchPhrase}</p>
+          </div>
         </div>
     </div>
   )

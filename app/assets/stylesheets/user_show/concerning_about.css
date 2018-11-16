@@ -16,11 +16,17 @@
   padding: 5%;
   background-color: #fff;
   font-family: sans-serif, serif;
-  height: 300px;
-  /* padding: 5px 14px; */
 }
-.about-section > p {
-  margin: 0 0 20px 0;
+.about-piece {
+  overflow: auto;
+  display: table;
+}
+.about-label {
+  min-width: 185px;
+}
+.about-response {
+  margin-left: 20px;
+  display: table-cell;
 }
 .edit-about-form {
   background-color: #fff;
@@ -29,7 +35,6 @@
   padding: 5%;
 }
 .milk-c-question {
-  /* width: 300px; */
   margin: 0;
 }
 .edit-about-single {
@@ -70,4 +75,41 @@
 }
 .about-edit-submit:focus {
   outline: none;
+}
+.edit-about-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 283px;
+}
+.edit-about-button:hover {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.edit-about-button-pic {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -7px;
+  top: -5px;
+}
+.edit-about-about {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 470px;
+  top: 14px;
+}
+.edit-about-about:hover {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.edit-about-about-pic {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -7px;
+  top: -5px;
 }

@@ -57,16 +57,6 @@ class userShow extends React.Component {
       </button>
       requestButton = null
      }
-    // let posts = null;
-    // let postForm = <p>Befriend {pageOwner.username} to share posts with them!</p>;
-    // const postsToRender = this.props.posts;
-    // postsToRender.sort(function(a, b){ return new Date(b.created_at) - new Date(a.created_at) });
-    // if (this.props.friendsWith || this.props.pageOwner === this.props.currentUser) {
-    //   posts = postsToRender.map((post) => {
-    //     return <PostIndexItemContainer post={post} key={post.id}/>;
-    //   });
-    //   postForm = <CreatePostFormContainer pageOwner={pageOwner} />;
-    // }
     return (
         <div className='user-show-all-content'>
           <nav>
@@ -86,7 +76,6 @@ class userShow extends React.Component {
                 <button className='all-below-cover-buttons timeline-button' value='Timeline' onClick={this.handleState} >Timeline</button>
                 <button className='all-below-cover-buttons' value='Friends' onClick={this.handleState} >Friends</button>
                 <button className='all-below-cover-buttons' value='About' onClick={this.handleState} >About</button>
-                <button className='all-below-cover-buttons' value='EditAbout' onClick={this.handleState} >EditAbout</button>
               </nav>
             </div>
             <div className='profile-picture-container'>
@@ -107,21 +96,8 @@ class userShow extends React.Component {
     );
   }
 }
-// <div className='show-page-left'>
-//   <div className='profile-info'>
-//     <p className='p' >Name: {pageOwner.firstname} {pageOwner.lastname}</p>
-//     <br />
-//     <p className='p' >Born on {pageOwner.month} {pageOwner.day}, {pageOwner.year}</p>
-//
-//   </div>
-// </div>
 
 export default userShow;
-// <div className='show-page-post-section'>
-//   {postForm}
-//   <br /><br />
-//   {posts}
-// </div>
 
 // <button className='all-below-cover-buttons'>Photos</button>
 // <button className='all-below-cover-buttons'>More</button>

@@ -21,7 +21,6 @@ class EditAbout extends React.Component {
   }
 
   handleSubmit(e) {
-    debugger
     e.preventDefault();
     this.props.all.updateProfile(this.state);
     this.props.handleState(e);

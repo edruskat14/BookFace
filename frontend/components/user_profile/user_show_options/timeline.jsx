@@ -6,23 +6,6 @@ import MakeNewFriendsItem from '../../feed/make_new_friends_item';
 const Timeline = (props) => {
   let posts = null;
   let postForm = <p>Befriend {props.pageOwner.username} to share posts with them!</p>;
-  // const pageFriendships = props.all.friendships.filter((ship) => {
-  //   return (
-  //     (ship.friendee_id === props.pageOwner.id) || (ship.friender_id === props.pageOwner.id)
-  //   );
-  // })
-  // const pageFriends = [];
-  // pageFriendships.forEach((ship) => {
-  //   if (ship.friendee_id === props.pageOwner.id) {
-  //     pageFriends.push()
-  //   }
-  // })
-  // let nineFriends = pageFriends.slice(0, 8).map((ship) => {
-  //
-  // });
-  // if (nineFriends.length === 0) {
-  //   nineFriends = null;
-  // }
 
   const nineFriends = props.all.pageFriends.slice(0, 9).map((friend) => {
     return <MakeNewFriendsItem user={friend} key={friend.id} />
@@ -30,6 +13,12 @@ const Timeline = (props) => {
 
   const profile = props.all.profile || { location: undefined };
 
+  let editButton = null;
+  if (props.all.currentUser === props.all.pageOwner) {
+    editButton = <button value='EditAbout' onClick={props.handleState} className='edit-about-button' >
+      <img src={window.edit_about} className='edit-about-button-pic'/>
+    </button>
+  }
   const location = profile.location || 'N/A';
   let firstname = props.pageOwner.firstname;
   let lastname = props.pageOwner.lastname;
@@ -59,6 +48,7 @@ const Timeline = (props) => {
       <br /><br />
       {posts}
         <div className='mini-about'>
+          {editButton}
           <h3 className='info-show'>Info
             </h3>
             Name: {firstname} {lastname}
