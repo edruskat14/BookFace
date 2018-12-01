@@ -4,7 +4,7 @@ import { searchUsers } from '../../actions/search_actions';
 
 const msp = (state) => {
   return {
-    results: state.entities.searchResults
+    results: Object.values(state.entities.searchResults)
   }
 }
 const mdp = (dispatch) => {

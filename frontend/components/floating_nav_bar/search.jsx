@@ -15,7 +15,6 @@ class NavBarSearch extends React.Component {
       this.props.searchUsers(this.state.text)
     })
   }
-  // componentDidMount
   handleSubmit(e) {
     e.preventDefault();
     if (this.state.text === '') {
@@ -27,9 +26,17 @@ class NavBarSearch extends React.Component {
   }
 
   render() {
-    // let dropdown =
-    debugger
+    let dropdown = this.props.results.map((res) => {
+      return <li key={res.id} className='search-dropdown-single'>
+      {res.username}</li>
+    })
+    if (this.state.text === '' || this.props.match.url === '/search_results') {
+      dropdown = null;
+    }
 
+    console.log("-----------")
+    console.log(this.props.results)
+    console.log("-----------")
     return (
       <div className='nav-search'>
         <form onSubmit={this.handleSubmit}>
@@ -37,7 +44,9 @@ class NavBarSearch extends React.Component {
           <input type='submit' className='nav-search-button' value='GO!' />
         </form>
         <div className='search-dropdown'>
-
+          <ul className='search-dropdown-list'>
+            {dropdown}
+          </ul>
         </div>
       </div>
     );
