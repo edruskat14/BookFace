@@ -37,8 +37,8 @@
   background-color: #fff;
   display: block;
   position: relative;
-  z-index: 9;
-  /* border: 1px solid black; */
+  left: -1px;
+  width: 453px;
 }
 .nav-search-text:focus + .search-dropdown {
   display: block;
@@ -52,10 +52,17 @@
   border-top: 1px solid gray;
 }
 .search-dropdown-single {
-  padding: 10px 0;
-  width: 100%;
+  padding: 10px 0 10px 10px;
   border: 1px solid gray;
   border-top: none;
+  display: flex;
+  align-items: center;
+}
+.search-dropdown-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 40px;
 }
 .search-dropdown-single:hover {
   background-color: #e9ebee;

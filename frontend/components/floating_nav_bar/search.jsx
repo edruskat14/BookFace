@@ -27,7 +27,7 @@ class NavBarSearch extends React.Component {
 
   render() {
     let dropdown = this.props.results.map((res) => {
-      return <Link className='search-dropdown-link' to={`/users/${res.id}`} key={res.id}><li className='search-dropdown-single'>
+      return <Link className='search-dropdown-link' to={`/users/${res.id}`} key={res.id}><li className='search-dropdown-single'><img className='search-dropdown-pic' src={res.photoUrl} />
       {res.username}</li></Link>
     })
     if (this.state.text === '' || this.props.match.url === '/search_results') {
