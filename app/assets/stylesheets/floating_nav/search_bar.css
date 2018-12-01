@@ -33,3 +33,36 @@
 .nav-search-button:focus {
   outline: none;
 }
+.search-dropdown {
+  background-color: #fff;
+  display: block;
+  position: relative;
+  /* border: 1px solid black; */
+}
+.nav-search-text:focus + .search-dropdown {
+  display: block;
+}
+.search-dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.search-dropdown-list:first-child {
+  border-top: 1px solid gray;
+}
+.search-dropdown-single {
+  padding: 10px 0;
+  width: 100%;
+  border: 1px solid gray;
+  border-top: none;
+}
+.search-dropdown-single:hover {
+  background-color: #e9ebee;
+}
+.search-dropdown-link {
+  color: black;
+  text-decoration: none;
+}
+.search-dropdown-link:hover {
+  color: #365899;
+}

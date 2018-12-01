@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class NavBarSearch extends React.Component {
   constructor(props) {
@@ -27,8 +27,8 @@ class NavBarSearch extends React.Component {
 
   render() {
     let dropdown = this.props.results.map((res) => {
-      return <li key={res.id} className='search-dropdown-single'>
-      {res.username}</li>
+      return <Link className='search-dropdown-link' to={`/users/${res.id}`} key={res.id}><li className='search-dropdown-single'>
+      {res.username}</li></Link>
     })
     if (this.state.text === '' || this.props.match.url === '/search_results') {
       dropdown = null;
@@ -39,15 +39,15 @@ class NavBarSearch extends React.Component {
     console.log("-----------")
     return (
       <div className='nav-search'>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className='search-bar-form'>
           <input onChange={this.handleChange} className='nav-search-text' type='text' value={this.state.text} placeholder='Search'/>
           <input type='submit' className='nav-search-button' value='GO!' />
+          <div className='search-dropdown'>
+            <ul className='search-dropdown-list'>
+              {dropdown}
+            </ul>
+          </div>
         </form>
-        <div className='search-dropdown'>
-          <ul className='search-dropdown-list'>
-            {dropdown}
-          </ul>
-        </div>
       </div>
     );
   }
