@@ -11,9 +11,11 @@ class NavBarSearch extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({text: e.target.value})
+    this.setState({text: e.target.value}, () => {
+      this.props.searchUsers(this.state.text)
+    })
   }
-
+  // componentDidMount
   handleSubmit(e) {
     e.preventDefault();
     if (this.state.text === '') {
@@ -25,12 +27,18 @@ class NavBarSearch extends React.Component {
   }
 
   render() {
+    // let dropdown =
+    debugger
+
     return (
       <div className='nav-search'>
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} className='nav-search-text' type='text' value={this.state.text} placeholder='Search'/>
-          <input type='submit' onClick={this.handleSubmit} className='nav-search-button' value='GO!' />
+          <input type='submit' className='nav-search-button' value='GO!' />
         </form>
+        <div className='search-dropdown'>
+
+        </div>
       </div>
     );
   }
