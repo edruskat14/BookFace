@@ -37,6 +37,7 @@
   background-color: #fff;
   display: block;
   position: relative;
+  z-index: 9;
   /* border: 1px solid black; */
 }
 .nav-search-text:focus + .search-dropdown {

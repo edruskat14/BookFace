@@ -1,6 +1,6 @@
 
 .profile-picture-container {
-  z-index: 1;
+  /* z-index: 1; */
   position: relative;
   left: 143px;
   top: -141px;
@@ -11,7 +11,7 @@
   border-radius: 3px;
 }
 .profile-picture {
-  z-index: 1;
+  /* z-index: 1; */
   position: relative;
   border: 4px solid white;
   border-radius: 2px;
@@ -62,7 +62,6 @@
   width: 300px;
   margin: 0 auto;
   align-items: center;
-  z-index: 8;
   background-color: white;
 }
 .upload-pro-pic-all-off {
