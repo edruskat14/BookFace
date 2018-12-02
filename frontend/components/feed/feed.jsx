@@ -11,12 +11,15 @@ class Feed extends React.Component {
   constructor(props) {
     super(props)
   }
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchFriendships(this.props.currentUser.id);
     this.props.fetchUsers();
     this.props.fetchFriends(this.props.currentUser.id);
     this.props.fetchAllPosts(this.props.currentUser.id, true);
     this.props.fetchNotifications(this.props.currentUser);
+  }
+  componentDidMount() {
+    this.props.fetchNews();
   }
 
   activeFriendship(user) {

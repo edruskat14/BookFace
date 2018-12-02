@@ -47,6 +47,9 @@
 .nav-search-text:focus + .search-dropdown {
   display: block;
 }
+.search-dropdown:hover {
+  display: block;
+}
 .search-dropdown-list {
   list-style: none;
   margin: 0;

@@ -6,6 +6,7 @@ import { fetchAllPosts } from '../../actions/post_actions';
 import { fetchFriendships } from '../../actions/friendship_actions';
 import { fetchAllComments } from '../../actions/comment_actions';
 import { fetchNotifications } from '../../actions/notification_actions';
+import { fetchNews } from '../../actions/news_actions';
 
 const msp = (state) => {
   return {
@@ -25,7 +26,9 @@ const mdp = (dispatch) => {
     fetchFriends: (id) => dispatch(fetchFriends(id)),
     fetchAllPosts: (userId, feed) => dispatch(fetchAllPosts(userId, feed)),
     fetchAllComments: (posts) => dispatch(fetchAllComments(posts)),
-    fetchNotifications: (user) => dispatch(fetchNotifications(user))
+    fetchNotifications: (user) => dispatch(fetchNotifications(user)),
+    fetchNews: () => dispatch(fetchNews())
+
   };
 };
 

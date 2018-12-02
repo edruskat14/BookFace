@@ -7,6 +7,8 @@ import commentsReducer from './comments_reducer';
 import notificationsReducer from './notifications_reducer';
 import postLikesReducer from './post_likes_reducer';
 import searchReducer from './search_reducer';
+import newsReducer from './news_reducer';
+
 const entitiesReducer = combineReducers({
   users: usersReducer,
   profile: profilesReducer,
@@ -15,7 +17,8 @@ const entitiesReducer = combineReducers({
   comments: commentsReducer,
   notifications: notificationsReducer,
   postLikes: postLikesReducer,
-  searchResults: searchReducer
+  searchResults: searchReducer,
+  news: newsReducer
 });
 
 export default entitiesReducer;
