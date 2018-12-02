@@ -36,7 +36,7 @@ class NavBarSearch extends React.Component {
     if (this.state.text === '' || this.props.match.url === '/search_results') {
       dropdown = null;
     }
-
+    debugger
     console.log("-----------")
     console.log(this.props.results)
     console.log("-----------")
@@ -44,12 +44,12 @@ class NavBarSearch extends React.Component {
       <div className='nav-search'>
         <form onSubmit={this.handleSubmit} className='search-bar-form'>
           <input onChange={this.handleChange} className='nav-search-text' type='text' value={this.state.text} placeholder='Search'/>
-          <input type='submit' className='nav-search-button' value='GO!' />
           <div className='search-dropdown'>
             <ul className='search-dropdown-list'>
               {dropdown}
             </ul>
           </div>
+          <input type='submit' className='nav-search-button' value='GO!' />
         </form>
       </div>
     );

@@ -17,7 +17,9 @@
   border: none;
   height: 25px;
   width: 46px;
-  position: relative;
+  position: absolute;
+  left: 405px;
+  top: 0;
   background-color: #f5f6f7;
 }
 
@@ -35,10 +37,12 @@
 }
 .search-dropdown {
   background-color: #fff;
-  display: block;
+  display: none;
   position: relative;
   left: -1px;
   width: 453px;
+  max-height: 180px;
+  overflow-y: scroll;
 }
 .nav-search-text:focus + .search-dropdown {
   display: block;

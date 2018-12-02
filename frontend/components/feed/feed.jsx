@@ -65,8 +65,8 @@ class Feed extends React.Component {
             <div>
               <h2 className='other-work-head'>My Other Work</h2>
               <a target='_blank' href='http://www.github.com/edruskat14'><button className='other-work-link'><img src={window.github_icon} className='other-work-img' />Github</button></a>
-              <a target='_blank' href='https://edruskat14.live'><button className='other-work-link'><img src={window.smiley_face} className='other-work-img' />Portfolio</button></a>
-              <a target='_blank' href='https://edruskat14.live'><button className='other-work-link'><img src={window.linkedin_icon} className='other-work-img' />LinkedIn</button></a>
+              <a target='_blank' href='https://www.edruskat14.live'><button className='other-work-link'><img src={window.smiley_face} className='other-work-img' />Portfolio</button></a>
+              <a target='_blank' href='https://www.linkedin.com/in/ethan-druskat/'><button className='other-work-link'><img src={window.linkedin_icon} className='other-work-img' />LinkedIn</button></a>
             </div>
           </div>
           <div className='feed-right'>
