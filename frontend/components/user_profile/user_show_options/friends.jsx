@@ -13,13 +13,13 @@ const Friends = (props) => {
   let ships = [];
   ships = props.friendships.map((ship) => {
     if (ship.friender_id === props.pageOwner.id) {
-      return <UserDisplay user={props.users[ship.friendee_id]} key={ship.friendee_id}/>
+      return <UserDisplay onClick={props.setTimeline} user={props.users[ship.friendee_id]} key={ship.friendee_id}/>
     } else if (ship.friendee_id === props.pageOwner.id) {
       return <UserDisplay user={props.users[ship.friender_id]} key={ship.friender_id}/>
     }
   })
   return (
-    <div className='show-page-post-section'>
+    <div onClick={props.setTimeline} className='show-page-post-section'>
       {ships}
     </div>
   )

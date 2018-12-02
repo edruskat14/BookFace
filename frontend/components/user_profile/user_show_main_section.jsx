@@ -9,7 +9,7 @@ const UserShowMain = (props) => {
   if (props.status === 'Timeline') {
     main = <Timeline all={props.all} pageOwner={props.pageOwner} handleState={props.handleState} />
   } else if (props.status === 'Friends') {
-    main = <Friends all={props.all} pageOwner={props.pageOwner} />
+    main = <Friends all={props.all} setTimeline={props.setTimeline} pageOwner={props.pageOwner} />
   } else if (props.status === 'About') {
     main = <About all={props.all} handleState={props.handleState} />
   } else if (props.status === 'EditAbout') {

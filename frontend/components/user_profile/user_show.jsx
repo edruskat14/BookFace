@@ -11,6 +11,7 @@ class userShow extends React.Component {
     super(props);
     this.state = { status: 'Timeline' }
     this.handleState = this.handleState.bind(this);
+    this.setTimeline = this.setTimeline.bind(this);
   }
   componentWillReceiveProps(nextProps) {
 
@@ -38,6 +39,9 @@ class userShow extends React.Component {
 
   handleState(event) {
     this.setState({ status: event.currentTarget.value})
+  }
+  setTimeline() {
+    this.setState({ status: 'Timeline' });
   }
 
   render() {
@@ -90,7 +94,7 @@ class userShow extends React.Component {
           </div>
 
           <main className='show-page-main'>
-            <UserShowMain all={this.props} handleState={this.handleState} pageOwner={pageOwner} status={this.state.status}/>
+            <UserShowMain all={this.props} handleState={this.handleState} setTimeline={this.setTimeline} pageOwner={pageOwner} status={this.state.status}/>
           </main>
         </div>
     );
