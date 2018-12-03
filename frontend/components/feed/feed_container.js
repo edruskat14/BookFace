@@ -14,7 +14,8 @@ const msp = (state) => {
     posts: Object.values(state.entities.posts),
     pendingRequests: Object.values(state.entities.friendships.pending),
     approvedRequests: Object.values(state.entities.friendships.approved),
-    allUsers: Object.values(state.entities.users.general)
+    allUsers: Object.values(state.entities.users.general),
+    news: state.entities.news.articles
   };
 };
 

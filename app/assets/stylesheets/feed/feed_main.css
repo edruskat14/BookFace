@@ -87,7 +87,29 @@
   text-decoration: none;
   font-weight: 700;
 }
-/* .thumbs-up-sponge {
+
+.news-div {
+  background-color: #fff;
   position: relative;
-  width: 300px;
-} */
+  margin-top: 20px;
+  padding: 25px;
+  font-family: sans-serif, serif;
+}
+.news-header {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.single-article {
+  font-size: 16px;
+  margin-bottom: 18px;
+  justify-content: flex-start;
+  text-align: left;
+}
+.link-to-article {
+  text-decoration: none;
+  color: black;
+}
+.link-to-article:hover {
+  /* text-decoration: underline; */
+  color: #365899;
+}

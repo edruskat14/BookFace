@@ -6,6 +6,7 @@ import PostIndexItemContainer from '../post/post_index_item_container';
 import FriendResponse from '../friend/friend_response';
 import ProPicFormContainer from '../profile_picture/pro_pic_form_container';
 import MakeNewFriendsItem from './make_new_friends_item';
+import News from './news';
 
 class Feed extends React.Component {
   constructor(props) {
@@ -55,6 +56,13 @@ class Feed extends React.Component {
       return <MakeNewFriendsItem user={user} key={user.id} />
     })
 
+    const articles = this.props.news;
+    let news = articles || [];
+
+    const latestNews = news.slice(10).map((arti) => {
+      return <News article={arti} />
+    })
+
     return (
       <div className='feed-all-content'>
         <div className='feed-main'>
@@ -76,6 +84,10 @@ class Feed extends React.Component {
             <h2 className='make-new-friends-header'>Make new friends</h2>
             <div className='feed-make-friends'>
               {makeFriends}
+            </div>
+            <div className='news-div'>
+              <h2 className='news-header'>Breaking News</h2>
+              {latestNews}
             </div>
           </div>
           <br />
