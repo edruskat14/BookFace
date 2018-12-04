@@ -20,11 +20,11 @@
 }
 
 .feed-left {
-  position: relative;
-  left: -420px;
-  top: 13px;
+  position: absolute;
+  left: 190px;
+  top: -11px;
   height: 700px;
-  width: 300px;
+  width: 200px;
   text-align: center;
 }
 
@@ -53,8 +53,9 @@
   margin-right: 5px;
 }
 .feed-right {
-  position: relative;
-  left: 150px;
+  position: absolute;
+  left: 950px;
+  top: -15px;
   width: 320px;
   text-align: center;
 }
