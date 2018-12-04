@@ -45,22 +45,21 @@ class userShow extends React.Component {
   }
 
   render() {
-    let pageOwner = { username: '' };
-    if (this.props.pageOwner) {
-      pageOwner = this.props.pageOwner;
-    }
+    let pageOwner = this.props.pageOwner || { username: '' };
+
     const currentUser = this.props.currentUser || { username: '' };
 
-    let requestButton = null
-    if (!this.props.friendsWith) {
-      requestButton = <FriendRequest currentUser={currentUser} pageOwner={pageOwner} />
-    }
+    let requestButton = <FriendRequest currentUser={currentUser} pageOwner={pageOwner} />
+
     let proPicButton = null
+
     if (pageOwner === currentUser) {
       proPicButton = <button onClick={this.props.turnOnModal} className='pro-pic-edit-button'><img className='pro-pic-camera' src={window.camera_icon} /><p className='update-profile-picture'>Update Profile Picture</p>
       </button>
       requestButton = null
      }
+     if (pageOwner.username === '') { requestButton = null}
+
     return (
         <div className='user-show-all-content'>
           <nav>
