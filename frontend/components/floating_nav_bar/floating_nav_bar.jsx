@@ -8,7 +8,7 @@ const floatingNavBar = (props) => {
     <div className='floating-nav-main'>
       <div className='nav-search-with-logo'>
         <Link to='/feed'>
-          <img src={window.nav_bar_fb_logo} className='nav-fb-logo'/>
+          <img src={window.favicon} className='nav-fb-logo'/>
         </Link>
         <div className='nav-search-bar'>
           <NavBarSearchContainer />

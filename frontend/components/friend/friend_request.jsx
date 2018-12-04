@@ -21,7 +21,7 @@ const FriendRequest = (props) => {
     return ((props.currentUser.id === req.friender_id || props.currentUser.id === req.friendee_id) && (props.pageOwner.id === req.friender_id || props.pageOwner.id === req.friendee_id));
   });
     let buttonText;
-    pend ? buttonText = 'Request pending...' : buttonText = 'AddFriend'
+    pend ? buttonText = 'Request pending...' : buttonText = 'Add Friend'
 
   return (
     <div className='friend-button-div'>
