@@ -54,7 +54,7 @@ In this code `props.all.friendsWith` checks the friendships in the current state
 <br>
 <br>
 
-The protected route ensures that a user can not see certain url routes unless logged in.
+The protected route ensures that a user cannot see certain url routes unless logged in.
 ```
 const ProtRoute = ({ component: Component, path, loggedIn, exact }) => {
   return <Route path={path} exact={exact} render={(props) => (
