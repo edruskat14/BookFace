@@ -8,13 +8,21 @@
   The objective here is to make a functional Facebook clone using Ruby on Rails. While it lacks many bells and whistles included in the real Facebook, BookFace aims to support most of Facebook's basic features.
 
 ## App Navigation  
-  Each user has their own profile page. This is easily denoted by the pictures at the top.  
+  Each user has their own profile page that will follow this basic template:
   ![](app/assets/images/readme/ex_user_profile.png)     
+  <br>
   The profile picture can be updated provided that the profile belongs to the active user.  
+  <br>
   The home feed page is populated by all posts made by the user and their friends.   
+  <br>
   The user's page is populated by that user's own posts and all other posts specifically targeting that user.  
-  Users can become friends with each other if one user clicks the 'add friend' button on the other user's profile page and the other accepts the request.  
-  A user will be notified via the globe symbol on the floating nav bar if another user posts to their wall, comments on their post, or likes their post.  
+  <br>
+  Users can become friends with each other if one user clicks the 'add friend' button on the other user's profile page and the other accepts the request that show up on the top of the screen:  
+  ![](app/assets/images/readme/ex_friend_request.png)
+  <br>
+  A user will be notified via the globe symbol on the floating nav bar if another user posts to their wall, comments on their post, or likes their post:
+  ![](app/assets/images/readme/ex_notification.png)
+  <br>
   A post can be deleted by the poster by clicking the X at the top right corner of the post.  
   Comments can be made on any post. They can be deleted by the commenter by clicking 'remove' next to the comment text.  
   The search bar will return a list of all users whose username contains the searched text.  
