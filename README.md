@@ -9,7 +9,7 @@
 
 ## App Navigation  
   Each user has their own profile page. This is easily denoted by the pictures at the top.  
-  ![](readme/ex_user_profile.png)     
+  ![](app/assets/images/readme/ex_user_profile.png)     
   The profile picture can be updated provided that the profile belongs to the active user.  
   The home feed page is populated by all posts made by the user and their friends.   
   The user's page is populated by that user's own posts and all other posts specifically targeting that user.  
