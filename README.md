@@ -50,4 +50,20 @@ if (props.all.friendsWith || props.pageOwner === props.all.currentUser) {
   postForm = <CreatePostFormContainer pageOwner={props.pageOwner} />;
 }
 ```
-In this code `props.all.friendsWith` checks the friendships in the current state. If there exists one between the current user and the owner of the page with a status of 'approved' or if the current user is on their own page the posts will show up.
+In this code `props.all.friendsWith` checks the friendships in the current state. If there exists one between the current user and the owner of the page with a status of 'approved' or if the current user is on their own page the posts will show up.  
+<br>
+<br>
+
+The protected route ensures that a user can not see certain url routes unless logged in.
+```
+const ProtRoute = ({ component: Component, path, loggedIn, exact }) => {
+  return <Route path={path} exact={exact} render={(props) => (
+    loggedIn ? (
+      <Component {...props} />
+    ) : (
+      <Redirect to={'/'} />
+    )
+  )}/>
+}
+```
+Anyone that tries to access a page that requires a logged in user will be directed to the login/signup page.
