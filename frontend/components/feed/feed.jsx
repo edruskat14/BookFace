@@ -88,6 +88,7 @@ class Feed extends React.Component {
             <div className='news-div'>
               <h2 className='news-header'>Breaking News</h2>
               {latestNews}
+              <p className='api-give-thanks'>Gracias a <a href='https://newsapi.org' >Newsapi.org</a></p>
             </div>
           </div>
           <br />

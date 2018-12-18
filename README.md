@@ -20,12 +20,16 @@
   Users can become friends with each other if one user clicks the 'add friend' button on the other user's profile page and the other accepts the request that show up on the top of the screen:  
   ![](app/assets/images/readme/ex_friend_request.png)
   <br>
+  <br>
   A user will be notified via the globe symbol on the floating nav bar if another user posts to their wall, comments on their post, or likes their post:
   ![](app/assets/images/readme/ex_notification.png)
   <br>
   A post can be deleted by the poster by clicking the X at the top right corner of the post.  
+  <br>
   Comments can be made on any post. They can be deleted by the commenter by clicking 'remove' next to the comment text.  
+  <br>
   The search bar will return a list of all users whose username contains the searched text.  
+  <br>
   Lastly, the logout button can be accessed by clicking the downward facing triangle on the upper nav bar.
 
 ## Technologies
